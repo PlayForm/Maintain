@@ -25,7 +25,7 @@ var Node_default = async () => await (async (Files) => {
               ].sort()) {
                 if (typeof JSONPackage[bundle] !== "undefined") {
                   Base.add(`
-            - uses: actions/setup-node@v4.0.1
+            - uses: actions/setup-node@v4.0.2
               with:
                   node-version: \${{ matrix.node-version }}
                   cache: "pnpm"
@@ -53,7 +53,7 @@ var Node_default = async () => await (async (Files) => {
             - run: pnpm run build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target
@@ -64,7 +64,7 @@ var Node_default = async () => await (async (Files) => {
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.0
+            - uses: actions/upload-artifact@v4.3.1
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target
