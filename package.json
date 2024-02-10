@@ -1,16 +1,15 @@
 {
 	"name": "@yesmaintain/script",
-	"version": "0.0.11",
+	"version": "0.0.12",
 	"private": false,
 	"description": "Maintains GitHub repositories. 🔧",
-	"homepage": "https://github.com/YesMaintain/NPM#readme",
+	"homepage": "https://github.com/YesMaintain/NPMScript#readme",
 	"bugs": {
-		"url": "https://github.com/YesMaintain/NPM/issues"
+		"url": "https://github.com/YesMaintain/NPMScript/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/YesMaintain/NPM.git",
-		"directory": "Script"
+		"url": "git+https://github.com/YesMaintain/NPMScript.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
@@ -43,7 +42,7 @@
 		"@types/pacote": "11.1.8",
 		"esbuild": "0.20.0",
 		"esbuild-plugin-copy": "2.1.1",
-		"typescript-esbuild": "0.3.8"
+		"typescript-esbuild": "0.3.9"
 	},
 	"publishConfig": {
 		"access": "public"
