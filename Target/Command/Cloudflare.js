@@ -1,26 +1,39 @@
 var Cloudflare_default = async () => await (async (Files) => {
   for (const { Path, Name, File } of Files) {
-    for (const [directory, packageFiles] of await (await import("../Function/Directory.js")).default(
+    for (const [_Directory, FilesPackage] of await (await import("../Function/Directory.js")).default(
       await (await import("../Function/Package.js")).default(
         "Cloudflare"
       )
     )) {
-      const GitHub = `${directory}/.github`;
+      const GitHub = `${_Directory}/.github`;
       const Base = await File();
       if (Path === "/workflows/" && Name === "Cloudflare.yml") {
-        for (const _package of packageFiles) {
-          const packageDirectory = (await import("path")).dirname(_package).replace(directory, "");
-          const environment = (await (await import("../Function/Type.js")).default()).get(_package.split("/").pop());
-          if (typeof environment !== "undefined" && environment === "Cloudflare") {
+        for (const Package of FilesPackage) {
+          const Directory = (await import("path")).dirname(Package).replace(_Directory, "");
+          const Environment = (await (await import("../Function/Type.js")).default()).get(Package.split("/").pop());
+          if (typeof Environment !== "undefined" && Environment === "Cloudflare") {
             Base.add(`
             - uses: cloudflare/wrangler-action@v3.4.1
               with:
                   apiToken: \${{ secrets.CF_API_TOKEN }}
                   accountId: \${{ secrets.CF_ACCOUNT_ID }}
-                  workingDirectory: .${packageDirectory}
+                  workingDirectory: .${Directory}
 `);
           }
         }
+      }
+      let Branch = "main";
+      try {
+        await (await import("fs/promises")).access(
+          _Directory,
+          (await import("fs/promises")).constants.F_OK
+        );
+        const Current = process.cwd();
+        process.chdir(_Directory);
+        Branch = (await import("child_process")).execSync("git rev-parse --abbrev-ref HEAD").toString().trim();
+        process.chdir(Current);
+      } catch (_Error) {
+        console.log(`Could not access: ${_Directory}`);
       }
       if (Base.size > 1) {
         try {
@@ -36,7 +49,10 @@ var Cloudflare_default = async () => await (async (Files) => {
         try {
           await (await import("fs/promises")).writeFile(
             `${GitHub}${Path}${Name}`,
-            `${[...Base].join("")}`
+            `${[...Base].join("")}`.replaceAll(
+              "$Branch$",
+              Branch
+            )
           );
         } catch {
           console.log(

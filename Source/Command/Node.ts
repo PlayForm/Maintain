@@ -136,6 +136,28 @@ export default async () =>
 					}
 				}
 
+				let Branch = "main";
+
+				try {
+					await (await import("fs/promises")).access(
+						_Directory,
+						(await import("fs/promises")).constants.F_OK,
+					);
+
+					const Current = process.cwd();
+
+					process.chdir(_Directory);
+
+					Branch = (await import("child_process"))
+						.execSync("git rev-parse --abbrev-ref HEAD")
+						.toString()
+						.trim();
+
+					process.chdir(Current);
+				} catch (_Error) {
+					console.log(`Could not access: ${_Directory}`);
+				}
+
 				if (Base.size > 1) {
 					try {
 						await (await import("fs/promises")).mkdir(
@@ -151,7 +173,10 @@ export default async () =>
 					try {
 						await (await import("fs/promises")).writeFile(
 							`${GitHub}${Path}${Name}`,
-							`${[...Base].join("")}`,
+							`${[...Base].join("")}`.replaceAll(
+								"$Branch$",
+								Branch,
+							),
 						);
 					} catch {
 						console.log(
