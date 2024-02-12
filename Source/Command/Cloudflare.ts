@@ -50,6 +50,8 @@ export default async () =>
 					}
 				}
 
+				console.log(Base);
+
 				if (Base.size > 1) {
 					try {
 						await (await import("fs/promises")).mkdir(
