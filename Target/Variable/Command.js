@@ -45,6 +45,11 @@ const Variable = /* @__PURE__ */ new Set([
     Action: (await import("../Command/Node.js")).default
   },
   {
+    Name: "Complexity",
+    Description: "Complexity detection.",
+    Action: (await import("../Command/Complexity.js")).default
+  },
+  {
     Name: "Cloudflare",
     Type: "Workflow",
     Description: "Put Cloudflare into GitHub Actions.",

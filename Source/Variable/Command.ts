@@ -63,6 +63,17 @@ export const Variable: Set<{
 		Action: (await import("../Command/Node.js")).default,
 	},
 	{
+		Name: "Complexity",
+		Arguments: new Set([
+			{
+				Name: "[files...]",
+				Description: "Files to scan.",
+			},
+		]),
+		Description: "Complexity detection.",
+		Action: (await import("../Command/Complexity.js")).default,
+	},
+	{
 		Name: "Cloudflare",
 		Type: "Workflow",
 		Description: "Put Cloudflare into GitHub Actions.",
@@ -91,7 +102,7 @@ export const Variable: Set<{
 		Description: "Trigger all workflow tasks.",
 		Action: async () =>
 			Variable.forEach((Command) =>
-				Command.Type === "Workflow" ? Command.Action() : {},
+				Command.Type === "Workflow" ? Command.Action() : {}
 			),
 	},
 	{
