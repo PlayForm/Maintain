@@ -40,7 +40,7 @@
 		"@types/etag": "1.8.3",
 		"@types/node": "20.11.19",
 		"@types/pacote": "11.1.8",
-		"esbuild": "0.20.0",
+		"esbuild": "0.20.1",
 		"esbuild-plugin-copy": "2.1.1",
 		"typescript-esbuild": "0.3.9"
 	},
