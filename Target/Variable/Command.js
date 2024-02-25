@@ -46,6 +46,12 @@ const Variable = /* @__PURE__ */ new Set([
   },
   {
     Name: "Complexity",
+    Arguments: /* @__PURE__ */ new Set([
+      {
+        Name: "[files...]",
+        Description: "Files to scan."
+      }
+    ]),
     Description: "Complexity detection.",
     Action: (await import("../Command/Complexity.js")).default
   },
