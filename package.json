@@ -27,7 +27,7 @@
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts' -es Configuration/ESBuild.ts"
 	},
 	"dependencies": {
-		"@octokit/core": "5.1.0",
+		"@octokit/core": "6.0.1",
 		"commander": "12.0.0",
 		"deepmerge-ts": "5.1.0",
 		"dotenv": "16.4.5",
@@ -36,9 +36,9 @@
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@octokit/types": "12.5.0",
+		"@octokit/types": "12.6.0",
 		"@types/etag": "1.8.3",
-		"@types/node": "20.11.19",
+		"@types/node": "20.11.20",
 		"@types/pacote": "11.1.8",
 		"esbuild": "0.20.1",
 		"esbuild-plugin-copy": "2.1.1",
