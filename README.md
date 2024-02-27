@@ -1,4 +1,4 @@
-# [YesMaintain] 🔧
+# 🔧 [YesMaintain]
 
 Maintains GitHub repositories.
 

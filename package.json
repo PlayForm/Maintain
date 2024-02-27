@@ -2,7 +2,7 @@
 	"name": "@yesmaintain/script",
 	"version": "0.0.13",
 	"private": false,
-	"description": "Maintains GitHub repositories. 🔧",
+	"description": "🔧 Maintains GitHub repositories.",
 	"homepage": "https://github.com/YesMaintain/NPMScript#readme",
 	"bugs": {
 		"url": "https://github.com/YesMaintain/NPMScript/issues"
