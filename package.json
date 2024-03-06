@@ -38,7 +38,7 @@
 	"devDependencies": {
 		"@octokit/types": "12.6.0",
 		"@types/etag": "1.8.3",
-		"@types/node": "20.11.24",
+		"@types/node": "20.11.25",
 		"@types/pacote": "11.1.8",
 		"esbuild": "0.20.1",
 		"esbuild-plugin-copy": "2.1.1",
