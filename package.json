@@ -1,6 +1,6 @@
 {
 	"name": "@yesmaintain/cli",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"private": false,
 	"description": "🔧 Maintains GitHub repositories.",
 	"homepage": "https://github.com/YesMaintain/NPMCLI#readme",
@@ -18,10 +18,10 @@
 		"url": "https://nikolahristov.tech"
 	},
 	"type": "module",
-	"main": "./Target/Class/YesMaintain.js",
-	"types": "./Target/Class/YesMaintain.d.ts",
+	"main": "./Target/Class/Maintain.js",
+	"types": "./Target/Class/Maintain.d.ts",
 	"bin": {
-		"Maintain": "Target/Class/YesMaintain.js"
+		"Maintain": "Target/Class/Maintain.js"
 	},
 	"scripts": {
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts' -es Configuration/ESBuild.ts"
