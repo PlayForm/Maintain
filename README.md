@@ -50,8 +50,8 @@ Deletes all GitHub Actions runs and their logs for all of your repositories:
 Maintain Clean
 ```
 
-Creates a `dependabot.yml` file in each of the .github directories for each of
-the packages in the monorepo:
+Creates a `dependabot.yml` file for each of the `.github` directories in each of
+the packages for the monorepo:
 
 ```sh
 Maintain Dependabot
@@ -83,8 +83,8 @@ repository that has a `package.json` file.
 Maintain Node
 ```
 
-Creates a `NPM.yml` file in the `.github/workflows` directory for each repository
-that has a `package.json` file.
+Creates a `NPM.yml` file in the `.github/workflows` directory for each
+repository that has a `package.json` file.
 
 ```sh
 Maintain NPM
