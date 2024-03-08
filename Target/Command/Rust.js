@@ -1,16 +1,4 @@
-var Rust_default = async () => await (async (Files) => {
-  for (const { Path, Name, File } of Files) {
-    for (const [_Directory, FilesPackage] of await (await import("../Function/Directory.js")).default(
-      await (await import("../Function/Package.js")).default("Cargo")
-    )) {
-      const GitHub = `${_Directory}/.github`;
-      const Base = await File();
-      if (Path === "/workflows/" && Name === "Rust.yml") {
-        for (const Package of FilesPackage) {
-          const Directory = (await import("path")).dirname(Package).replace(_Directory, "");
-          const Environment = (await (await import("../Function/Type.js")).default()).get(Package.split("/").pop());
-          if (typeof Environment !== "undefined" && Environment === "Cargo") {
-            Base.add(`
+var m=async()=>await(async l=>{for(const{Path:r,Name:i,File:w}of l)for(const[t,p]of await(await import("../Function/Directory.js")).default(await(await import("../Function/Package.js")).default("Cargo"))){const o=`${t}/.github`,e=await w();if(r==="/workflows/"&&i==="Rust.yml")for(const a of p){const s=(await import("path")).dirname(a).replace(t,""),n=(await(await import("../Function/Type.js")).default()).get(a.split("/").pop());typeof n<"u"&&n==="Cargo"&&e.add(`
             - uses: actions/cache@v4.0.0
               with:
                   path: |
@@ -20,56 +8,9 @@ var Rust_default = async () => await (async (Files) => {
                       ~/.cargo/git/db/
                       target/
                       Target/
-                  key: \${{ runner.os }}-cargo-\${{ hashFiles('.${Directory}/Cargo.toml') }}
+                  key: \${{ runner.os }}-cargo-\${{ hashFiles('.${s}/Cargo.toml') }}
             - uses: actions-rs/cargo@v1.0.3
               with:
                 command: build
-                args: --release --all-features --manifest-path .${Directory}/${(await import("path")).basename(Package)}
-`);
-          }
-        }
-      }
-      let Branch = "main";
-      try {
-        await (await import("fs/promises")).access(
-          _Directory,
-          (await import("fs/promises")).constants.F_OK
-        );
-        const Current = process.cwd();
-        process.chdir(_Directory);
-        Branch = (await import("child_process")).execSync("git rev-parse --abbrev-ref HEAD").toString().trim();
-        process.chdir(Current);
-      } catch (_Error) {
-        console.log(`Could not access: ${_Directory}`);
-      }
-      if (Base.size > 1) {
-        try {
-          await (await import("fs/promises")).mkdir(
-            `${GitHub}${Path}`,
-            {
-              recursive: true
-            }
-          );
-        } catch {
-          console.log(`Could not create: ${GitHub}${Path}`);
-        }
-        try {
-          await (await import("fs/promises")).writeFile(
-            `${GitHub}${Path}${Name}`,
-            `${[...Base].join("")}`.replaceAll(
-              "$Branch$",
-              Branch
-            )
-          );
-        } catch {
-          console.log(
-            `Could not create workflow for: ${GitHub}/workflows/Rust.yml`
-          );
-        }
-      }
-    }
-  }
-})((await import("../Variable/Rust.js")).default);
-export {
-  Rust_default as default
-};
+                args: --release --all-features --manifest-path .${s}/${(await import("path")).basename(a)}
+`)}let c="main";try{await(await import("fs/promises")).access(t,(await import("fs/promises")).constants.F_OK);const a=process.cwd();process.chdir(t),c=(await import("child_process")).execSync("git rev-parse --abbrev-ref HEAD").toString().trim(),process.chdir(a)}catch{console.log(`Could not access: ${t}`)}if(e.size>1){try{await(await import("fs/promises")).mkdir(`${o}${r}`,{recursive:!0})}catch{console.log(`Could not create: ${o}${r}`)}try{await(await import("fs/promises")).writeFile(`${o}${r}${i}`,`${[...e].join("")}`.replaceAll("$Branch$",c))}catch{console.log(`Could not create workflow for: ${o}/workflows/Rust.yml`)}}}})((await import("../Variable/Rust.js")).default);export{m as default};

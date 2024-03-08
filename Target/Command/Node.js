@@ -1,134 +1,29 @@
-var Node_default = async () => await (async (Files) => {
-  for (const { Path, Name, File } of Files) {
-    for (const [_Directory, FilesPackage] of await (await import("../Function/Directory.js")).default(
-      await (await import("../Function/Package.js")).default("NPM")
-    )) {
-      const GitHub = `${_Directory}/.github`;
-      const Base = await File();
-      if (Path === "/workflows/" && Name === "Node.yml") {
-        for (const Package of FilesPackage) {
-          const Directory = (await import("path")).dirname(Package).replace(_Directory, "");
-          const FilePackage = (await (await import("fs/promises")).readFile(Package, "utf-8")).toString();
-          const Environment = (await (await import("../Function/Type.js")).default()).get(Package.split("/").pop());
-          try {
-            if (typeof Environment !== "undefined" && Environment === "NPM") {
-              const JSONPackage = JSON.parse(FilePackage);
-              for (const bundle of [
-                "bundledDependencies",
-                "bundleDependencies",
-                "dependencies",
-                "devDependencies",
-                "extensionDependencies",
-                "optionalDependencies",
-                "peerDependencies",
-                "peerDependenciesMeta"
-              ].sort()) {
-                if (typeof JSONPackage[bundle] !== "undefined") {
-                  Base.add(`
+var $=async()=>await(async u=>{for(const{Path:n,Name:p,File:w}of u)for(const[r,m]of await(await import("../Function/Directory.js")).default(await(await import("../Function/Package.js")).default("NPM"))){const c=`${r}/.github`,o=await w();if(n==="/workflows/"&&p==="Node.yml")for(const e of m){const t=(await import("path")).dirname(e).replace(r,""),y=(await(await import("fs/promises")).readFile(e,"utf-8")).toString(),d=(await(await import("../Function/Type.js")).default()).get(e.split("/").pop());try{if(typeof d<"u"&&d==="NPM"){const a=JSON.parse(y);for(const i of["bundledDependencies","bundleDependencies","dependencies","devDependencies","extensionDependencies","optionalDependencies","peerDependencies","peerDependenciesMeta"].sort())typeof a[i]<"u"&&o.add(`
             - uses: actions/setup-node@v4.0.2
               with:
                   node-version: \${{ matrix.node-version }}
                   cache: "pnpm"
-                  cache-dependency-path: .${Directory}/pnpm-lock.yaml
+                  cache-dependency-path: .${t}/pnpm-lock.yaml
 
             - run: pnpm install
-              working-directory: .${Directory}
-`);
-                }
-              }
-              for (const key in JSONPackage) {
-                if (Object.prototype.hasOwnProperty.call(
-                  JSONPackage,
-                  key
-                )) {
-                  const values = JSONPackage[key];
-                  if (key === "scripts") {
-                    for (const scripts in values) {
-                      if (Object.prototype.hasOwnProperty.call(
-                        values,
-                        scripts
-                      )) {
-                        if (scripts === "build") {
-                          Base.add(`
+              working-directory: .${t}
+`);for(const i in a)if(Object.prototype.hasOwnProperty.call(a,i)){const f=a[i];if(i==="scripts")for(const s in f)Object.prototype.hasOwnProperty.call(f,s)&&(s==="build"&&o.add(`
             - run: pnpm run build
               working-directory: .
 
             - uses: actions/upload-artifact@v4.3.1
               with:
-                  name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
-                  path: .${Directory}/Target
-`);
-                        }
-                        if (scripts === "prepublishOnly") {
-                          Base.add(`
+                  name: .${t.replaceAll("/","-")}-Node-\${{ matrix.node-version }}-Target
+                  path: .${t}/Target
+`),s==="prepublishOnly"&&o.add(`
             - run: pnpm run prepublishOnly
               working-directory: .
 
             - uses: actions/upload-artifact@v4.3.1
               with:
-                  name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
-                  path: .${Directory}/Target
-`);
-                        }
-                        if (scripts === "test") {
-                          Base.add(`
+                  name: .${t.replaceAll("/","-")}-Node-\${{ matrix.node-version }}-Target
+                  path: .${t}/Target
+`),s==="test"&&o.add(`
             - run: pnpm run test
-              working-directory: .${Directory}
-`);
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          } catch (_Error) {
-            console.log(`Could not create: ${Package}`);
-            console.log(_Error);
-          }
-        }
-      }
-      let Branch = "main";
-      try {
-        await (await import("fs/promises")).access(
-          _Directory,
-          (await import("fs/promises")).constants.F_OK
-        );
-        const Current = process.cwd();
-        process.chdir(_Directory);
-        Branch = (await import("child_process")).execSync("git rev-parse --abbrev-ref HEAD").toString().trim();
-        process.chdir(Current);
-      } catch (_Error) {
-        console.log(`Could not access: ${_Directory}`);
-      }
-      if (Base.size > 1) {
-        try {
-          await (await import("fs/promises")).mkdir(
-            `${GitHub}${Path}`,
-            {
-              recursive: true
-            }
-          );
-        } catch {
-          console.log(`Could not create: ${GitHub}${Path}`);
-        }
-        try {
-          await (await import("fs/promises")).writeFile(
-            `${GitHub}${Path}${Name}`,
-            `${[...Base].join("")}`.replaceAll(
-              "$Branch$",
-              Branch
-            )
-          );
-        } catch {
-          console.log(
-            `Could not create workflow for: ${GitHub}/workflows/Node.yml`
-          );
-        }
-      }
-    }
-  }
-})((await import("../Variable/Node.js")).default);
-export {
-  Node_default as default
-};
+              working-directory: .${t}
+`))}}}catch(a){console.log(`Could not create: ${e}`),console.log(a)}}let l="main";try{await(await import("fs/promises")).access(r,(await import("fs/promises")).constants.F_OK);const e=process.cwd();process.chdir(r),l=(await import("child_process")).execSync("git rev-parse --abbrev-ref HEAD").toString().trim(),process.chdir(e)}catch{console.log(`Could not access: ${r}`)}if(o.size>1){try{await(await import("fs/promises")).mkdir(`${c}${n}`,{recursive:!0})}catch{console.log(`Could not create: ${c}${n}`)}try{await(await import("fs/promises")).writeFile(`${c}${n}${p}`,`${[...o].join("")}`.replaceAll("$Branch$",l))}catch{console.log(`Could not create workflow for: ${c}/workflows/Node.yml`)}}}})((await import("../Variable/Node.js")).default);export{$ as default};

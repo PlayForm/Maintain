@@ -1,11 +1,1 @@
-(await import("dotenv")).config();
-const { string } = await import("zod");
-var Environment_default = (await import("zod")).object({
-  User: string().optional().default(""),
-  Base: string().optional().default((await import("process")).cwd()),
-  Token: string().optional().default("")
-});
-export {
-  Environment_default as default,
-  string
-};
+(await import("dotenv")).config();const{string:t}=await import("zod");var a=(await import("zod")).object({User:t().optional().default(""),Base:t().optional().default((await import("process")).cwd()),Token:t().optional().default("")});export{a as default,t as string};

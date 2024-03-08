@@ -1,6 +1,6 @@
 export default {
 	format: "esm",
-	minify: false,
+	minify: true,
 	outdir: "Target",
 	platform: "node",
 	target: "esnext",
