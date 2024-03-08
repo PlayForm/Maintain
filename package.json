@@ -1,0 +1,50 @@
+{
+	"name": "@yesmaintain/cli",
+	"version": "0.0.1",
+	"private": false,
+	"description": "🔧 Maintains GitHub repositories.",
+	"homepage": "https://github.com/YesMaintain/NPMCLI#readme",
+	"bugs": {
+		"url": "https://github.com/YesMaintain/NPMCLI/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/YesMaintain/NPMCLI.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Nikola R. Hristov",
+		"email": "nikola@nikolahristov.tech",
+		"url": "https://nikolahristov.tech"
+	},
+	"type": "module",
+	"main": "./Target/Class/YesMaintain.js",
+	"types": "./Target/Class/YesMaintain.d.ts",
+	"bin": {
+		"Maintain": "Target/Class/YesMaintain.js"
+	},
+	"scripts": {
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts' -es Configuration/ESBuild.ts"
+	},
+	"dependencies": {
+		"@octokit/core": "6.0.1",
+		"commander": "12.0.0",
+		"deepmerge-ts": "5.1.0",
+		"dotenv": "16.4.5",
+		"etag": "1.8.1",
+		"fast-glob": "3.3.2",
+		"zod": "3.22.4"
+	},
+	"devDependencies": {
+		"@octokit/types": "12.6.0",
+		"@types/etag": "1.8.3",
+		"@types/node": "20.11.25",
+		"@types/pacote": "11.1.8",
+		"esbuild": "0.20.1",
+		"esbuild-plugin-copy": "2.1.1",
+		"typescript-esbuild": "0.3.11"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
