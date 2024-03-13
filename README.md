@@ -50,14 +50,14 @@ Deletes all GitHub Actions runs and their logs for all of your repositories:
 Maintain Clean
 ```
 
-Creates a `dependabot.yml` file for each of the `.github` directories in each of
+Create a `dependabot.yml` file for each of the `.github` directories in each of
 the packages for the monorepo:
 
 ```sh
 Maintain Dependabot
 ```
 
-Dispatches all workflows for all repositories for a given user:
+Dispatch all workflows for all repositories for a given user:
 
 ```sh
 Maintain Dispatch
@@ -69,35 +69,35 @@ or specific repositories by name:
 Maintain Dispatch Repository1 Repository2
 ```
 
-Enables / disables all the features that GitHub offers for all the repositories
+`Enable` / `Disable` all the features that GitHub offers for all the repositories
 that you have access to:
 
 ```sh
 Maintain Edit
 ```
 
-Creates a `Node.yml` file in the `.github/workflows` directory for each
+Create a `Node.yml` file in the `.github/workflows` directory for each
 repository that has a `package.json` file.
 
 ```sh
 Maintain Node
 ```
 
-Creates a `NPM.yml` file in the `.github/workflows` directory for each
+Create a `NPM.yml` file in the `.github/workflows` directory for each
 repository that has a `package.json` file.
 
 ```sh
 Maintain NPM
 ```
 
-Creates a `Rust.yml` file in the `.github/workflows` directory for each
+Create a `Rust.yml` file in the `.github/workflows` directory for each
 repository that has a `Cargo.toml` file.
 
 ```sh
 Maintain Rust
 ```
 
-Runs all workflow tasks.
+Run all workflow tasks.
 
 ```sh
 Maintain Workflow

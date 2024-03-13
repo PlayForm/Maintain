@@ -50,7 +50,7 @@ export default async (Repositories: string[] = []) => {
 		}
 
 		if (Pass === null || Pass) {
-			const Runs = await Request(
+			const Run = await Request(
 				`GET /repos/${Repository.Owner}/${Repository.Name}/actions/runs`,
 				{
 					owner: Repository.Owner,
@@ -58,9 +58,9 @@ export default async (Repositories: string[] = []) => {
 				},
 			);
 
-			if (Runs?.data?.workflow_runs) {
+			if (Run?.data?.workflow_runs) {
 				// start: actions/runs
-				for (const run of Runs.data.workflow_runs) {
+				for (const run of Run.data.workflow_runs) {
 					await Request(
 						`DELETE /repos/${Repository.Owner}/${Repository.Name}/actions/runs/${run.id}`,
 						{
