@@ -1,6 +1,6 @@
 # 🔧 [Maintain]
 
-Maintains GitHub repositories.
+Maintain GitHub.
 
 ## Installation
 
@@ -44,7 +44,7 @@ pnpx @yesmaintain/cli
 
 ## CLI Usage:
 
-Deletes all GitHub Actions runs and their logs for all of your repositories:
+Delete all GitHub Actions runs and their logs for all of your repositories:
 
 ```sh
 Maintain Clean
