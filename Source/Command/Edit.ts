@@ -4,7 +4,7 @@
  */
 export default async (_Repository: string[] | Set<string> = []) => {
 	const User = (await import("../Variable/Environment.js")).default.parse(
-		process.env
+		process.env,
 	).User;
 
 	const Organizations: {
@@ -57,7 +57,7 @@ export default async (_Repository: string[] | Set<string> = []) => {
 				org: Organization.name,
 				default_workflow_permissions: "write",
 				can_approve_pull_request_reviews: true,
-			}
+			},
 		);
 		// end: actions/permissions/workflow
 	}
@@ -78,13 +78,13 @@ export default async (_Repository: string[] | Set<string> = []) => {
 		if (pass === null || pass) {
 			// start: vulnerability-alerts
 			await Request(
-				`PUT /repos/${repo.owner}/${repo.name}/vulnerability-alerts`
+				`PUT /repos/${repo.owner}/${repo.name}/vulnerability-alerts`,
 			);
 			// end: vulnerability-alerts
 
 			// start: automated-security-fixes
 			await Request(
-				`PUT /repos/${repo.owner}/${repo.name}/automated-security-fixes`
+				`PUT /repos/${repo.owner}/${repo.name}/automated-security-fixes`,
 			);
 			// end: automated-security-fixes
 
@@ -111,7 +111,7 @@ export default async (_Repository: string[] | Set<string> = []) => {
 				{
 					enabled: true,
 					allowed_actions: "all",
-				}
+				},
 			);
 			// end: actions/permissions
 
@@ -121,7 +121,7 @@ export default async (_Repository: string[] | Set<string> = []) => {
 				{
 					default_workflow_permissions: "write",
 					can_approve_pull_request_reviews: true,
-				}
+				},
 			);
 			// end: actions/permissions/workflow
 
@@ -134,7 +134,7 @@ export default async (_Repository: string[] | Set<string> = []) => {
 				`PUT /repos/${repo.owner}/${repo.name}/actions/permissions/access`,
 				{
 					access_level: "organization",
-				}
+				},
 			);
 			// end: actions/permissions/access
 		}

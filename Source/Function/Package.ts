@@ -77,9 +77,9 @@ export default async (Filter: Type = false) =>
 					cwd: (
 						await import("../Variable/Environment.js")
 					).default.parse(process.env).Base,
-				}
+				},
 			)),
-		].sort()
+		].sort(),
 	);
 
 import type Type from "../Type/Package.js";

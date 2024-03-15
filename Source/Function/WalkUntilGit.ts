@@ -11,9 +11,10 @@ export const _Function = (async (...[Search, From]: Parameters<Type>) => {
 	}
 
 	try {
-		await (
-			await import("fs/promises")
-		).access(`${Path}/.git`, (await import("fs/promises")).constants.R_OK);
+		await (await import("fs/promises")).access(
+			`${Path}/.git`,
+			(await import("fs/promises")).constants.R_OK,
+		);
 
 		return Path;
 	} catch (_Error) {

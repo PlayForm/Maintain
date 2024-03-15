@@ -102,7 +102,7 @@ export const Variable: Set<{
 		Description: "Trigger all workflow tasks.",
 		Action: async () =>
 			Variable.forEach((Command) =>
-				Command.Type === "Workflow" ? Command.Action() : {}
+				Command.Type === "Workflow" ? Command.Action() : {},
 			),
 	},
 	{
