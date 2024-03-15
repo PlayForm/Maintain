@@ -1,6 +1,6 @@
 {
 	"name": "@yesmaintain/cli",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"private": false,
 	"description": "🔧 Maintains GitHub repositories.",
 	"homepage": "https://github.com/YesMaintain/NPMCLI#readme",
@@ -38,11 +38,11 @@
 	"devDependencies": {
 		"@octokit/types": "12.6.0",
 		"@types/etag": "1.8.3",
-		"@types/node": "20.11.27",
+		"@types/node": "20.11.28",
 		"@types/pacote": "11.1.8",
 		"esbuild": "0.20.2",
 		"esbuild-plugin-copy": "2.1.1",
-		"typescript-esbuild": "0.4.0"
+		"typescript-esbuild": "0.4.1"
 	},
 	"publishConfig": {
 		"access": "public"
