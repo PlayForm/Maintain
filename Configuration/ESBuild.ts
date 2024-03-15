@@ -11,7 +11,9 @@ export default {
 			setup({ onStart, initialOptions: { outdir } }) {
 				onStart(async () => {
 					try {
-						await (await import("fs/promises")).rm(outdir, {
+						await (
+							await import("fs/promises")
+						).rm(outdir, {
 							recursive: true,
 						});
 					} catch (_Error) {

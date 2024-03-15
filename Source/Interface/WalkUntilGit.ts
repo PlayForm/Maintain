@@ -18,3 +18,5 @@ export default interface Type {
 	 */
 	(Search: string, From?: string): Promise<string>;
 }
+
+

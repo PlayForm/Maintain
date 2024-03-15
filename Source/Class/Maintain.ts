@@ -15,9 +15,9 @@ const Program = new (await import("commander")).Command()
 			.action(Action);
 
 		Arguments?.forEach(({ Name, Description }) =>
-			_Program.argument(Name, Description),
+			_Program.argument(Name, Description)
 		);
-	},
+	}
 );
 
 export default Program.parse();

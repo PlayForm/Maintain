@@ -69,8 +69,8 @@ or specific repositories by name:
 Maintain Dispatch Repository1 Repository2
 ```
 
-`Enable` / `Disable` all the features that GitHub offers for all the repositories
-that you have access to:
+`Enable` / `Disable` all the features that GitHub offers for all the
+repositories that you have access to:
 
 ```sh
 Maintain Edit
@@ -83,8 +83,8 @@ repository that has a `package.json` file.
 Maintain Node
 ```
 
-Create a `NPM.yml` file in the `.github/workflows` directory for each
-repository that has a `package.json` file.
+Create a `NPM.yml` file in the `.github/workflows` directory for each repository
+that has a `package.json` file.
 
 ```sh
 Maintain NPM
