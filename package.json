@@ -24,6 +24,7 @@
 		"Maintain": "Target/Class/Maintain.js"
 	},
 	"scripts": {
+		"Document": "TypeScriptDocument 'Source/**/*.ts'",
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts' -ES Configuration/ESBuild.ts"
 	},
 	"dependencies": {
@@ -42,6 +43,7 @@
 		"@types/pacote": "11.1.8",
 		"esbuild": "0.20.2",
 		"esbuild-plugin-copy": "2.1.1",
+		"typescript-document": "0.0.2",
 		"typescript-esbuild": "0.4.3"
 	},
 	"publishConfig": {
