@@ -24,7 +24,7 @@
 		"Maintain": "Target/Class/Maintain.js"
 	},
 	"scripts": {
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts' -es Configuration/ESBuild.ts"
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts' -ES Configuration/ESBuild.ts"
 	},
 	"dependencies": {
 		"@octokit/core": "6.0.1",
