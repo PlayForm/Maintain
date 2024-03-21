@@ -1,5 +1,5 @@
 /**
- * @module Files
+ * @module File
  *
  */
 export type Type = Set<{

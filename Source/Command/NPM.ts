@@ -116,4 +116,4 @@ export default async () =>
 		}
 	})((await import("../Variable/NPM.js")).default);
 
-import type Files from "../Type/Files.js";
+import type Files from "../Type/File.js";

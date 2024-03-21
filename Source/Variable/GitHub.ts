@@ -30,4 +30,4 @@ export default new Set([
 	},
 ]) satisfies Type;
 
-import type Type from "../Type/Files.js";
+import type Type from "../Type/File.js";
