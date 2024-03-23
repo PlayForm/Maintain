@@ -1,0 +1,62 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta name="keywords" content="typescript-document"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@yesmaintain/cli - v0.0.4</title><meta name="description" content="Documentation for @yesmaintain/cli"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><link rel="stylesheet" href="assets/custom.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@yesmaintain/cli - v0.0.4</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h2>@yesmaintain/cli - v0.0.4</h2></div><div class="tsd-panel tsd-typography"><a id="md:🔧-maintain" class="tsd-anchor"></a><h1><a href="#md:🔧-maintain">🔧 <a href="https://github.com/Maintain">Maintain</a></a></h1><p>Maintain GitHub.</p>
+<a id="md:installation" class="tsd-anchor"></a><h2><a href="#md:installation">Installation</a></h2><p>Using NPM</p>
+<pre><code class="language-sh"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-3">-g</span><span class="hl-1"> </span><span class="hl-2">@yesmaintain/cli</span>
+</code><button>Copy</button></pre>
+<p>Using Yarn</p>
+<pre><code class="language-sh"><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">global</span><span class="hl-1"> </span><span class="hl-2">add</span><span class="hl-1"> </span><span class="hl-2">@yesmaintain/cli</span>
+</code><button>Copy</button></pre>
+<p>Using PNPM</p>
+<pre><code class="language-sh"><span class="hl-0">pnpm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-3">-g</span><span class="hl-1"> </span><span class="hl-2">@yesmaintain/cli</span>
+</code><button>Copy</button></pre>
+<p>or direct usage:</p>
+<p>Using NPM</p>
+<pre><code class="language-sh"><span class="hl-0">npx</span><span class="hl-1"> </span><span class="hl-2">@yesmaintain/cli</span>
+</code><button>Copy</button></pre>
+<p>Using Yarn</p>
+<pre><code class="language-sh"><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">@yesmaintain/cli</span>
+</code><button>Copy</button></pre>
+<p>Using PNPM</p>
+<pre><code class="language-sh"><span class="hl-0">pnpx</span><span class="hl-1"> </span><span class="hl-2">@yesmaintain/cli</span>
+</code><button>Copy</button></pre>
+<a id="md:cli-usage" class="tsd-anchor"></a><h2><a href="#md:cli-usage">CLI Usage:</a></h2><p>Delete all GitHub Actions runs and their logs for all of your repositories:</p>
+<pre><code class="language-sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Clean</span>
+</code><button>Copy</button></pre>
+<p>Create a <code>dependabot.yml</code> file for each of the <code>.github</code> directories in each of
+the packages for the monorepo:</p>
+<pre><code class="language-sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Dependabot</span>
+</code><button>Copy</button></pre>
+<p>Dispatch all workflows for all repositories for a given user:</p>
+<pre><code class="language-sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Dispatch</span>
+</code><button>Copy</button></pre>
+<p>or specific repositories by name:</p>
+<pre><code class="language-sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Dispatch</span><span class="hl-1"> </span><span class="hl-2">Repository1</span><span class="hl-1"> </span><span class="hl-2">Repository2</span>
+</code><button>Copy</button></pre>
+<p><code>Enable</code> / <code>Disable</code> all the features that GitHub offers for all the
+repositories that you have access to:</p>
+<pre><code class="language-sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Edit</span>
+</code><button>Copy</button></pre>
+<p>Create a <code>Node.yml</code> file in the <code>.github/workflows</code> directory for each
+repository that has a <code>package.json</code> file.</p>
+<pre><code class="language-sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Node</span>
+</code><button>Copy</button></pre>
+<p>Create a <code>NPM.yml</code> file in the <code>.github/workflows</code> directory for each repository
+that has a <code>package.json</code> file.</p>
+<pre><code class="language-sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">NPM</span>
+</code><button>Copy</button></pre>
+<p>Create a <code>Rust.yml</code> file in the <code>.github/workflows</code> directory for each
+repository that has a <code>Cargo.toml</code> file.</p>
+<pre><code class="language-sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Rust</span>
+</code><button>Copy</button></pre>
+<p>Run all workflow tasks.</p>
+<pre><code class="language-sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Workflow</span>
+</code><button>Copy</button></pre>
+<p>Finds all the <code>package.json</code> files in the project, and then star all the
+dependencies in that <code>package.json</code>.</p>
+<pre><code class="language-sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Star</span>
+</code><button>Copy</button></pre>
+<p><strong>.env</strong></p>
+<pre><code class="language-env">User=&quot;Username&quot;
+Base=&quot;Folder&quot;
+Token=&quot;AAAA&quot;
+</code><button>Copy</button></pre>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#md:🔧-maintain"><span>🔧 <wbr/>Maintain</span></a><ul><li><a href="#md:installation"><span>Installation</span></a></li><li><a href="#md:cli-usage"><span>CLI <wbr/>Usage:</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="index.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="assets/icons.svg#icon-1"></use></svg><span>@yesmaintain/cli - v0.0.4</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="."><li>Loading...</li></ul></nav></div></div></div><div class="tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div></body></html>

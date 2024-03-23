@@ -1,7 +1,7 @@
-var d=async()=>await(async w=>{for(const{Path:e,Name:c,File:u}of w)for(const[n,y]of await(await import("../Function/Directory.js")).default(await(await import("../Function/Package.js")).default("NPM"))){const o=`${n}/.github`,i=await u();if(e==="/workflows/"&&c==="NPM.yml")for(const a of y){const s=(await import("path")).dirname(a).replace(n,""),m=(await(await import("fs/promises")).readFile(a,"utf-8")).toString(),l=(await(await import("../Function/Type.js")).default()).get(a.split("/").pop());try{if(typeof l<"u"&&l==="NPM"){const t=JSON.parse(m);for(const r in t)if(Object.prototype.hasOwnProperty.call(t,r)){const p=t[r];if(r==="scripts")for(const f in p)Object.prototype.hasOwnProperty.call(p,f)&&f==="prepublishOnly"&&i.add(`
-            - name: Publish .${s}
+var d=async()=>await(async w=>{for(const{Path:e,Name:c,File:u}of w)for(const[n,y]of await(await import("../Function/Directory.js")).default(await(await import("../Function/Package.js")).default("NPM"))){const o=`${n}/.github`,i=await u();if(e==="/workflows/"&&c==="NPM.yml")for(const a of y){const l=(await import("path")).dirname(a).replace(n,""),m=(await(await import("fs/promises")).readFile(a,"utf-8")).toString(),s=(await(await import("../Function/Type.js")).default()).get(a.split("/").pop());try{if(typeof s<"u"&&s==="NPM"){const t=JSON.parse(m);for(const r in t)if(Object.prototype.hasOwnProperty.call(t,r)){const p=t[r];if(r==="scripts")for(const f in p)Object.prototype.hasOwnProperty.call(p,f)&&f==="prepublishOnly"&&i.add(`
+            - name: Publish .${l}
               continue-on-error: true
-              working-directory: .${s}
+              working-directory: .${l}
               run: |
                   npm install --legacy-peer-deps
                   npm publish --legacy-peer-deps --provenance
