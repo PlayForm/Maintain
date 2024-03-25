@@ -118,5 +118,5 @@ Base="Folder"
 Token="AAAA"
 ```
 
-[Maintain]: https://github.com/Maintain
+[Maintain]: HTTPS://GitHub.Com/Maintain
 [@yesmaintain/cli]: https://npmjs.org/@yesmaintain/cli

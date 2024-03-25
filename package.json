@@ -3,19 +3,19 @@
 	"version": "0.0.4",
 	"private": false,
 	"description": "🔧 Maintain GitHub.",
-	"homepage": "https://github.com/YesMaintain/NPMCLI#readme",
+	"homepage": "HTTPS://GitHub.Com/YesMaintain/NPMCLI#readme",
 	"bugs": {
-		"url": "https://github.com/YesMaintain/NPMCLI/issues"
+		"url": "HTTPS://GitHub.Com/YesMaintain/NPMCLI/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/YesMaintain/NPMCLI.git"
+		"url": "git+HTTPS://GitHub.Com/YesMaintain/NPMCLI.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "Nikola R. Hristov",
 		"email": "Nikola@Playform.Cloud",
-		"url": "https://nikolahristov.tech"
+		"url": "HTTPS://NikolaHristov.Tech"
 	},
 	"type": "module",
 	"main": "./Target/Class/Maintain.js",
