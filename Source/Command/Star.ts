@@ -42,7 +42,7 @@ export default async () => {
 		(await import("../Function/Star.js")).default(
 			(
 				await (
-					await fetch(`https://registry.npmjs.org/${_Dependency}`)
+					await fetch(`HTTPS://Registry.NPMJS.Org/${_Dependency}`)
 				).json()
 			).repository.url,
 		);
