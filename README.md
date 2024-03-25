@@ -119,4 +119,4 @@ Token="AAAA"
 ```
 
 [Maintain]: HTTPS://GitHub.Com/Maintain
-[@yesmaintain/cli]: https://npmjs.org/@yesmaintain/cli
+[@yesmaintain/cli]: HTTPS://NPMJS.Org/@yesmaintain/cli
