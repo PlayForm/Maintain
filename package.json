@@ -43,8 +43,8 @@
 		"@types/pacote": "11.1.8",
 		"esbuild": "0.20.2",
 		"esbuild-plugin-copy": "2.1.1",
-		"typescript-document": "0.0.5",
-		"typescript-esbuild": "0.4.5"
+		"typescript-document": "0.0.6",
+		"typescript-esbuild": "0.4.6"
 	},
 	"publishConfig": {
 		"access": "public"
