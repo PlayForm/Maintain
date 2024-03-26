@@ -8,7 +8,7 @@ export default async (URL = "") => {
 	}
 
 	const _URL = URL?.replace("git://", "https://")
-		?.replace("HTTPS://GitHub.Com/", "")
+		?.replace("https://github.com/", "")
 		?.replace("git+", "")
 		?.replace(".git", "");
 
