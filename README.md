@@ -1,6 +1,6 @@
 # 🔧 [Maintain]
 
-Maintain GitHub.
+Maintain GitHub repositories.
 
 ## Installation
 
@@ -119,4 +119,4 @@ Token="AAAA"
 ```
 
 [Maintain]: https://github.com/Maintain
-[@yesmaintain/cli]: https://NPMJS.Org/@yesmaintain/cli
+[@yesmaintain/cli]: https://npmjs.org/@yesmaintain/cli
