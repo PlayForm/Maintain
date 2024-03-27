@@ -1,4 +1,4 @@
-# 🔧 [Maintain]
+# 🔧 [Maintain]
 
 Maintain GitHub.
 
