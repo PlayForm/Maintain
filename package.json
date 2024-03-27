@@ -2,7 +2,7 @@
 	"name": "@yesmaintain/cli",
 	"version": "0.0.4",
 	"private": false,
-	"description": "🔧 Maintain GitHub.",
+	"description": "🔧  Maintain GitHub.",
 	"homepage": "https://github.com/YesMaintain/NPMCLI#readme",
 	"bugs": {
 		"url": "https://github.com/YesMaintain/NPMCLI/issues"

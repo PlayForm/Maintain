@@ -5,7 +5,7 @@
  */
 const Program = new (await import("commander")).Command()
 	.name("Maintain")
-	.description("🔧 Maintain GitHub repositories.")
+	.description("🔧  Maintain GitHub repositories.")
 	.version(process.env["VERSION_PACKAGE"] ?? "0.0.1");
 
 (await import("../Variable/Command.js")).default?.forEach(
