@@ -5,7 +5,7 @@ var $=async()=>await(async u=>{for(const{Path:n,Name:p,File:w}of u)for(const[r,m
                   cache: "pnpm"
                   cache-dependency-path: .${t}/pnpm-lock.yaml
 
-            - run: pnpm install
+            - run: pnpm install --legacy-peer-deps
               working-directory: .${t}
 `);for(const i in a)if(Object.prototype.hasOwnProperty.call(a,i)){const f=a[i];if(i==="scripts")for(const s in f)Object.prototype.hasOwnProperty.call(f,s)&&(s==="build"&&o.add(`
             - run: pnpm run build

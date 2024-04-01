@@ -39,12 +39,14 @@
 	"devDependencies": {
 		"@octokit/types": "12.6.0",
 		"@types/etag": "1.8.3",
-		"@types/node": "20.11.30",
+		"@types/node": "20.12.2",
 		"@types/pacote": "11.1.8",
 		"esbuild": "0.20.2",
 		"esbuild-plugin-copy": "2.1.1",
-		"typescript-document": "0.0.7",
-		"typescript-esbuild": "0.4.9"
+		"@playform/build": "0.0.1"
+	},
+	"optionalDependencies": {
+		"@playform/document": "0.0.2"
 	},
 	"publishConfig": {
 		"access": "public"
