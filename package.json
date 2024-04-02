@@ -38,12 +38,12 @@
 	},
 	"devDependencies": {
 		"@octokit/types": "12.6.0",
+		"@playform/build": "0.0.1",
 		"@types/etag": "1.8.3",
 		"@types/node": "20.12.2",
 		"@types/pacote": "11.1.8",
 		"esbuild": "0.20.2",
-		"esbuild-plugin-copy": "2.1.1",
-		"@playform/build": "0.0.1"
+		"esbuild-plugin-copy": "2.1.1"
 	},
 	"optionalDependencies": {
 		"@playform/document": "0.0.2"
