@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"outDir": "Target"
+	},
+	"extends": "@playform/build/Target/Notation/TypeScript",
+	"include": ["Source"]
+}

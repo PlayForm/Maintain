@@ -1,0 +1,54 @@
+{
+	"name": "@playform/maintain",
+	"version": "0.0.4",
+	"private": false,
+	"description": "🔧 Maintain GitHub.",
+	"homepage": "https://github.com/YesMaintain/NPMCLI#ReadMe",
+	"bugs": {
+		"url": "https://github.com/YesMaintain/NPMCLI/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/YesMaintain/NPMCLI.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Nikola R. Hristov",
+		"email": "nikola@playform.cloud",
+		"url": "https://nikolahristov.tech"
+	},
+	"type": "module",
+	"main": "./Target/Class/Maintain.js",
+	"types": "./Target/Class/Maintain.d.ts",
+	"bin": {
+		"Maintain": "Target/Class/Maintain.js"
+	},
+	"scripts": {
+		"Document": "TypeScriptDocument 'Source/**/*.ts'",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts' -ES Configuration/ESBuild.ts"
+	},
+	"dependencies": {
+		"@octokit/core": "6.0.1",
+		"commander": "12.0.0",
+		"deepmerge-ts": "5.1.0",
+		"dotenv": "16.4.5",
+		"etag": "1.8.1",
+		"fast-glob": "3.3.2",
+		"zod": "3.22.4"
+	},
+	"devDependencies": {
+		"@octokit/types": "12.6.0",
+		"@playform/build": "0.0.1",
+		"@types/etag": "1.8.3",
+		"@types/node": "20.12.2",
+		"@types/pacote": "11.1.8",
+		"esbuild": "0.20.2",
+		"esbuild-plugin-copy": "2.1.1"
+	},
+	"optionalDependencies": {
+		"@playform/document": "0.0.2"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
