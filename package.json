@@ -1,21 +1,27 @@
 {
 	"name": "@playform/maintain",
-	"version": "0.0.4",
+	"version": "0.0.1",
 	"private": false,
-	"description": "🔧 Maintain GitHub.",
-	"homepage": "https://github.com/YesMaintain/NPMCLI#ReadMe",
+	"description": "🔧 Maintain.",
+	"keywords": [
+		"git",
+		"github",
+		"maintain",
+		"workflow"
+	],
+	"homepage": "https://github.com/Playform/Maintain#ReadMe",
 	"bugs": {
-		"url": "https://github.com/YesMaintain/NPMCLI/issues"
+		"url": "https://github.com/Playform/Maintain/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/YesMaintain/NPMCLI.git"
+		"url": "git+https://github.com/Playform/Maintain.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Nikola R. Hristov",
-		"email": "nikola@playform.cloud",
-		"url": "https://nikolahristov.tech"
+		"name": "Playform",
+		"email": "hello@playform.cloud",
+		"url": "https://playform.cloud"
 	},
 	"type": "module",
 	"main": "./Target/Class/Maintain.js",
@@ -24,8 +30,8 @@
 		"Maintain": "Target/Class/Maintain.js"
 	},
 	"scripts": {
-		"Document": "TypeScriptDocument 'Source/**/*.ts'",
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts' -ES Configuration/ESBuild.ts"
+		"Document": "Document 'Source/**/*.ts'",
+		"prepublishOnly": "Build 'Source/**/*.ts' --ESBuild Configuration/ESBuild.ts"
 	},
 	"dependencies": {
 		"@octokit/core": "6.0.1",
@@ -37,10 +43,10 @@
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@octokit/types": "12.6.0",
-		"@playform/build": "0.0.1",
+		"@octokit/types": "13.0.0",
+		"@playform/build": "0.0.2",
 		"@types/etag": "1.8.3",
-		"@types/node": "20.12.2",
+		"@types/node": "20.12.3",
 		"@types/pacote": "11.1.8",
 		"esbuild": "0.20.2",
 		"esbuild-plugin-copy": "2.1.1"

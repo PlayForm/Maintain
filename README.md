@@ -1,6 +1,6 @@
 # 🔧 [Maintain]
 
-Maintain GitHub repositories.
+Maintain GitHub.
 
 ## Installation
 

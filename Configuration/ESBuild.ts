@@ -1,17 +1,26 @@
+/**
+ * @module ESBuild
+ *
+ */
 export default {
+	color: true,
 	format: "esm",
+	metafile: true,
 	minify: true,
 	outdir: "Target",
 	platform: "node",
 	target: "esnext",
 	write: true,
+	logLevel: "debug",
 	plugins: [
 		{
 			name: "Target",
 			setup({ onStart, initialOptions: { outdir } }) {
 				onStart(async () => {
 					try {
-						await (await import("fs/promises")).rm(outdir, {
+						await (
+							await import("fs/promises")
+						).rm(outdir, {
 							recursive: true,
 						});
 					} catch (_Error) {
