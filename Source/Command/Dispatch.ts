@@ -2,7 +2,7 @@
  * @module Dispatch
  *
  */
-export default async (repositories: string[] | Set<string> = []) => {
+export default async (Repository: string[] | Set<string> = []) => {
 	const User = (await import("../Variable/Environment.js")).default.parse(
 		process.env,
 	).User;
@@ -42,7 +42,7 @@ export default async (repositories: string[] | Set<string> = []) => {
 
 	for (const { name, owner } of Repositories) {
 		/* Checking if the repository is in the list of repositories. */
-		for (const repository of repositories) {
+		for (const repository of Repository) {
 			if (name === repository) {
 				pass = true;
 			} else {
