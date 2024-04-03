@@ -1,10 +1,17 @@
+/**
+ * @module ESBuild
+ *
+ */
 export default {
+    color: true,
     format: "esm",
+    metafile: true,
     minify: true,
     outdir: "Target",
     platform: "node",
     target: "esnext",
     write: true,
+    logLevel: "debug",
     plugins: [
         {
             name: "Target",
