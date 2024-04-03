@@ -13,7 +13,7 @@ export default new Set([
 						resolve(
 							`${dirname(
 								fileURLToPath(import.meta.url),
-							)}/../../Target/Workflow/dependabot.yml`,
+							)}/../../Workflow/dependabot.yml`,
 						),
 						"utf-8",
 					)
@@ -30,7 +30,7 @@ export default new Set([
 						resolve(
 							`${dirname(
 								fileURLToPath(import.meta.url),
-							)}/../../Target/Workflow/InnerDependabot.yml`,
+							)}/../../Workflow/InnerDependabot.yml`,
 						),
 						"utf-8",
 					)

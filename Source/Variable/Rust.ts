@@ -21,7 +21,7 @@ export default new Set([
 								(
 									await import("url")
 								).fileURLToPath(import.meta.url),
-							)}/../../Target/Workflow/Rust.yml`,
+							)}/../../Workflow/Rust.yml`,
 						),
 						"utf-8",
 					)

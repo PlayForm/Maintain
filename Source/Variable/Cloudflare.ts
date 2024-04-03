@@ -21,7 +21,7 @@ export default new Set([
 								(
 									await import("url")
 								).fileURLToPath(import.meta.url),
-							)}/../../Target/Workflow/Cloudflare.yml`,
+							)}/../../Workflow/Cloudflare.yml`,
 						),
 						"utf-8",
 					)

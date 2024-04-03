@@ -21,7 +21,7 @@ export default new Set([
 								(
 									await import("url")
 								).fileURLToPath(import.meta.url),
-							)}/../../Target/Workflow/Node.yml`,
+							)}/../../Workflow/Node.yml`,
 						),
 						"utf-8",
 					)

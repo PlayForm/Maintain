@@ -22,7 +22,7 @@ export default new Set([
 								(
 									await import("url")
 								).fileURLToPath(import.meta.url),
-							)}/../../Target/Workflow/NPM.yml`,
+							)}/../../Workflow/NPM.yml`,
 						),
 						"utf-8",
 					)
