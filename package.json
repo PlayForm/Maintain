@@ -31,7 +31,7 @@
 	},
 	"scripts": {
 		"Document": "Document 'Source/**/*.ts'",
-		"prepublishOnly": "Build 'Source/**/*.ts'"
+		"Build": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"@octokit/core": "6.0.1",
