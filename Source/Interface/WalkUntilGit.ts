@@ -2,7 +2,7 @@
  * @module WalkUntilGit
  *
  */
-export default interface Type {
+export default interface Interface {
 	/**
 	 * The function recursively walks through directories until it finds a ".git" folder or reaches the
 	 * root directory.

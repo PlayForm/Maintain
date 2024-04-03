@@ -2,7 +2,7 @@
  * @module Type
  *
  */
-export default interface Type {
+export default interface Interface {
 	(Filter?: Package): Promise<Map<string, Package>>;
 }
 
