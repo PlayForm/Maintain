@@ -74,24 +74,25 @@ export default async () =>
 									}
 								}
 
-								for (const key in JSONPackage) {
+								for (const Key in JSONPackage) {
 									if (
 										Object.prototype.hasOwnProperty.call(
 											JSONPackage,
-											key
+											Key
 										)
 									) {
-										const values = JSONPackage[key];
-										if (key === "scripts") {
-											for (const scripts in values) {
+										const Value = JSONPackage[Key];
+
+										if (Key === "scripts") {
+											for (const Script in Value) {
 												if (
 													Object.prototype.hasOwnProperty.call(
-														values,
-														scripts
+														Value,
+														Script
 													)
 												) {
 													// TODO: Rework this to have scripts in an array and checked in a foreach
-													if (scripts === "build") {
+													if (Script === "build") {
 														Base.add(`
             - run: pnpm run build
               working-directory: .
@@ -104,7 +105,7 @@ export default async () =>
 													}
 
 													if (
-														scripts ===
+														Script ===
 														"prepublishOnly"
 													) {
 														Base.add(`
@@ -118,7 +119,7 @@ export default async () =>
 `);
 													}
 
-													if (scripts === "Build") {
+													if (Script === "Build") {
 														Base.add(`
             - run: pnpm run Build
               working-directory: .
@@ -130,7 +131,7 @@ export default async () =>
 `);
 													}
 
-													if (scripts === "test") {
+													if (Script === "test") {
 														Base.add(`
             - run: pnpm run test
               working-directory: .${Directory}
