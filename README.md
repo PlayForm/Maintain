@@ -112,10 +112,10 @@ Maintain Star
 
 **.env**
 
-```env
-User="Username"
-Base="Folder"
-Token="AAAA"
+```sh
+User="User"
+Base="Base"
+Token="Token"
 ```
 
 [Maintain]: https://github.com/Maintain
