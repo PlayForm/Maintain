@@ -12,18 +12,14 @@ export default new Set([
 					await (
 						await import("fs/promises")
 					).readFile(
-						(
-							await import("path")
-						).resolve(
-							`${(
-								await import("path")
-							).dirname(
-								(
-									await import("url")
-								).fileURLToPath(import.meta.url),
-							)}/../../Workflow/GitHub.yml`,
+						(await import("path")).resolve(
+							`${(await import("path")).dirname(
+								(await import("url")).fileURLToPath(
+									import.meta.url
+								)
+							)}/../../Workflow/GitHub.yml`
 						),
-						"utf-8",
+						"utf-8"
 					)
 				).toString(),
 			]),

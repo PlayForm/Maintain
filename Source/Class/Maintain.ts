@@ -2,22 +2,24 @@
 
 /**
  * @module Maintain
+ *
  */
-const Program = new (await import("commander")).Command()
+const _Class = new (await import("commander")).Command()
 	.name("Maintain")
 	.description("🔧 Maintain.")
 	.version(process.env["VERSION_PACKAGE"] ?? "0.0.1");
 
 (await import("../Variable/Command.js")).default?.forEach(
 	({ Action, Name, Description, Arguments }) => {
-		const _Program = Program.command(Name)
+		const Command = _Class
+			.command(Name)
 			.description(typeof Description !== "undefined" ? Description : "")
 			.action(Action);
 
 		Arguments?.forEach(({ Name, Description }) =>
-			_Program.argument(Name, Description)
+			Command.argument(Name, Description)
 		);
 	}
 );
 
-export default Program.parse();
+export default _Class.parse();

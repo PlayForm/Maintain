@@ -5,7 +5,7 @@
 export default async (
 	Where: string,
 	With = {},
-	Type = "octokit",
+	Type = "octokit"
 	// biome-ignore lint/suspicious/noExplicitAny:
 ): Promise<OctokitResponse<any, number> | any> => {
 	try {
@@ -22,10 +22,10 @@ export default async (
 					(await import("deepmerge-ts")).deepmerge(With, {
 						headers: {
 							"If-None-Match": (await import("etag")).default(
-								Where,
+								Where
 							),
 						},
-					}),
+					})
 				);
 			}
 		}

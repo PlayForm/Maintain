@@ -23,7 +23,7 @@ export default async (Repositories: string[] = []) => {
 			});
 
 			const Repositories = await Request(
-				`GET /orgs/${Organization.login}/repos`,
+				`GET /orgs/${Organization.login}/repos`
 			);
 
 			if (Repositories) {
@@ -55,7 +55,7 @@ export default async (Repositories: string[] = []) => {
 				{
 					owner: Repository.Owner,
 					repo: Repository.Name,
-				},
+				}
 			);
 
 			if (Run?.data?.workflow_runs) {
@@ -67,7 +67,7 @@ export default async (Repositories: string[] = []) => {
 							owner: Repository.Owner,
 							repo: Repository.Name,
 							run_id: run.id,
-						},
+						}
 					);
 
 					await Request(
@@ -76,7 +76,7 @@ export default async (Repositories: string[] = []) => {
 							owner: Repository.Owner,
 							repo: Repository.Name,
 							run_id: run.id,
-						},
+						}
 					);
 				}
 				// end: actions/runs
@@ -87,7 +87,7 @@ export default async (Repositories: string[] = []) => {
 				{
 					owner: Repository.Owner,
 					repo: Repository.Name,
-				},
+				}
 			);
 
 			if (Caches?.data?.actions_caches) {
@@ -99,7 +99,7 @@ export default async (Repositories: string[] = []) => {
 							owner: Repository.Owner,
 							repo: Repository.Name,
 							cache_id: Cache.id,
-						},
+						}
 					);
 				}
 				// end: actions/caches
@@ -112,7 +112,7 @@ export default async (Repositories: string[] = []) => {
 export const { default: Request } = await import("../Function/Request.js");
 
 export const User = (await import("../Variable/Environment.js")).default.parse(
-	process.env,
+	process.env
 ).User;
 
 export const All: {
