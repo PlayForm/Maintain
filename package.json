@@ -45,11 +45,11 @@
 	"devDependencies": {
 		"@octokit/types": "13.0.0",
 		"@playform/build": "0.0.2",
+		"@playform/document": "0.0.3",
 		"@types/etag": "1.8.3",
 		"@types/node": "20.12.4",
 		"@types/pacote": "11.1.8",
-		"esbuild": "0.20.2",
-		"@playform/document": "0.0.3"
+		"esbuild": "0.20.2"
 	},
 	"publishConfig": {
 		"access": "public"
