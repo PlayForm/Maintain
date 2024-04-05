@@ -25,7 +25,7 @@ export const Variable: Set<{
 				Description: "Repositories to clean.",
 			},
 		]),
-		Action: (await import("../Command/Clean.js")).default,
+		Action: (await import("@Command/Clean.js")).default,
 	},
 	{
 		Name: "Dispatch",
@@ -37,13 +37,13 @@ export const Variable: Set<{
 					"Repositories on which to trigger dispatch events.",
 			},
 		]),
-		Action: (await import("../Command/Dispatch.js")).default,
+		Action: (await import("@Command/Dispatch.js")).default,
 	},
 	{
 		Name: "Dependabot",
 		Type: "Workflow",
 		Description: "Put Dependabot everywhere.",
-		Action: (await import("../Command/Dependabot.js")).default,
+		Action: (await import("@Command/Dependabot.js")).default,
 	},
 	{
 		Name: "Edit",
@@ -54,13 +54,13 @@ export const Variable: Set<{
 			},
 		]),
 		Description: "Edit features for all repositories.",
-		Action: (await import("../Command/Edit.js")).default,
+		Action: (await import("@Command/Edit.js")).default,
 	},
 	{
 		Name: "Node",
 		Type: "Workflow",
 		Description: "Put Node into GitHub Actions.",
-		Action: (await import("../Command/Node.js")).default,
+		Action: (await import("@Command/Node.js")).default,
 	},
 	{
 		Name: "Complexity",
@@ -71,31 +71,31 @@ export const Variable: Set<{
 			},
 		]),
 		Description: "Complexity detection.",
-		Action: (await import("../Command/Complexity.js")).default,
+		Action: (await import("@Command/Complexity.js")).default,
 	},
 	{
 		Name: "Cloudflare",
 		Type: "Workflow",
 		Description: "Put Cloudflare into GitHub Actions.",
-		Action: (await import("../Command/Cloudflare.js")).default,
+		Action: (await import("@Command/Cloudflare.js")).default,
 	},
 	{
 		Name: "NPM",
 		Type: "Workflow",
 		Description: "Put NPM into GitHub Actions.",
-		Action: (await import("../Command/NPM.js")).default,
+		Action: (await import("@Command/NPM.js")).default,
 	},
 	{
 		Name: "Rust",
 		Type: "Workflow",
 		Description: "Put rust into GitHub Actions.",
-		Action: (await import("../Command/Rust.js")).default,
+		Action: (await import("@Command/Rust.js")).default,
 	},
 	{
 		Name: "GitHub",
 		Type: "Workflow",
 		Description: "Put GitHub into GitHub Actions.",
-		Action: (await import("../Command/GitHub.js")).default,
+		Action: (await import("@Command/GitHub.js")).default,
 	},
 	{
 		Name: "Workflow",
@@ -108,7 +108,7 @@ export const Variable: Set<{
 	{
 		Name: "Star",
 		Description: "Star all my used repositories.",
-		Action: (await import("../Command/Star.js")).default,
+		Action: (await import("@Command/Star.js")).default,
 	},
 ]);
 

@@ -2,7 +2,28 @@
 	"compilerOptions": {
 		"baseUrl": "./",
 		"lib": ["ESNext", "DOM", "DOM.Iterable"],
-		"outDir": "Target"
+		"outDir": "Target",
+		"paths": {
+			"@Asset/*": ["Source/Asset/*"],
+			"@Class/*": ["Source/Class/*"],
+			"@Command/*": ["Source/Command/*"],
+			"@Component/*": ["Source/Component/*"],
+			"@Context/*": ["Source/Context/*"],
+			"@Element/*": ["Source/Element/*"],
+			"@Function/*": ["Source/Function/*"],
+			"@Interface/*": ["Source/Interface/*"],
+			"@Layout/*": ["Source/Layout/*"],
+			"@Library/*": ["Source/Library/*"],
+			"@Notation/*": ["Source/Notation/*"],
+			"@Option/*": ["Source/Option/*"],
+			"@Page/*": ["Source/pages/*"],
+			"@Script/*": ["Source/Script/*"],
+			"@Stylesheet/*": ["Source/Stylesheet/*"],
+			"@Target/*": ["Source/Target/*"],
+			"@Test/*": ["Source/Test/*"],
+			"@Type/*": ["Source/Type/*"],
+			"@Variable/*": ["Source/Variable/*"]
+		}
 	},
 	"extends": "@playform/build/tsconfig",
 	"include": ["Source"]

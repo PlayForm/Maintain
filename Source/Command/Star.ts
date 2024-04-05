@@ -38,7 +38,7 @@ export default async () => {
 	}
 
 	for (const _Dependency of Dependency) {
-		(await import("../Function/Star.js")).default(
+		(await import("@Function/Star.js")).default(
 			(
 				await (
 					await fetch(`https://registry.npmjs.org/${_Dependency}`)

@@ -142,4 +142,4 @@ export default async (_Repository: string[] | Set<string> = []) => {
 	// end: repos
 };
 
-export const { default: Request } = await import("../Function/Request.js");
+export const { default: Request } = await import("@Function/Request.js");

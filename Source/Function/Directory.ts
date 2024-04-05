@@ -19,7 +19,7 @@ export default async (Search: Set<string>) => {
 
 	for (const _Search of Search) {
 		const Directory = await (
-			await import("./WalkUntilGit.js")
+			await import("@Function/WalkUntilGit.js")
 		).default(_Search);
 
 		Results.set(
