@@ -48,6 +48,6 @@ export default async () =>
 				}
 			}
 		}
-	})((await import("../Variable/GitHub.js")).default);
+	})((await import("@Variable/GitHub.js")).default);
 
-import type Files from "../Type/File.js";
+import type Files from "@Type/File.js";

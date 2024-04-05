@@ -75,11 +75,11 @@ export default async (Filter: Type = false) =>
 				{
 					absolute: true,
 					cwd: (
-						await import("../Variable/Environment.js")
+						await import("@Variable/Environment.js")
 					).default.parse(process.env).Base,
 				}
 			)),
 		].sort()
 	);
 
-import type Type from "../Type/Package.js";
+import type Type from "@Type/Package.js";

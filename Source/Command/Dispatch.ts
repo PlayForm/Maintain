@@ -3,7 +3,7 @@
  *
  */
 export default async (Repository: string[] | Set<string> = []) => {
-	const User = (await import("../Variable/Environment.js")).default.parse(
+	const User = (await import("@Variable/Environment.js")).default.parse(
 		process.env
 	).User;
 

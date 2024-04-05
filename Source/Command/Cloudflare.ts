@@ -103,6 +103,6 @@ export default async () =>
 				}
 			}
 		}
-	})((await import("../Variable/Cloudflare.js")).default);
+	})((await import("@Variable/Cloudflare.js")).default);
 
-import type Files from "../Type/File.js";
+import type Files from "@Type/File.js";

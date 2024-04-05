@@ -25,5 +25,5 @@ export default (async (...[Filter = false]: Parameters<Type>) => {
 	return Result;
 }) satisfies Type as Type;
 
-import type Type from "../Interface/Type.js";
-import type Package from "../Type/Package.js";
+import type Type from "@Interface/Type.js";
+import type Package from "@Type/Package.js";

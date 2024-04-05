@@ -111,7 +111,7 @@ export default async (Repositories: string[] = []) => {
 
 export const { default: Request } = await import("../Function/Request.js");
 
-export const User = (await import("../Variable/Environment.js")).default.parse(
+export const User = (await import("@Variable/Environment.js")).default.parse(
 	process.env
 ).User;
 

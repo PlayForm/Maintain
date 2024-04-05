@@ -9,7 +9,7 @@ const _Class = new (await import("commander")).Command()
 	.description("🔧 Maintain.")
 	.version(process.env["VERSION_PACKAGE"] ?? "0.0.1");
 
-(await import("../Variable/Command.js")).default?.forEach(
+(await import("@Variable/Command.js")).default?.forEach(
 	({ Action, Name, Description, Arguments }) => {
 		const Command = _Class
 			.command(Name)

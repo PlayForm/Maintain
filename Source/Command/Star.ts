@@ -9,7 +9,7 @@ export default async () => {
 		await import("fast-glob")
 	).default(["**/package.json", "!**/node_modules"], {
 		absolute: true,
-		cwd: (await import("../Variable/Environment.js")).default.parse(
+		cwd: (await import("@Variable/Environment.js")).default.parse(
 			process.env
 		).Base,
 	})) {

@@ -39,7 +39,7 @@ export default new Set([
 	},
 ]) satisfies Type;
 
-import type Type from "../Type/File.js";
+import type Type from "@Type/File.js";
 
 export const { readFile } = await import("fs/promises");
 
