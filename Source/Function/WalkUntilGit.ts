@@ -2,7 +2,7 @@
  * @module WalkUntilGit
  *
  */
-export const _Function = (async (...[Search, From]: Parameters<Type>) => {
+export const _Function = (async (...[Search, From]: Parameters<Interface>) => {
 	const Path = (await import("path")).dirname(Search);
 	const Original = From ?? Path;
 
@@ -19,8 +19,8 @@ export const _Function = (async (...[Search, From]: Parameters<Type>) => {
 	} catch (_Error) {
 		return await _Function(Path, Original);
 	}
-}) satisfies Type as Type;
+}) satisfies Interface as Interface;
 
 export default _Function;
 
-import type Type from "@Interface/WalkUntilGit";
+import type Interface from "@Interface/WalkUntilGit";

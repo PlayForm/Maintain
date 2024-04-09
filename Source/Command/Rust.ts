@@ -29,9 +29,7 @@ export default async () =>
 							.replace(_Directory, "");
 
 						const Environment = (
-							await (
-								await import("@Function/Type.js")
-							).default()
+							await (await import("@Function/Type.js")).default()
 						).get(Package.split("/").pop());
 
 						if (

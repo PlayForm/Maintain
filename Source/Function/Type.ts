@@ -2,7 +2,7 @@
  * @module Type
  *
  */
-export default (async (...[Filter = false]: Parameters<Type>) => {
+export default (async (...[Filter = false]: Parameters<Interface>) => {
 	const Result = new Map<string, Package>();
 
 	Result.set("*.csproj", "Nuget");
@@ -23,7 +23,7 @@ export default (async (...[Filter = false]: Parameters<Type>) => {
 	}
 
 	return Result;
-}) satisfies Type as Type;
+}) satisfies Interface as Interface;
 
-import type Type from "@Interface/Type.js";
+import type Interface from "@Interface/Type.js";
 import type Package from "@Type/Package.js";

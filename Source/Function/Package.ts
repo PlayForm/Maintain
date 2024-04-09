@@ -11,7 +11,9 @@ export default async (Filter: Type = false) =>
 				[
 					...[
 						...(
-							await (await import("@Function/Type.js")).default(Filter)
+							await (
+								await import("@Function/Type.js")
+							).default(Filter)
 						).keys(),
 					].map((Package) => `**/${Package}`),
 					"!**/node_modules",
