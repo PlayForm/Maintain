@@ -2,6 +2,6 @@
  * @module WalkUntilGit
  *
  */
-export declare const _Function: Type;
+export declare const _Function: Interface;
 export default _Function;
-import type Type from "@Interface/WalkUntilGit";
+import type Interface from "@Interface/WalkUntilGit";

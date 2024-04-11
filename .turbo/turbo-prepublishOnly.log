@@ -1,0 +1,109 @@
+
+> @playform/maintain@0.0.3 prepublishOnly D:\Developer\Application\Playform\NPM\Maintain
+> Build 'Source/**/*.ts'
+
+
+  Target\Command\Node.js      2.9kb
+  Target\Command\NPM.js       2.1kb
+  Target\Variable\Command.js  1.8kb
+  Target\Command\Rust.js      1.7kb
+  Target\Command\Edit.js      1.6kb
+  ...and 28 more output files...
+
+⚡ Done in 24ms
+
+  Target/Command/Node.js ───────────── 2.9kb ─ 100.0%
+   └ Source/Command/Node.ts ────────── 2.9kb ── 99.3%
+
+  Target/Command/NPM.js ────────────── 2.1kb ─ 100.0%
+   └ Source/Command/NPM.ts ─────────── 2.1kb ── 99.0%
+
+  Target/Variable/Command.js ───────── 1.8kb ─ 100.0%
+   └ Source/Variable/Command.ts ────── 1.8kb ── 98.1%
+
+  Target/Command/Rust.js ───────────── 1.7kb ─ 100.0%
+   └ Source/Command/Rust.ts ────────── 1.7kb ── 98.8%
+
+  Target/Command/Edit.js ───────────── 1.6kb ─ 100.0%
+   └ Source/Command/Edit.ts ────────── 1.6kb ── 97.9%
+
+  Target/Command/Cloudflare.js ─────── 1.4kb ─ 100.0%
+   └ Source/Command/Cloudflare.ts ──── 1.4kb ── 98.4%
+
+  Target/Command/Clean.js ──────────── 1.3kb ─ 100.0%
+   └ Source/Command/Clean.ts ───────── 1.2kb ── 95.9%
+
+  Target/Function/Package.js ───────── 1.3kb ─ 100.0%
+   └ Source/Function/Package.ts ────── 1.3kb ── 98.3%
+
+  Target/Command/Dependabot.js ─────── 1.1kb ─ 100.0%
+   └ Source/Command/Dependabot.ts ──── 1.1kb ── 98.1%
+
+  Target/Command/Dispatch.js ───────── 735b ── 100.0%
+   └ Source/Command/Dispatch.ts ────── 700b ─── 95.2%
+
+  Target/Command/Star.js ───────────── 655b ── 100.0%
+   └ Source/Command/Star.ts ────────── 633b ─── 96.6%
+
+  Target/Command/GitHub.js ─────────── 598b ── 100.0%
+   └ Source/Command/GitHub.ts ──────── 576b ─── 96.3%
+
+  Target/Variable/Dependabot.js ────── 536b ── 100.0%
+   └ Source/Variable/Dependabot.ts ─── 455b ─── 84.9%
+
+  Target/Function/Star.js ──────────── 452b ── 100.0%
+   └ Source/Function/Star.ts ───────── 430b ─── 95.1%
+
+  Target/Class/Maintain.js ─────────── 403b ── 100.0%
+   └ Source/Class/Maintain.ts ──────── 361b ─── 89.6%
+
+  Target/Function/Request.js ───────── 392b ── 100.0%
+   └ Source/Function/Request.ts ────── 370b ─── 94.4%
+
+  Target/Function/Type.js ──────────── 359b ── 100.0%
+   └ Source/Function/Type.ts ───────── 337b ─── 93.9%
+
+  Target/Variable/Cloudflare.js ────── 325b ── 100.0%
+   └ Source/Variable/Cloudflare.ts ─── 303b ─── 93.2%
+
+  Target/Variable/GitHub.js ────────── 317b ── 100.0%
+   └ Source/Variable/GitHub.ts ─────── 295b ─── 93.1%
+
+  Target/Variable/Node.js ──────────── 313b ── 100.0%
+   └ Source/Variable/Node.ts ───────── 291b ─── 93.0%
+
+  Target/Variable/Rust.js ──────────── 313b ── 100.0%
+   └ Source/Variable/Rust.ts ───────── 291b ─── 93.0%
+
+  Target/Variable/NPM.js ───────────── 311b ── 100.0%
+   └ Source/Variable/NPM.ts ────────── 289b ─── 92.9%
+
+  Target/Function/WalkUntilGit.js ──── 279b ── 100.0%
+   └ Source/Function/WalkUntilGit.ts ─ 242b ─── 86.7%
+
+  Target/Variable/Environment.js ───── 268b ── 100.0%
+   └ Source/Variable/Environment.ts ── 234b ─── 87.3%
+
+  Target/Command/Complexity.js ─────── 235b ── 100.0%
+   └ Source/Command/Complexity.ts ──── 213b ─── 90.6%
+
+  Target/Function/Git.js ───────────── 231b ── 100.0%
+   └ Source/Function/Git.ts ────────── 192b ─── 83.1%
+
+  Target/Function/Readme.js ────────── 210b ── 100.0%
+   └ Source/Function/Readme.ts ─────── 188b ─── 89.5%
+
+  Target/Function/Directory.js ─────── 204b ── 100.0%
+   └ Source/Function/Directory.ts ──── 182b ─── 89.2%
+
+  Target/Type/Environment.js ────────── 59b ── 100.0%
+   └ Source/Type/Environment.ts ─────── 58b ─── 98.3%
+
+  Target/Interface/Type.js ───────────── 0b ── 100.0%
+
+  Target/Interface/WalkUntilGit.js ───── 0b ── 100.0%
+
+  Target/Type/File.js ────────────────── 0b ── 100.0%
+
+  Target/Type/Package.js ─────────────── 0b ── 100.0%
+
