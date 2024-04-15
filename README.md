@@ -118,5 +118,5 @@ Base="Base"
 Token="Token"
 ```
 
-[Maintain]: https://github.com/Maintain
+[Maintain.]: https://github.com/Maintain
 [@playform/maintain]: https://npmjs.org/@playform/maintain
