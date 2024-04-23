@@ -1,13 +1,14 @@
 {
 	"name": "@playform/maintain",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"private": false,
 	"description": "🔧 Maintain —",
 	"keywords": [
 		"git",
 		"github",
 		"maintain",
-		"workflow"
+		"workflow",
+		"playform"
 	],
 	"homepage": "HTTPS://GitHub.Com/Playform/Maintain#readme",
 	"bugs": {
@@ -19,7 +20,7 @@
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Source/Open",
+		"name": "⛲ Source ⁄ 🚪 Open —",
 		"email": "Source/Open@Playform.Cloud",
 		"url": "HTTPS://Playform.Cloud"
 	},

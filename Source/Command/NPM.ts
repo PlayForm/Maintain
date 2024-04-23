@@ -65,7 +65,7 @@ export default async () =>
               continue-on-error: true
               working-directory: .${Directory}
               run: |
-                  npm install --legacy-peer-deps
+                  npm install --include prod dev optional peer --legacy-peer-deps
                   npm publish --legacy-peer-deps --provenance
               env:
                   NODE_AUTH_TOKEN: \${{ secrets.NPM_TOKEN }}
@@ -81,7 +81,7 @@ export default async () =>
               continue-on-error: true
               working-directory: .${Directory}
               run: |
-                  npm install --legacy-peer-deps
+                  npm install --include prod dev optional peer --legacy-peer-deps
                   npm publish --legacy-peer-deps --provenance
               env:
                   NODE_AUTH_TOKEN: \${{ secrets.NPM_TOKEN }}
@@ -94,7 +94,7 @@ export default async () =>
               continue-on-error: true
               working-directory: .${Directory}
               run: |
-                  npm install --legacy-peer-deps
+                  npm install --include prod dev optional peer --legacy-peer-deps
                   npm publish --legacy-peer-deps --provenance
               env:
                   NODE_AUTH_TOKEN: \${{ secrets.NPM_TOKEN }}
