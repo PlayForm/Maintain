@@ -10,19 +10,19 @@
 		"workflow",
 		"playform"
 	],
-	"homepage": "HTTPS://GitHub.Com/Playform/Maintain#readme",
+	"homepage": "HTTPS://GitHub.Com/PlayForm/Maintain#readme",
 	"bugs": {
-		"url": "HTTPS://GitHub.Com/Playform/Maintain/issues"
+		"url": "HTTPS://GitHub.Com/PlayForm/Maintain/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+HTTPS://github.com/Playform/Maintain.git"
+		"url": "git+HTTPS://github.com/PlayForm/Maintain.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "⛲ Source ⁄ 🚪 Open —",
-		"email": "Source/Open@Playform.Cloud",
-		"url": "HTTPS://Playform.Cloud"
+		"email": "Source/Open@PlayForm.Cloud",
+		"url": "HTTPS://PlayForm.Cloud"
 	},
 	"type": "module",
 	"main": "./Target/Class/Maintain.js",
