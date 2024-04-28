@@ -1,4 +1,4 @@
-# 🔧 [Maintain.]
+# 🔧 [Maintain —]
 
 Maintain GitHub.
 
@@ -118,5 +118,5 @@ Base="Base"
 Token="Token"
 ```
 
-[Maintain.]: HTTPS://github.com/Maintain
+[Maintain —]: httpS://github.com/Maintain
 [@playform/maintain]: HTTPS://npmjs.org/@playform/maintain
