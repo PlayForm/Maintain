@@ -2,7 +2,7 @@
 	"name": "@playform/maintain",
 	"version": "0.0.4",
 	"private": false,
-	"description": "🔧 Maintain —",
+	"description": "🔧 — Maintain —",
 	"keywords": [
 		"git",
 		"github",
@@ -20,7 +20,7 @@
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "⛲ Source ⁄ 🚪 Open —",
+		"name": "⛲ Source ⁄ 🚪 — Open —",
 		"email": "Source/Open@PlayForm.Cloud",
 		"url": "HTTPS://PlayForm.Cloud"
 	},
