@@ -47,7 +47,7 @@
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
 		"@types/etag": "1.8.3",
-		"@types/node": "20.12.7",
+		"@types/node": "20.12.8",
 		"@types/pacote": "11.1.8"
 	},
 	"publishConfig": {
