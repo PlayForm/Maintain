@@ -91,4 +91,4 @@ export default async () =>
 		}
 	})((await import("@Variable/Dependabot.js")).default);
 
-import type Files from "@Type/File.js";
+import type Files from "../Type/File.js";

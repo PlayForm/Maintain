@@ -113,4 +113,4 @@ export default async () =>
 		}
 	})((await import("@Variable/Rust.js")).default);
 
-import type Files from "@Type/File.js";
+import type Files from "../Type/File.js";

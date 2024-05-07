@@ -203,4 +203,4 @@ export default async () =>
 		}
 	})((await import("@Variable/Node.js")).default);
 
-import type Files from "@Type/File.js";
+import type Files from "../Type/File.js";
