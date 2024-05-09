@@ -119,4 +119,4 @@ Token="Token"
 ```
 
 [Maintain]: HTTPS://github.com/Maintain
-[@playform/maintain]: HTTPS://npmjs.org/@playform/maintain
+[@playform/maintain]: HTTPS://NPMJS.Org/@playform/maintain
