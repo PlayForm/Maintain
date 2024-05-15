@@ -50,11 +50,7 @@ jobs:
             TELEMETRY_DISABLED: 1
 
         steps:
-<<<<<<< HEAD
             - uses: pozil/auto-assign-issue@v2.0.0
-=======
-            - uses: pozil/auto-assign-issue@v1.14.0
->>>>>>> 84ed203bfc659839a8f9792f32b1bd3f914af907
               with:
                   repo-token: ${{ secrets.GITHUB_TOKEN }}
                   assignees: NikolaRHristov
