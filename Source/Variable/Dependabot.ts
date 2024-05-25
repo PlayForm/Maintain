@@ -12,10 +12,10 @@ export default new Set([
 					await readFile(
 						resolve(
 							`${dirname(
-								fileURLToPath(import.meta.url)
-							)}/../../Workflow/dependabot.yml`
+								fileURLToPath(import.meta.url),
+							)}/../../Workflow/dependabot.yml`,
 						),
-						"utf-8"
+						"utf-8",
 					)
 				).toString(),
 			]),
@@ -29,10 +29,10 @@ export default new Set([
 					await readFile(
 						resolve(
 							`${dirname(
-								fileURLToPath(import.meta.url)
-							)}/../../Workflow/InnerDependabot.yml`
+								fileURLToPath(import.meta.url),
+							)}/../../Workflow/InnerDependabot.yml`,
 						),
-						"utf-8"
+						"utf-8",
 					)
 				).toString(),
 			]),

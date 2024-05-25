@@ -17,9 +17,9 @@ const _Class = new (await import("commander")).Command()
 			.action(Action);
 
 		Arguments?.forEach(({ Name, Description }) =>
-			Command.argument(Name, Description)
+			Command.argument(Name, Description),
 		);
-	}
+	},
 );
 
 export default _Class.parse();

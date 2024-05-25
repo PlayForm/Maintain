@@ -5,18 +5,19 @@
 export default async () => {
 	const Dependency = new Set<string>();
 
-	for (const Package of await (
-		await import("fast-glob")
-	).default(["**/package.json", "!**/node_modules"], {
-		absolute: true,
-		cwd: (await import("@Variable/Environment.js")).default.parse(
-			process.env
-		).Base,
-	})) {
+	for (const Package of await (await import("fast-glob")).default(
+		["**/package.json", "!**/node_modules"],
+		{
+			absolute: true,
+			cwd: (await import("@Variable/Environment.js")).default.parse(
+				process.env,
+			).Base,
+		},
+	)) {
 		const _JSON = JSON.parse(
 			(
 				await (await import("fs/promises")).readFile(Package, "utf-8")
-			).toString()
+			).toString(),
 		);
 
 		for (const Key in _JSON) {
@@ -26,7 +27,7 @@ export default async () => {
 						if (
 							Object.prototype.hasOwnProperty.call(
 								_JSON[Key],
-								Package
+								Package,
 							)
 						) {
 							Dependency.add(Package);
@@ -43,7 +44,7 @@ export default async () => {
 				await (
 					await fetch(`https://registry.npmjs.org/${_Dependency}`)
 				).json()
-			).repository.url
+			).repository.url,
 		);
 	}
 };

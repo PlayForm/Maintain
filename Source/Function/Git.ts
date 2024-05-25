@@ -11,7 +11,7 @@ export default async () =>
 				absolute: true,
 				cwd: Environment.parse(process.env).Base,
 			})),
-		].sort()
+		].sort(),
 	);
 
 export const { default: Environment } = await import(

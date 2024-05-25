@@ -16,7 +16,7 @@ export default async (URL = "") => {
 	try {
 		await new (await import("@octokit/core")).Octokit({
 			auth: (await import("@Variable/Environment.js")).default.parse(
-				process.env
+				process.env,
 			).Token,
 		}).request(`PUT /user/starred/${_URL}`);
 

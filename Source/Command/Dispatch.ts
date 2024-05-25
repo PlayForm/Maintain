@@ -4,7 +4,7 @@
  */
 export default async (Repository: string[] | Set<string> = []) => {
 	const User = (await import("@Variable/Environment.js")).default.parse(
-		process.env
+		process.env,
 	).User;
 
 	const Organizations: {
@@ -62,7 +62,7 @@ export default async (Repository: string[] | Set<string> = []) => {
 					`POST /repos/${owner}/${name}/actions/workflows/${Workflow.id}/dispatches`,
 					{
 						ref: "main",
-					}
+					},
 				);
 			}
 			// end: actions/workflows

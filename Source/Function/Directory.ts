@@ -26,7 +26,7 @@ export default async (Search: Set<string>) => {
 			Directory,
 			Results.has(Directory)
 				? Results.get(Directory).add(_Search)
-				: new Set<string>([_Search].sort())
+				: new Set<string>([_Search].sort()),
 		);
 	}
 
