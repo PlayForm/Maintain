@@ -3,7 +3,13 @@
 	"version": "0.0.4",
 	"private": false,
 	"description": "🔧 Maintain —",
-	"keywords": ["git", "github", "maintain", "workflow", "playform"],
+	"keywords": [
+		"git",
+		"github",
+		"maintain",
+		"workflow",
+		"playform"
+	],
 	"homepage": "HTTPS://GitHub.Com/PlayForm/Maintain#readme",
 	"bugs": {
 		"url": "HTTPS://GitHub.Com/PlayForm/Maintain/issues"
