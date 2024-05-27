@@ -1,6 +1,6 @@
 {
 	"name": "@playform/maintain",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"private": false,
 	"description": "🔧 Maintain —",
 	"keywords": [
@@ -31,7 +31,6 @@
 		"Maintain": "Target/Class/Maintain.js"
 	},
 	"scripts": {
-		"Document": "Document 'Source/**/*.ts'",
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
@@ -45,11 +44,17 @@
 	},
 	"devDependencies": {
 		"@octokit/types": "13.5.0",
-		"@playform/build": "0.0.9",
-		"@playform/document": "0.0.7",
 		"@types/etag": "1.8.3",
 		"@types/node": "20.12.12",
 		"@types/pacote": "11.1.8"
+	},
+	"peerDependencies": {
+		"@playform/build": "0.0.9"
+	},
+	"peerDependenciesMeta": {
+		"@playform/build": {
+			"optional": true
+		}
 	},
 	"publishConfig": {
 		"access": "public"
