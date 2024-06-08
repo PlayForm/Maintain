@@ -36,7 +36,7 @@
 	"dependencies": {
 		"@octokit/core": "6.1.2",
 		"commander": "12.1.0",
-		"deepmerge-ts": "7.0.1",
+		"deepmerge-ts": "7.0.3",
 		"dotenv": "16.4.5",
 		"etag": "1.8.1",
 		"fast-glob": "3.3.2",
@@ -46,7 +46,7 @@
 		"@octokit/types": "13.5.0",
 		"@playform/build": "0.0.10",
 		"@types/etag": "1.8.3",
-		"@types/node": "20.12.13",
+		"@types/node": "20.14.2",
 		"@types/pacote": "11.1.8"
 	},
 	"publishConfig": {
