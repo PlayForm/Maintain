@@ -16,8 +16,7 @@ export default async (_Repository: string[] | Set<string> = []) => {
 		name: string;
 	}[] = [];
 
-	for (const Repository of (await Request(`GET /users/${User}/repos`))
-		?.data) {
+	for (const Repository of (await Request(`GET /users/${User}/repos`))?.data) {
 		Repositories.push({
 			owner: User,
 			name: Repository.name,

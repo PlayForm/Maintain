@@ -15,11 +15,9 @@ export default (async (...[Filter = false]: Parameters<Interface>) => {
 	Result.set("wrangler.toml", "Cloudflare");
 
 	if (Filter) {
-		Result.forEach((value, key) => {
-			if (value !== Filter) {
-				Result.delete(key);
-			}
-		});
+		Result.forEach((Value, Key) =>
+			Value !== Filter ? Result.delete(Key) : null,
+		);
 	}
 
 	return Result;

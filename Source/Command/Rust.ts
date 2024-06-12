@@ -32,10 +32,7 @@ export default async () =>
 							await (await import("@Function/Type.js")).default()
 						).get(Package.split("/").pop());
 
-						if (
-							typeof Environment !== "undefined" &&
-							Environment === "Cargo"
-						) {
+						if (typeof Environment !== "undefined" && Environment === "Cargo") {
 							Base.add(`
             - uses: actions/cache@v4.0.2
               with:
@@ -50,9 +47,7 @@ export default async () =>
             - uses: actions-rs/cargo@v1.0.3
               with:
                 command: build
-                args: --release --all-features --manifest-path .${Directory}/${(
-					await import("path")
-				).basename(Package)}
+                args: --release --all-features --manifest-path .${Directory}/${(await import("path")).basename(Package)}
 `);
 						}
 					}
@@ -82,12 +77,9 @@ export default async () =>
 
 				if (Base.size > 1) {
 					try {
-						await (await import("fs/promises")).mkdir(
-							`${GitHub}${Path}`,
-							{
-								recursive: true,
-							},
-						);
+						await (await import("fs/promises")).mkdir(`${GitHub}${Path}`, {
+							recursive: true,
+						});
 					} catch {
 						console.log(`Could not create: ${GitHub}${Path}`);
 					}
@@ -95,10 +87,7 @@ export default async () =>
 					try {
 						await (await import("fs/promises")).writeFile(
 							`${GitHub}${Path}${Name}`,
-							`${[...Base].join("")}`.replaceAll(
-								"$Branch$",
-								Branch,
-							),
+							`${[...Base].join("")}`.replaceAll("$Branch$", Branch),
 						);
 					} catch {
 						console.log(

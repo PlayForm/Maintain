@@ -14,9 +14,7 @@ export default async () =>
 		for (const { Path, Name, File } of Files) {
 			for (const [_Directory, FilesPackage] of await (
 				await import("@Function/Directory.js")
-			).default(
-				await (await import("@Function/Package.js")).default("NPM"),
-			)) {
+			).default(await (await import("@Function/Package.js")).default("NPM"))) {
 				const GitHub = `${_Directory}/.github`;
 				const Base = await File();
 
@@ -27,9 +25,7 @@ export default async () =>
 							.replace(_Directory, "");
 
 						const FilePackage = (
-							await (
-								await import("fs/promises")
-							).readFile(Package, "utf-8")
+							await (await import("fs/promises")).readFile(Package, "utf-8")
 						).toString();
 
 						const Environment = (
@@ -37,27 +33,16 @@ export default async () =>
 						).get(Package.split("/").pop());
 
 						try {
-							if (
-								typeof Environment !== "undefined" &&
-								Environment === "NPM"
-							) {
+							if (typeof Environment !== "undefined" && Environment === "NPM") {
 								const JSONPackage = JSON.parse(FilePackage);
 
 								for (const key in JSONPackage) {
-									if (
-										Object.prototype.hasOwnProperty.call(
-											JSONPackage,
-											key,
-										)
-									) {
+									if (Object.prototype.hasOwnProperty.call(JSONPackage, key)) {
 										const values = JSONPackage[key];
 										if (key === "scripts") {
 											for (const scripts in values) {
 												if (
-													Object.prototype.hasOwnProperty.call(
-														values,
-														scripts,
-													)
+													Object.prototype.hasOwnProperty.call(values, scripts)
 												) {
 													if (scripts === "build") {
 														Base.add(`
@@ -71,10 +56,7 @@ export default async () =>
 `);
 													}
 
-													if (
-														scripts ===
-														"prepublishOnly"
-													) {
+													if (scripts === "prepublishOnly") {
 														Base.add(`
             - name: Publish .${Directory}
               continue-on-error: true
@@ -112,12 +94,9 @@ export default async () =>
 
 				if (Base.size > 1) {
 					try {
-						await (await import("fs/promises")).mkdir(
-							`${GitHub}${Path}`,
-							{
-								recursive: true,
-							},
-						);
+						await (await import("fs/promises")).mkdir(`${GitHub}${Path}`, {
+							recursive: true,
+						});
 					} catch {
 						console.log(`Could not create: ${GitHub}${Path}`);
 					}

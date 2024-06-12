@@ -32,32 +32,32 @@ export default async () =>
 						if (Environment !== "Cloudflare") {
 							Base.add(`
     - package-ecosystem: "${
-		typeof Environment !== "undefined"
-			? String(Environment).toLowerCase()
-			: (() => {
-					switch (Package.split(".").pop()) {
-						case "csproj":
-							return "nuget";
-						default:
-							return "npm";
-					}
-				})()
-	}"
+			typeof Environment !== "undefined"
+				? String(Environment).toLowerCase()
+				: (() => {
+						switch (Package.split(".").pop()) {
+							case "csproj":
+								return "nuget";
+							default:
+								return "npm";
+						}
+					})()
+		}"
       directory: "${Directory ? Directory : "/"}"
       schedule:
           interval: "daily"
       versioning-strategy: ${
-			typeof Environment !== "undefined"
-				? (() => {
-						switch (Environment) {
-							case "Cargo":
-								return "lockfile-only";
-							default:
-								return "increase";
-						}
-					})()
-				: "increase"
-		}
+				typeof Environment !== "undefined"
+					? (() => {
+							switch (Environment) {
+								case "Cargo":
+									return "lockfile-only";
+								default:
+									return "increase";
+							}
+						})()
+					: "increase"
+			}
 `);
 						}
 					}
@@ -65,12 +65,9 @@ export default async () =>
 
 				if (Base.size > 0) {
 					try {
-						await (await import("fs/promises")).mkdir(
-							`${GitHub}${Path}`,
-							{
-								recursive: true,
-							},
-						);
+						await (await import("fs/promises")).mkdir(`${GitHub}${Path}`, {
+							recursive: true,
+						});
 					} catch {
 						console.log(`Could not create: ${GitHub}${Path}`);
 					}
