@@ -1,1 +1,0 @@
-const e=async(...[a,i])=>{const t=(await import("path")).dirname(a),r=i??t;if(t===a)return r;try{return await(await import("fs/promises")).access(`${t}/.git`,(await import("fs/promises")).constants.R_OK),t}catch{return await e(t,r)}};var c=e;export{e as _Function,c as default};
