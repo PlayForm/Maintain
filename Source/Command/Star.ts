@@ -9,8 +9,9 @@ export default async () => {
 		["**/package.json", "!**/node_modules"],
 		{
 			absolute: true,
-			cwd: (await import("@Variable/Environment.js")).default.parse(process.env)
-				.Base,
+			cwd: (await import("@Variable/Environment.js")).default.parse(
+				process.env,
+			).Base,
 		},
 	)) {
 		const _JSON = JSON.parse(
@@ -23,7 +24,12 @@ export default async () => {
 			if (Object.prototype.hasOwnProperty.call(_JSON, Key)) {
 				if (Key === "dependencies" || Key === "devDependencies") {
 					for (const Package in _JSON[Key]) {
-						if (Object.prototype.hasOwnProperty.call(_JSON[Key], Package)) {
+						if (
+							Object.prototype.hasOwnProperty.call(
+								_JSON[Key],
+								Package,
+							)
+						) {
 							Dependency.add(Package);
 						}
 					}
@@ -34,8 +40,11 @@ export default async () => {
 
 	for (const _Dependency of Dependency) {
 		(await import("@Function/Star.js")).default(
-			(await (await fetch(`https://registry.npmjs.org/${_Dependency}`)).json())
-				.repository.url,
+			(
+				await (
+					await fetch(`https://registry.npmjs.org/${_Dependency}`)
+				).json()
+			).repository.url,
 		);
 	}
 };

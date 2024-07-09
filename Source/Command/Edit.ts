@@ -16,7 +16,8 @@ export default async (_Repository: string[] | Set<string> = []) => {
 		name: string;
 	}[] = [];
 
-	for (const Repository of (await Request(`GET /users/${User}/repos`))?.data) {
+	for (const Repository of (await Request(`GET /users/${User}/repos`))
+		?.data) {
 		Repositories.push({
 			owner: User,
 			name: Repository.name,
@@ -63,18 +64,19 @@ export default async (_Repository: string[] | Set<string> = []) => {
 	// end: orgs
 
 	// start: repos
-	let pass = null;
+	// biome-ignore lint/nursery/noEvolvingTypes:
+	let Pass = null;
 
 	for (const repo of Repositories) {
 		for (const repository of _Repository) {
 			if (repo.name === repository) {
-				pass = true;
+				Pass = true;
 			} else {
-				pass = false;
+				Pass = false;
 			}
 		}
 
-		if (pass === null || pass) {
+		if (Pass === null || Pass) {
 			// start: vulnerability-alerts
 			await Request(
 				`PUT /repos/${repo.owner}/${repo.name}/vulnerability-alerts`,

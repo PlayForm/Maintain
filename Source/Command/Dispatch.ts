@@ -28,7 +28,8 @@ export default async (Repository: string[] | Set<string> = []) => {
 			name: org.login,
 		});
 
-		for (const repo of (await Request(`GET /orgs/${org.login}/repos`))?.data) {
+		for (const repo of (await Request(`GET /orgs/${org.login}/repos`))
+			?.data) {
 			Repositories.push({
 				owner: org.login,
 				name: repo.name,
@@ -37,19 +38,20 @@ export default async (Repository: string[] | Set<string> = []) => {
 	}
 
 	// start: repos
-	let pass: boolean | undefined = undefined;
+	// biome-ignore lint/nursery/noEvolvingTypes:
+	let Pass = null;
 
 	for (const { name, owner } of Repositories) {
 		/* Checking if the repository is in the list of repositories. */
 		for (const repository of Repository) {
 			if (name === repository) {
-				pass = true;
+				Pass = true;
 			} else {
-				pass = false;
+				Pass = false;
 			}
 		}
 
-		if (typeof pass === "undefined" || pass) {
+		if (Pass === null || Pass) {
 			// start: actions/workflows
 			for (const Workflow of (
 				await Request(`GET /repos/${owner}/${name}/actions/workflows`, {

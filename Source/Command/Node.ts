@@ -16,7 +16,9 @@ export default async () =>
 		for (const { Path, Name, File } of Files) {
 			for (const [_Directory, FilesPackage] of await (
 				await import("@Function/Directory.js")
-			).default(await (await import("@Function/Package.js")).default("NPM"))) {
+			).default(
+				await (await import("@Function/Package.js")).default("NPM"),
+			)) {
 				const GitHub = `${_Directory}/.github`;
 				const Base = await File();
 
@@ -27,7 +29,9 @@ export default async () =>
 							.replace(_Directory, "");
 
 						const FilePackage = (
-							await (await import("fs/promises")).readFile(Package, "utf-8")
+							await (
+								await import("fs/promises")
+							).readFile(Package, "utf-8")
 						).toString();
 
 						const Environment = (
@@ -35,7 +39,10 @@ export default async () =>
 						).get(Package.split("/").pop());
 
 						try {
-							if (typeof Environment !== "undefined" && Environment === "NPM") {
+							if (
+								typeof Environment !== "undefined" &&
+								Environment === "NPM"
+							) {
 								const JSONPackage = JSON.parse(FilePackage);
 
 								for (const bundle of [
@@ -48,7 +55,10 @@ export default async () =>
 									"peerDependencies",
 									"peerDependenciesMeta",
 								].sort()) {
-									if (typeof JSONPackage[bundle] !== "undefined") {
+									if (
+										typeof JSONPackage[bundle] !==
+										"undefined"
+									) {
 										Base.add(`
             - uses: actions/setup-node@v4.0.2
               with:
@@ -63,13 +73,21 @@ export default async () =>
 								}
 
 								for (const Key in JSONPackage) {
-									if (Object.prototype.hasOwnProperty.call(JSONPackage, Key)) {
+									if (
+										Object.prototype.hasOwnProperty.call(
+											JSONPackage,
+											Key,
+										)
+									) {
 										const Value = JSONPackage[Key];
 
 										if (Key === "scripts") {
 											for (const Script in Value) {
 												if (
-													Object.prototype.hasOwnProperty.call(Value, Script)
+													Object.prototype.hasOwnProperty.call(
+														Value,
+														Script,
+													)
 												) {
 													// TODO: Rework this to have scripts in an array and checked in a foreach
 													if (Script === "build") {
@@ -77,19 +95,22 @@ export default async () =>
             - run: pnpm run build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.3
+            - uses: actions/upload-artifact@v4.3.4
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target
 `);
 													}
 
-													if (Script === "prepublishOnly") {
+													if (
+														Script ===
+														"prepublishOnly"
+													) {
 														Base.add(`
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.3
+            - uses: actions/upload-artifact@v4.3.4
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target
@@ -101,7 +122,7 @@ export default async () =>
             - run: pnpm run Build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.3
+            - uses: actions/upload-artifact@v4.3.4
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target
@@ -151,9 +172,12 @@ export default async () =>
 
 				if (Base.size > 1) {
 					try {
-						await (await import("fs/promises")).mkdir(`${GitHub}${Path}`, {
-							recursive: true,
-						});
+						await (await import("fs/promises")).mkdir(
+							`${GitHub}${Path}`,
+							{
+								recursive: true,
+							},
+						);
 					} catch {
 						console.log(`Could not create: ${GitHub}${Path}`);
 					}
@@ -161,7 +185,10 @@ export default async () =>
 					try {
 						await (await import("fs/promises")).writeFile(
 							`${GitHub}${Path}${Name}`,
-							`${[...Base].join("")}`.replaceAll("$Branch$", Branch),
+							`${[...Base].join("")}`.replaceAll(
+								"$Branch$",
+								Branch,
+							),
 						);
 					} catch {
 						console.log(

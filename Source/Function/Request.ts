@@ -28,6 +28,9 @@ export default async (
 					}),
 				);
 			}
+
+			default:
+				return {};
 		}
 	} catch (_Error) {
 		return {};

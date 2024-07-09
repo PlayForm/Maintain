@@ -16,7 +16,9 @@ export default async () =>
 			for (const [_Directory, FilesPackage] of await (
 				await import("@Function/Directory.js")
 			).default(
-				await (await import("@Function/Package.js")).default("Cloudflare"),
+				await (await import("@Function/Package.js")).default(
+					"Cloudflare",
+				),
 			)) {
 				const GitHub = `${_Directory}/.github`;
 				const Base = await File();
@@ -70,9 +72,12 @@ export default async () =>
 
 				if (Base.size > 1) {
 					try {
-						await (await import("fs/promises")).mkdir(`${GitHub}${Path}`, {
-							recursive: true,
-						});
+						await (await import("fs/promises")).mkdir(
+							`${GitHub}${Path}`,
+							{
+								recursive: true,
+							},
+						);
 					} catch {
 						console.log(`Could not create: ${GitHub}${Path}`);
 					}
@@ -80,7 +85,10 @@ export default async () =>
 					try {
 						await (await import("fs/promises")).writeFile(
 							`${GitHub}${Path}${Name}`,
-							`${[...Base].join("")}`.replaceAll("$Branch$", Branch),
+							`${[...Base].join("")}`.replaceAll(
+								"$Branch$",
+								Branch,
+							),
 						);
 					} catch {
 						console.log(

@@ -24,4 +24,4 @@ export const _Function = (async (...[Search, From]: Parameters<Interface>) => {
 
 export default _Function;
 
-import type Interface from "../Interface/WalkUntilGit";
+import type Interface from "../Interface/WalkUntilGit.js";
