@@ -31,6 +31,7 @@
 		"Maintain": "Target/Class/Maintain.js"
 	},
 	"scripts": {
+		"Run": "Build 'Source/**/*.ts' -W",
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
