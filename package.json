@@ -37,7 +37,7 @@
 	"dependencies": {
 		"@octokit/core": "6.1.2",
 		"commander": "12.1.0",
-		"deepmerge-ts": "7.0.3",
+		"deepmerge-ts": "7.1.0",
 		"dotenv": "16.4.5",
 		"etag": "1.8.1",
 		"fast-glob": "3.3.2",
