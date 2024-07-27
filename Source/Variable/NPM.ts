@@ -12,15 +12,11 @@ export default new Set([
 					await (
 						await import("fs/promises")
 					).readFile(
-						(
-							await import("path")
-						).resolve(
-							`${(
-								await import("path")
-							).dirname(
-								(
-									await import("url")
-								).fileURLToPath(import.meta.url),
+						(await import("path")).resolve(
+							`${(await import("path")).dirname(
+								(await import("url")).fileURLToPath(
+									import.meta.url,
+								),
 							)}/../../Workflow/NPM.yml`,
 						),
 						"utf-8",
