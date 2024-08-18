@@ -22,19 +22,18 @@ export default async () =>
 
 				if (Base.size > 0) {
 					try {
-						await (
-							await import("fs/promises")
-						).mkdir(`${GitHub}${Path}`, {
-							recursive: true,
-						});
+						await (await import("fs/promises")).mkdir(
+							`${GitHub}${Path}`,
+							{
+								recursive: true,
+							},
+						);
 					} catch {
 						console.log(`Could not create: ${GitHub}${Path}`);
 					}
 
 					try {
-						await (
-							await import("fs/promises")
-						).writeFile(
+						await (await import("fs/promises")).writeFile(
 							`${GitHub}${Path}${Name}`,
 							`${[...Base].join("")}`,
 						);
