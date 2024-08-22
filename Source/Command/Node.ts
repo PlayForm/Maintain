@@ -95,7 +95,7 @@ export default async () =>
             - run: pnpm run build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.4
+            - uses: actions/upload-artifact@v4.3.6
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target
@@ -110,7 +110,7 @@ export default async () =>
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.4
+            - uses: actions/upload-artifact@v4.3.6
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target
@@ -122,7 +122,7 @@ export default async () =>
             - run: pnpm run Build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.3.4
+            - uses: actions/upload-artifact@v4.3.6
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target
@@ -151,7 +151,9 @@ export default async () =>
 				let Branch = "main";
 
 				try {
-					await (await import("fs/promises")).access(
+					await (
+						await import("fs/promises")
+					).access(
 						_Directory,
 						(await import("fs/promises")).constants.F_OK,
 					);
@@ -172,18 +174,19 @@ export default async () =>
 
 				if (Base.size > 1) {
 					try {
-						await (await import("fs/promises")).mkdir(
-							`${GitHub}${Path}`,
-							{
-								recursive: true,
-							},
-						);
+						await (
+							await import("fs/promises")
+						).mkdir(`${GitHub}${Path}`, {
+							recursive: true,
+						});
 					} catch {
 						console.log(`Could not create: ${GitHub}${Path}`);
 					}
 
 					try {
-						await (await import("fs/promises")).writeFile(
+						await (
+							await import("fs/promises")
+						).writeFile(
 							`${GitHub}${Path}${Name}`,
 							`${[...Base].join("")}`.replaceAll(
 								"$Branch$",
