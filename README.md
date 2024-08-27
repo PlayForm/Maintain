@@ -2,7 +2,7 @@
 
 Maintain GitHub.
 
-## Installation
+## 🚀 Installation
 
 Using NPM
 
