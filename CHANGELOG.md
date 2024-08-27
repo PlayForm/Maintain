@@ -1,5 +1,12 @@
 ## 0.1.1
 
+### Changed
+
+-   Updated `@playform/build` to version 0.1.3
+-   Updated `@types/node` to version 22.5.0
+-   Updated `zod` to version 3.23.8
+-   Updated `actions/upload-artifact` to v4.3.6 in Node.ts
+
 ## 0.1.0
 
 ### Changed
