@@ -60,7 +60,7 @@ export default async () =>
 										"undefined"
 									) {
 										Base.add(`
-            - uses: actions/setup-node@v4.0.3
+            - uses: actions/setup-node@v4.0.4
               with:
                   node-version: \${{ matrix.node-version }}
                   cache: "pnpm"
