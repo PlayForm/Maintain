@@ -1,6 +1,6 @@
 {
 	"name": "@playform/maintain",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"private": false,
 	"description": "🔧 Maintain —",
 	"keywords": [
@@ -45,9 +45,9 @@
 	},
 	"devDependencies": {
 		"@octokit/types": "13.5.1",
-		"@playform/build": "0.1.6",
+		"@playform/build": "0.1.7",
 		"@types/etag": "1.8.3",
-		"@types/node": "22.6.1",
+		"@types/node": "22.7.0",
 		"@types/pacote": "11.1.8"
 	},
 	"publishConfig": {
