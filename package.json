@@ -44,10 +44,10 @@
 		"zod": "3.23.8"
 	},
 	"devDependencies": {
-		"@octokit/types": "13.5.0",
+		"@octokit/types": "13.5.1",
 		"@playform/build": "0.1.6",
 		"@types/etag": "1.8.3",
-		"@types/node": "22.6.0",
+		"@types/node": "22.6.1",
 		"@types/pacote": "11.1.8"
 	},
 	"publishConfig": {
