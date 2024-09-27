@@ -1,3 +1,5 @@
+import type { OctokitResponse } from "@octokit/types";
+
 /**
  * @module Request
  *
@@ -9,8 +11,6 @@ export default async (
 	// biome-ignore lint/suspicious/noExplicitAny:
 ): Promise<OctokitResponse<any, number> | any> => {
 	try {
-		console.log(`Successfully ${Where}`);
-
 		switch (Type) {
 			case "octokit": {
 				return await new (await import("@octokit/core")).Octokit({
@@ -30,11 +30,10 @@ export default async (
 			}
 
 			default:
-				return {};
+				throw new Error(`Cannot ${Where}.`);
 		}
 	} catch (_Error) {
-		return {};
+		console.log(`Cannot ${Where}.`);
+		console.log(_Error);
 	}
 };
-
-import type { OctokitResponse } from "@octokit/types";
