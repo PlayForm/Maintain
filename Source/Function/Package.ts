@@ -1,3 +1,5 @@
+import type Type from "../Type/Package.js";
+
 /**
  * @module Package
  *
@@ -83,5 +85,3 @@ export default async (Filter: Type = false) =>
 			)),
 		].sort(),
 	);
-
-import type Type from "../Type/Package.js";

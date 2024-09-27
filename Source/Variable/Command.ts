@@ -1,3 +1,5 @@
+import type { CommandOptions } from "commander";
+
 /**
  * @module Command
  *
@@ -113,5 +115,3 @@ export const Variable: Set<{
 ]);
 
 export default Variable;
-
-import type { CommandOptions } from "commander";

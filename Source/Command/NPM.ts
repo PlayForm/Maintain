@@ -1,3 +1,5 @@
+import type Files from "../Type/File.js";
+
 /**
  * @module NPM
  *
@@ -112,18 +114,19 @@ export default async () =>
 
 				if (Base.size > 1) {
 					try {
-						await (await import("fs/promises")).mkdir(
-							`${GitHub}${Path}`,
-							{
-								recursive: true,
-							},
-						);
+						await (
+							await import("fs/promises")
+						).mkdir(`${GitHub}${Path}`, {
+							recursive: true,
+						});
 					} catch {
 						console.log(`Could not create: ${GitHub}${Path}`);
 					}
 
 					try {
-						await (await import("fs/promises")).writeFile(
+						await (
+							await import("fs/promises")
+						).writeFile(
 							`${GitHub}${Path}${Name}`,
 							`${[...Base].join("")}`,
 						);
@@ -136,5 +139,3 @@ export default async () =>
 			}
 		}
 	})((await import("@Variable/NPM.js")).default);
-
-import type Files from "../Type/File.js";

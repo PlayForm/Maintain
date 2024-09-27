@@ -1,3 +1,5 @@
+import type Type from "../Type/File.js";
+
 /**
  * @module Rust
  *
@@ -12,15 +14,11 @@ export default new Set([
 					await (
 						await import("fs/promises")
 					).readFile(
-						(
-							await import("path")
-						).resolve(
-							`${(
-								await import("path")
-							).dirname(
-								(
-									await import("url")
-								).fileURLToPath(import.meta.url),
+						(await import("path")).resolve(
+							`${(await import("path")).dirname(
+								(await import("url")).fileURLToPath(
+									import.meta.url,
+								),
 							)}/../../Workflow/GitHub.yml`,
 						),
 						"utf-8",
@@ -29,5 +27,3 @@ export default new Set([
 			]),
 	},
 ]) satisfies Type;
-
-import type Type from "../Type/File.js";

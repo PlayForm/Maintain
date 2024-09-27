@@ -1,3 +1,6 @@
+import type Interface from "../Interface/Type.js";
+import type Package from "../Type/Package.js";
+
 /**
  * @module Type
  *
@@ -22,6 +25,3 @@ export default (async (...[Filter = false]: Parameters<Interface>) => {
 
 	return Result;
 }) satisfies Interface as Interface;
-
-import type Interface from "../Interface/Type.js";
-import type Package from "../Type/Package.js";
