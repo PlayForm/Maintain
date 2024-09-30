@@ -1,3 +1,4 @@
+import type { CommandOptions } from "commander";
 /**
  * @module Command
  *
@@ -15,4 +16,3 @@ export declare const Variable: Set<{
     Action: (...args: any[]) => Promise<void>;
 }>;
 export default Variable;
-import type { CommandOptions } from "commander";
