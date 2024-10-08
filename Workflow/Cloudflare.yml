@@ -1,7 +1,7 @@
-name: Rust
+name: Cloudflare
 
 concurrency:
-    group: Rust-${{ github.workflow }}-${{ github.ref }}
+    group: Cloudflare-${{ github.workflow }}-${{ github.ref }}
     cancel-in-progress: true
 
 permissions:
@@ -16,7 +16,7 @@ on:
     workflow_call:
 
 jobs:
-    Build:
+    Cloudflare:
         runs-on: ubuntu-latest
 
         env:
@@ -52,14 +52,5 @@ jobs:
             TERRAFORM_TELEMETRY: 0
             VCPKG_DISABLE_METRICS: 1
 
-        strategy:
-            matrix:
-                toolchain: ["stable", "nightly"]
-
         steps:
             - uses: actions/checkout@v4.2.1
-
-            - uses: actions-rs/toolchain@v1.0.7
-              with:
-                  profile: minimal
-                  toolchain: ${{ matrix.toolchain }}
