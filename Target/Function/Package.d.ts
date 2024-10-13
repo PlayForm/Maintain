@@ -1,4 +1,5 @@
 import type Type from "../Type/Package.js";
+
 /**
  * @module Package
  *
