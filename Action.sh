@@ -15,9 +15,10 @@ Action=(
 )
 
 for Action in "${Action[@]}"; do
-	readarray -t Tag < <(gh api repos/"$Action"/tags | jq -r .[].name)
+	readarray -t Tag < <(gh api repos/"$Action"/tags | jq -r .[0].name)
 
 	for Tag in "${Tag[@]}"; do
-		echo "$Action@$Tag"
+		echo "$Action"
+		echo "$Tag"
 	done
 done
