@@ -5,7 +5,7 @@ import type Package from "../Type/Package.js";
  * @module Type
  *
  */
-export default (async (...[Filter = false]: Parameters<Interface>) => {
+export default (async (...[Filter = false]) => {
 	const Result = new Map<string, Package>();
 
 	Result.set("*.csproj", "Nuget");

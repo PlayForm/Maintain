@@ -4,7 +4,7 @@ import type Interface from "../Interface/WalkUntilGit.js";
  * @module WalkUntilGit
  *
  */
-export const _Function = (async (...[Search, From]: Parameters<Interface>) => {
+export const _Function = (async (...[Search, From]) => {
 	const Path = (await import("path")).dirname(Search);
 	const Original = From ?? Path;
 
