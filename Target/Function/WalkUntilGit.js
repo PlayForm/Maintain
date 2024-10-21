@@ -1,1 +1,1 @@
-const e=async(...[a,i])=>{const t=(await import("path")).dirname(a),r=i??t;if(t===a)return r;try{return await(await import("fs/promises")).access(`${t}/.git`,(await import("fs/promises")).constants.R_OK),t}catch{return await e(t,r)}};var c=e;export{e as _Function,c as default};
+const i=async(...[a,n])=>{const t=(await import("path")).dirname(a),r=n??t;if(t===a)return r;try{return await(await import("fs/promises")).access(`${t}/.git`,(await import("fs/promises")).constants.R_OK),t}catch{return await i(t,r)}};var c=i;export{i as _Function,c as default};
