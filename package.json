@@ -45,7 +45,7 @@
 	},
 	"devDependencies": {
 		"@octokit/types": "13.6.1",
-		"@playform/build": "0.1.7",
+		"@playform/build": "0.1.8",
 		"@types/etag": "1.8.3",
 		"@types/node": "22.7.7",
 		"@types/pacote": "11.1.8"
