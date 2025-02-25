@@ -41,8 +41,8 @@ export default new Set([
 	},
 ]) satisfies Type;
 
-export const { readFile } = await import("fs/promises");
+export const { readFile } = await import("node:fs/promises");
 
-export const { dirname, resolve } = await import("path");
+export const { dirname, resolve } = await import("node:path");
 
 export const { fileURLToPath } = await import("url");

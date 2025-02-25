@@ -12,10 +12,10 @@ export default new Set([
 			new Set([
 				(
 					await (
-						await import("fs/promises")
+						await import("node:fs/promises")
 					).readFile(
-						(await import("path")).resolve(
-							`${(await import("path")).dirname(
+						(await import("node:path")).resolve(
+							`${(await import("node:path")).dirname(
 								(await import("url")).fileURLToPath(
 									import.meta.url,
 								),

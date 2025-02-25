@@ -5,7 +5,7 @@ import type Interface from "../Interface/WalkUntilGit.js";
  *
  */
 export const _Function = (async (...[Search, From]) => {
-	const Path = (await import("path")).dirname(Search);
+	const Path = (await import("node:path")).dirname(Search);
 
 	const Original = From ?? Path;
 
@@ -15,8 +15,8 @@ export const _Function = (async (...[Search, From]) => {
 
 	try {
 		await (
-			await import("fs/promises")
-		).access(`${Path}/.git`, (await import("fs/promises")).constants.R_OK);
+			await import("node:fs/promises")
+		).access(`${Path}/.git`, (await import("node:fs/promises")).constants.R_OK);
 
 		return Path;
 	} catch (_Error) {

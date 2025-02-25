@@ -28,7 +28,7 @@ export default async () =>
 
 				if (Path === "/workflows/" && Name === "Cloudflare.yml") {
 					for (const Package of FilesPackage) {
-						const Directory = (await import("path"))
+						const Directory = (await import("node:path"))
 							.dirname(Package)
 							.replace(_Directory, "");
 
@@ -55,10 +55,10 @@ export default async () =>
 
 				try {
 					await (
-						await import("fs/promises")
+						await import("node:fs/promises")
 					).access(
 						_Directory,
-						(await import("fs/promises")).constants.F_OK,
+						(await import("node:fs/promises")).constants.F_OK,
 					);
 
 					const Current = process.cwd();
@@ -78,7 +78,7 @@ export default async () =>
 				if (Base.size > 1) {
 					try {
 						await (
-							await import("fs/promises")
+							await import("node:fs/promises")
 						).mkdir(`${GitHub}${Path}`, {
 							recursive: true,
 						});
@@ -88,7 +88,7 @@ export default async () =>
 
 					try {
 						await (
-							await import("fs/promises")
+							await import("node:fs/promises")
 						).writeFile(
 							`${GitHub}${Path}${Name}`,
 							`${[...Base].join("")}`.replaceAll(

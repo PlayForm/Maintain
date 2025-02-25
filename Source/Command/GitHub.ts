@@ -26,7 +26,7 @@ export default async () =>
 				if (Base.size > 0) {
 					try {
 						await (
-							await import("fs/promises")
+							await import("node:fs/promises")
 						).mkdir(`${GitHub}${Path}`, {
 							recursive: true,
 						});
@@ -36,7 +36,7 @@ export default async () =>
 
 					try {
 						await (
-							await import("fs/promises")
+							await import("node:fs/promises")
 						).writeFile(
 							`${GitHub}${Path}${Name}`,
 							`${[...Base].join("")}`,
