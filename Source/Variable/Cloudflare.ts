@@ -16,7 +16,7 @@ export default new Set([
 					).readFile(
 						(await import("node:path")).resolve(
 							`${(await import("node:path")).dirname(
-								(await import("url")).fileURLToPath(
+								(await import("node:url")).fileURLToPath(
 									import.meta.url,
 								),
 							)}/../../Workflow/Cloudflare.yml`,

@@ -97,7 +97,7 @@
 - Updated `@types/node` to version 20.14.10
 - Updated project description to "Maintain 🔧"
 
-### Fixed
+### Fix
 
 - Fixed evolving type errors by adding
   `// biome-ignore lint/nursery/noEvolvingTypes:` annotations
@@ -112,7 +112,7 @@
 - Updated `@types/node` to version 20.14.10
 - Updated project description to "Maintain 🔧"
 
-### Fixed
+### Fix
 
 - Fixed evolving type errors by adding
   `// biome-ignore lint/nursery/noEvolvingTypes:` annotations
