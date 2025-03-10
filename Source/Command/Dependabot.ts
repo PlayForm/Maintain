@@ -63,6 +63,14 @@ export default async () =>
 					})()
 				: "increase"
 		}
+      ${
+			Environment === "NPM"
+				? `ignore:
+          - dependency-name: "tailwindcss"
+            versions:
+                - "^4.0.0"`
+				: ""
+		}
 `);
 						}
 					}
