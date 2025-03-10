@@ -47,7 +47,7 @@
 		"@octokit/types": "13.8.0",
 		"@playform/build": "0.2.1",
 		"@types/etag": "1.8.3",
-		"@types/node": "22.13.9",
+		"@types/node": "22.13.10",
 		"@types/pacote": "11.1.8"
 	},
 	"publishConfig": {
