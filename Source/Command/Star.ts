@@ -15,7 +15,9 @@ export default async () => {
 	})) {
 		const _JSON = JSON.parse(
 			(
-				await (await import("node:fs/promises")).readFile(Package, "utf-8")
+				await (
+					await import("node:fs/promises")
+				).readFile(Package, "utf-8")
 			).toString(),
 		);
 
