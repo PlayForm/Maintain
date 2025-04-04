@@ -1,5 +1,41 @@
 ## 0.1.6
 
+### Add
+
+- Added new Auto workflow for automated scheduled commits
+- Added Dependabot ignore rule for `tailwindcss@^4.0.0` in NPM environment
+
+### Change
+
+- Updated dependencies:
+    - Bump `@octokit/core` from 6.1.3 to 6.1.4
+    - Bump `commander` from 13.0.0 to 13.1.0
+    - Bump `deepmerge-ts` from 7.1.3 to 7.1.5
+    - Bump `zod` from 3.24.1 to 3.24.2
+    - Bump `@octokit/types` from 13.6.2 to 13.10.0
+    - Bump `@playform/build` from 0.2.1 to 0.2.2
+    - Bump `@types/node` from 22.10.5 to 22.14.0
+- Updated GitHub Actions:
+    - Bump `cloudflare/wrangler-action` from v3.13.0 to v3.14.1 in
+      `Cloudflare.ts`
+    - Bump `actions/setup-node` from v4.1.0 to v4.3.0 in `Node.ts` and `NPM.yml`
+    - Bump `actions/upload-artifact` from v4.5.0 to v4.6.2 in `Node.ts`
+    - Bump `actions/cache` from v4.2.0 to v4.2.3 in `Rust.ts`
+    - Bump `github/codeql-action` from v3.27.6 to v3.28.13 in `codeql.yml`
+    - Bump `pozil/auto-assign-issue` from v2.0.1 to v2.2.0 in `GitHub.yml`
+    - Bump `dependabot/fetch-metadata` from v2.2.0 to v2.3.0 in
+      `InnerDependabot.yml`
+    - Bump `pnpm/action-setup` from v4.0.0 to v4.1.0 in `codeql.yml` and
+      `Node.yml`
+- Refactored imports to use Node.js core module protocol (`node:path`,
+  `node:fs/promises`)
+- Improved repository pagination handling in `Dispatch` command
+- Renamed command parameters from `[repositories...]` to `[Repositories...]`
+- Changed default branch reference from `main` to `Current` in workflow
+  dispatches
+- Updated shebang in `Action.sh` to use `/usr/bin/env bash` for better
+  portability
+
 ## 0.1.5
 
 ### Change
