@@ -63,7 +63,7 @@ export default async () =>
 										"undefined"
 									) {
 										Base.add(`
-            - uses: actions/setup-node@v4.2.0
+            - uses: actions/setup-node@v4.3.0
               with:
                   node-version: \${{ matrix.node-version }}
                   cache: "pnpm"
@@ -98,7 +98,7 @@ export default async () =>
             - run: pnpm run build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.6.1
+            - uses: actions/upload-artifact@v4.6.2
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target
@@ -113,7 +113,7 @@ export default async () =>
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.6.1
+            - uses: actions/upload-artifact@v4.6.2
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target
@@ -125,7 +125,7 @@ export default async () =>
             - run: pnpm run Build
               working-directory: .
 
-            - uses: actions/upload-artifact@v4.6.1
+            - uses: actions/upload-artifact@v4.6.2
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target
