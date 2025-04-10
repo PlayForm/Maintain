@@ -35,7 +35,7 @@
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@octokit/core": "6.1.4",
+		"@octokit/core": "6.1.5",
 		"commander": "13.1.0",
 		"deepmerge-ts": "7.1.5",
 		"dotenv": "16.4.7",
