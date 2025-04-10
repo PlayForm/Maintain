@@ -44,7 +44,7 @@
 		"zod": "3.24.2"
 	},
 	"devDependencies": {
-		"@octokit/types": "13.10.0",
+		"@octokit/types": "14.0.0",
 		"@playform/build": "0.2.3",
 		"@types/etag": "1.8.3",
 		"@types/node": "22.14.0",
