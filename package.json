@@ -21,8 +21,8 @@
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "Source ✍🏻 Open 👐🏻",
-		"email": "Source/Open@PlayForm.LTD",
-		"url": "HTTPS://PlayForm.LTD"
+		"email": "Source/Open@PlayForm.Cloud",
+		"url": "HTTPS://PlayForm.Cloud"
 	},
 	"type": "module",
 	"main": "./Target/Class/Maintain.js",
@@ -41,13 +41,13 @@
 		"dotenv": "16.5.0",
 		"etag": "1.8.1",
 		"fast-glob": "3.3.3",
-		"zod": "3.24.3"
+		"zod": "3.24.4"
 	},
 	"devDependencies": {
 		"@octokit/types": "14.0.0",
 		"@playform/build": "0.2.3",
 		"@types/etag": "1.8.3",
-		"@types/node": "22.15.2",
+		"@types/node": "22.15.3",
 		"@types/pacote": "11.1.8"
 	},
 	"publishConfig": {

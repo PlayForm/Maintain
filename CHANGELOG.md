@@ -90,8 +90,8 @@
   with `Action.sh`.
 - Updated `package.json`:
     - Bumped version from 0.1.1 to 0.1.2.
-    - Updated email to `Source/Open@PlayForm.LTD`.
-    - Updated URL to `HTTPS://PlayForm.LTD`.
+    - Updated email to `Source/Open@PlayForm.Cloud`.
+    - Updated URL to `HTTPS://PlayForm.Cloud`.
     - Updated `deepmerge-ts` to version 7.1.3.
     - Updated `@octokit/types` to version 13.6.1.
     - Updated `@playform/build` to version 0.1.8.
