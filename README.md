@@ -1,4 +1,4 @@
-# Maintain 🔧
+# [Maintain] 🔧
 
 Maintain GitHub repositories and automate common tasks related to project
 upkeep, CI/CD workflows, and dependency management.
@@ -237,6 +237,5 @@ Token="YourGitHubPAT"
 - **Project Repository:** [Maintain]
 - **NPM Package:** [@playform/maintain]
 
-[Maintain]: https://github.com/user/Maintain # FIXME: Replace with the actual
-GitHub repository URL [@playform/maintain]:
-https://www.npmjs.com/package/@playform/maintain
+[Maintain]: HTTPS://GitHub.Com/PlayForm/Maintain.git
+[@playform/maintain]: https://www.npmjs.com/package/@playform/maintain
