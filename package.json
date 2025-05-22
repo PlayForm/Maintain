@@ -41,7 +41,7 @@
 		"dotenv": "16.5.0",
 		"etag": "1.8.1",
 		"fast-glob": "3.3.3",
-		"zod": "3.25.18"
+		"zod": "3.25.22"
 	},
 	"devDependencies": {
 		"@octokit/types": "14.0.0",
