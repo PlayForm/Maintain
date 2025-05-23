@@ -14,9 +14,7 @@ export const _Function = (async (...[Search, From]) => {
 	}
 
 	try {
-		await (
-			await import("node:fs/promises")
-		).access(
+		await (await import("node:fs/promises")).access(
 			`${Path}/.git`,
 			(await import("node:fs/promises")).constants.R_OK,
 		);

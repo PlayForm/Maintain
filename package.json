@@ -10,9 +10,9 @@
 		"workflow",
 		"playform"
 	],
-	"homepage": "HTTPS://GitHub.Com/PlayForm/Maintain#readme",
+	"homepage": "https://GitHub.Com/PlayForm/Maintain#readme",
 	"bugs": {
-		"url": "HTTPS://GitHub.Com/PlayForm/Maintain/issues"
+		"url": "https://GitHub.Com/PlayForm/Maintain/issues"
 	},
 	"repository": {
 		"type": "git",
@@ -22,7 +22,7 @@
 	"author": {
 		"name": "Source ✍🏻 Open 👐🏻",
 		"email": "Source/Open@PlayForm.Cloud",
-		"url": "HTTPS://PlayForm.Cloud"
+		"url": "https://PlayForm.Cloud"
 	},
 	"type": "module",
 	"main": "./Target/Class/Maintain.js",

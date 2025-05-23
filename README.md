@@ -237,5 +237,5 @@ Token="YourGitHubPAT"
 - **Project Repository:** [Maintain]
 - **NPM Package:** [@playform/maintain]
 
-[Maintain]: HTTPS://GitHub.Com/PlayForm/Maintain.git
+[Maintain]: https://GitHub.Com/PlayForm/Maintain.git
 [@playform/maintain]: https://www.npmjs.com/package/@playform/maintain

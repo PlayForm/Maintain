@@ -17,7 +17,7 @@ export default async (Repository: string[] | Set<string> = []) => {
 	}[] = [];
 
 	let Current = 1;
-	let _Page = 20;
+	const _Page = 20;
 
 	for (let Page = 0; Page < 50000; Page += _Page) {
 		const Request = (
@@ -47,7 +47,7 @@ export default async (Repository: string[] | Set<string> = []) => {
 		});
 
 		let Current = 1;
-		let _Page = 20;
+		const _Page = 20;
 
 		for (let Page = 0; Page < 50000; Page += _Page) {
 			const Request = (
