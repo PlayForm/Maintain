@@ -41,13 +41,13 @@
 		"dotenv": "16.5.0",
 		"etag": "1.8.1",
 		"fast-glob": "3.3.3",
-		"zod": "3.25.30"
+		"zod": "3.25.56"
 	},
 	"devDependencies": {
 		"@octokit/types": "14.1.0",
 		"@playform/build": "0.2.4",
-		"@types/etag": "1.8.3",
-		"@types/node": "22.15.23",
+		"@types/etag": "1.8.4",
+		"@types/node": "22.15.30",
 		"@types/pacote": "11.1.8"
 	},
 	"publishConfig": {
