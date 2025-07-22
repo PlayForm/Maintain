@@ -35,19 +35,19 @@
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"@octokit/core": "7.0.2",
+		"@octokit/core": "7.0.3",
 		"commander": "14.0.0",
 		"deepmerge-ts": "7.1.5",
-		"dotenv": "17.0.1",
+		"dotenv": "17.2.0",
 		"etag": "1.8.1",
 		"fast-glob": "3.3.3",
-		"zod": "3.25.73"
+		"zod": "4.0.5"
 	},
 	"devDependencies": {
 		"@octokit/types": "14.1.0",
 		"@playform/build": "0.2.5",
 		"@types/etag": "1.8.4",
-		"@types/node": "24.0.10",
+		"@types/node": "24.0.14",
 		"@types/pacote": "11.1.8"
 	},
 	"publishConfig": {
