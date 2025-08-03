@@ -38,10 +38,10 @@
 		"@octokit/core": "7.0.3",
 		"commander": "14.0.0",
 		"deepmerge-ts": "7.1.5",
-		"dotenv": "17.2.0",
+		"dotenv": "17.2.1",
 		"etag": "1.8.1",
 		"fast-glob": "3.3.3",
-		"zod": "4.0.5"
+		"zod": "4.0.10"
 	},
 	"devDependencies": {
 		"@octokit/types": "14.1.0",
