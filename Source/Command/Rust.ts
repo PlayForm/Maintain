@@ -40,7 +40,7 @@ export default async () =>
 							Environment === "Cargo"
 						) {
 							Base.add(`
-            - uses: actions/cache@v4.2.3
+            - uses: actions/cache@v5.0.1
               with:
                   path: |
                       ~/.cargo/bin/
