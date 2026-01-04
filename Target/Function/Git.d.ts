@@ -8,12 +8,4 @@ export declare const Environment: import("zod").ZodObject<{
     User: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
     Base: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
     Token: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
-}, "strip", import("zod").ZodTypeAny, {
-    User: string;
-    Base: string;
-    Token: string;
-}, {
-    User?: string | undefined;
-    Base?: string | undefined;
-    Token?: string | undefined;
-}>;
+}, import("zod/v4/core").$strip>;
