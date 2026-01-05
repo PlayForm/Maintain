@@ -31,8 +31,8 @@
 		"Maintain": "Target/Class/Maintain.js"
 	},
 	"scripts": {
-		"Run": "Build 'Source/**/*.ts' --Watch",
-		"prepublishOnly": "Build 'Source/**/*.ts'"
+		"Run": "sh Source/Run.sh",
+		"prepublishOnly": "sh Source/prepublishOnly.sh"
 	},
 	"dependencies": {
 		"@octokit/core": "7.0.6",

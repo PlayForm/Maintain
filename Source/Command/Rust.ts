@@ -40,7 +40,7 @@ export default async () =>
 							Environment === "Cargo"
 						) {
 							Base.add(`
-            - uses: actions/cache@v5.0.1
+            - uses: actions/cache@${process.env["VERSION_ACTIONS_CACHE"]}
               with:
                   path: |
                       ~/.cargo/bin/
@@ -50,7 +50,7 @@ export default async () =>
                       target/
                       Target/
                   key: \${{ runner.os }}-cargo-\${{ hashFiles('.${Directory}/Cargo.toml') }}
-            - uses: actions-rs/cargo@v1.0.3
+            - uses: actions-rs/cargo@${process.env["VERSION_ACTIONS_RS_CARGO"]}
               with:
                 command: build
                 args: --release --all-features --manifest-path .${Directory}/${(await import("node:path")).basename(Package)}
