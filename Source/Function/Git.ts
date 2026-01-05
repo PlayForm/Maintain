@@ -14,6 +14,5 @@ export default async () =>
 		].sort(),
 	);
 
-export const { default: Environment } = await import(
-	"@Variable/Environment.js"
-);
+export const { default: Environment } =
+	await import("@Variable/Environment.js");

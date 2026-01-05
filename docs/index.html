@@ -1,196 +1,675 @@
-<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta name="keywords" content="git, github, maintain, workflow, playform"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@playform/maintain - v0.1.7</title><meta name="description" content="Documentation for @playform/maintain"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><link rel="stylesheet" href="assets/custom.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">@playform/maintain - v0.1.7</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>@playform/maintain - v0.1.7</h1></div><div class="tsd-panel tsd-typography"><h1 id="maintain🔧" class="tsd-anchor-link"><a href="HTTPS://GitHub.Com/PlayForm/Maintain.git">Maintain</a> 🔧<a href="#maintain🔧" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p>Maintain GitHub repositories and automate common tasks related to project
-upkeep, CI/CD workflows, and dependency management.</p>
-<h2 id="installation🚀" class="tsd-anchor-link">Installation 🚀<a href="#installation🚀" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Using NPM</p>
-<pre><code class="sh"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-3">-g</span><span class="hl-1"> </span><span class="hl-2">@playform/maintain</span>
+<!doctype html>
+<html class="default" lang="en" data-base="./">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			content="git, github, maintain, workflow, playform"
+			name="keywords" />
+		<meta content="IE=edge" http-equiv="x-ua-compatible" />
+		<title>@playform/maintain - v0.1.7</title>
+		<meta
+			content="Documentation for @playform/maintain"
+			name="description" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<link href="assets/style.css" rel="stylesheet" />
+		<link href="assets/highlight.css" rel="stylesheet" />
+		<link href="assets/custom.css" rel="stylesheet" />
+		<script defer src="assets/main.js"></script>
+		<script async id="tsd-icons-script" src="assets/icons.js"></script>
+		<script async id="tsd-search-script" src="assets/search.js"></script>
+		<script async id="tsd-nav-script" src="assets/navigation.js"></script>
+	</head>
+	<body>
+		<script>
+			document.documentElement.dataset.theme =
+				localStorage.getItem("tsd-theme") || "os";
+			document.body.style.display = "none";
+			setTimeout(
+				() =>
+					window.app
+						? app.showPage()
+						: document.body.style.removeProperty("display"),
+				500,
+			);
+		</script>
+		<header class="tsd-page-toolbar">
+			<div class="tsd-toolbar-contents container">
+				<a class="title" href="index.html"
+					>@playform/maintain - v0.1.7</a
+				>
+				<div id="tsd-toolbar-links"></div>
+				<button
+					aria-label="Search"
+					class="tsd-widget"
+					id="tsd-search-trigger">
+					<svg
+						aria-hidden="true"
+						fill="none"
+						height="16"
+						viewBox="0 0 16 16"
+						width="16">
+						<use href="assets/icons.svg#icon-search"></use>
+					</svg>
+				</button>
+				<dialog aria-label="Search" id="tsd-search">
+					<input
+						aria-autocomplete="list"
+						aria-controls="tsd-search-results"
+						aria-expanded="true"
+						autocapitalize="off"
+						autocomplete="off"
+						id="tsd-search-input"
+						maxlength="100"
+						placeholder="Search the docs"
+						role="combobox" />
+					<ul id="tsd-search-results" role="listbox"></ul>
+					<div
+						aria-atomic="true"
+						aria-live="polite"
+						id="tsd-search-status">
+						<div>Preparing search index...</div>
+					</div>
+				</dialog>
+				<a
+					aria-label="Menu"
+					class="tsd-widget menu"
+					href="#"
+					id="tsd-toolbar-menu-trigger"
+					data-toggle="menu"
+					><svg
+						aria-hidden="true"
+						fill="none"
+						height="16"
+						viewBox="0 0 16 16"
+						width="16">
+						<use href="assets/icons.svg#icon-menu"></use></svg
+				></a>
+			</div>
+		</header>
+		<div class="container-main container">
+			<div class="col-content">
+				<div class="tsd-page-title">
+					<h1>@playform/maintain - v0.1.7</h1>
+				</div>
+				<div class="tsd-panel tsd-typography">
+					<h1 class="tsd-anchor-link" id="maintain🔧">
+						<a href="HTTPS://GitHub.Com/PlayForm/Maintain.git"
+							>Maintain</a
+						> 🔧<a
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							href="#maintain🔧"
+							><svg aria-hidden="true" viewBox="0 0 24 24">
+								<use
+									href="assets/icons.svg#icon-anchor"></use></svg
+						></a>
+					</h1>
+					<p>
+						Maintain GitHub repositories and automate common tasks
+						related to project upkeep, CI/CD workflows, and
+						dependency management.
+					</p>
+					<h2 class="tsd-anchor-link" id="installation🚀">
+						Installation 🚀<a
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							href="#installation🚀"
+							><svg aria-hidden="true" viewBox="0 0 24 24">
+								<use
+									href="assets/icons.svg#icon-anchor"></use></svg
+						></a>
+					</h2>
+					<p>Using NPM</p>
+					<pre><code class="sh"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-3">-g</span><span class="hl-1"> </span><span class="hl-2">@playform/maintain</span>
 </code><button type="button">Copy</button></pre>
 
-<p>Using Yarn</p>
-<pre><code class="sh"><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">global</span><span class="hl-1"> </span><span class="hl-2">add</span><span class="hl-1"> </span><span class="hl-2">@playform/maintain</span>
+					<p>Using Yarn</p>
+					<pre><code class="sh"><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">global</span><span class="hl-1"> </span><span class="hl-2">add</span><span class="hl-1"> </span><span class="hl-2">@playform/maintain</span>
 </code><button type="button">Copy</button></pre>
 
-<p>Using PNPM</p>
-<pre><code class="sh"><span class="hl-0">pnpm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-3">-g</span><span class="hl-1"> </span><span class="hl-2">@playform/maintain</span>
+					<p>Using PNPM</p>
+					<pre><code class="sh"><span class="hl-0">pnpm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-3">-g</span><span class="hl-1"> </span><span class="hl-2">@playform/maintain</span>
 </code><button type="button">Copy</button></pre>
 
-<p>or direct usage:</p>
-<p>Using NPM</p>
-<pre><code class="sh"><span class="hl-0">npx</span><span class="hl-1"> </span><span class="hl-2">@playform/maintain</span><span class="hl-1"> &lt; </span><span class="hl-2">Command</span><span class="hl-1"> &gt; [Arguments...]</span>
+					<p>or direct usage:</p>
+					<p>Using NPM</p>
+					<pre><code class="sh"><span class="hl-0">npx</span><span class="hl-1"> </span><span class="hl-2">@playform/maintain</span><span class="hl-1"> &lt; </span><span class="hl-2">Command</span><span class="hl-1"> &gt; [Arguments...]</span>
 </code><button type="button">Copy</button></pre>
 
-<p>Using Yarn</p>
-<pre><code class="sh"><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">@playform/maintain</span><span class="hl-1"> &lt; </span><span class="hl-2">Command</span><span class="hl-1"> &gt; [Arguments...]</span>
+					<p>Using Yarn</p>
+					<pre><code class="sh"><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">@playform/maintain</span><span class="hl-1"> &lt; </span><span class="hl-2">Command</span><span class="hl-1"> &gt; [Arguments...]</span>
 </code><button type="button">Copy</button></pre>
 
-<p>Using PNPM</p>
-<pre><code class="sh"><span class="hl-0">pnpx</span><span class="hl-1"> </span><span class="hl-2">@playform/maintain</span><span class="hl-1"> &lt; </span><span class="hl-2">Command</span><span class="hl-1"> &gt; [Arguments...]</span>
+					<p>Using PNPM</p>
+					<pre><code class="sh"><span class="hl-0">pnpx</span><span class="hl-1"> </span><span class="hl-2">@playform/maintain</span><span class="hl-1"> &lt; </span><span class="hl-2">Command</span><span class="hl-1"> &gt; [Arguments...]</span>
 </code><button type="button">Copy</button></pre>
 
-<h2 id="cli-usage" class="tsd-anchor-link">CLI Usage:<a href="#cli-usage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>The CLI is invoked using the <code>Maintain</code> command, followed by a specific
-subcommand.</p>
-<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> &lt; </span><span class="hl-2">Command</span><span class="hl-1"> &gt; [Arguments...]</span>
+					<h2 class="tsd-anchor-link" id="cli-usage">
+						CLI Usage:<a
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							href="#cli-usage"
+							><svg aria-hidden="true" viewBox="0 0 24 24">
+								<use
+									href="assets/icons.svg#icon-anchor"></use></svg
+						></a>
+					</h2>
+					<p>
+						The CLI is invoked using the
+						<code>Maintain</code> command, followed by a specific
+						subcommand.
+					</p>
+					<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> &lt; </span><span class="hl-2">Command</span><span class="hl-1"> &gt; [Arguments...]</span>
 </code><button type="button">Copy</button></pre>
 
-<h3 id="commands" class="tsd-anchor-link">Commands:<a href="#commands" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p><strong><code>Clean [Repositories...]</code></strong></p>
-<p>Deletes GitHub Actions workflow runs, their logs, and actions caches for
-specified repositories. If no repositories are listed, it attempts to clean all
-repositories accessible to the configured user.</p>
-<ul>
-<li><strong>Arguments:</strong>
-<ul>
-<li><code>[Repositories...]</code>: (Optional) A list of repository names to clean.</li>
-</ul>
-</li>
-<li><strong>Example:</strong><pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Clean</span><span class="hl-1"> </span><span class="hl-2">MyRepo</span><span class="hl-1"> </span><span class="hl-2">AnotherRepo</span><br/><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Clean</span><span class="hl-1"> </span><span class="hl-4"># Cleans all accessible repositories</span>
+					<h3 class="tsd-anchor-link" id="commands">
+						Commands:<a
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							href="#commands"
+							><svg aria-hidden="true" viewBox="0 0 24 24">
+								<use
+									href="assets/icons.svg#icon-anchor"></use></svg
+						></a>
+					</h3>
+					<p>
+						<strong><code>Clean [Repositories...]</code></strong>
+					</p>
+					<p>
+						Deletes GitHub Actions workflow runs, their logs, and
+						actions caches for specified repositories. If no
+						repositories are listed, it attempts to clean all
+						repositories accessible to the configured user.
+					</p>
+					<ul>
+						<li>
+							<strong>Arguments:</strong>
+							<ul>
+								<li>
+									<code>[Repositories...]</code>: (Optional) A
+									list of repository names to clean.
+								</li>
+							</ul>
+						</li>
+						<li>
+							<strong>Example:</strong>
+							<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Clean</span><span class="hl-1"> </span><span class="hl-2">MyRepo</span><span class="hl-1"> </span><span class="hl-2">AnotherRepo</span><br/><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Clean</span><span class="hl-1"> </span><span class="hl-4"># Cleans all accessible repositories</span>
+</code><button type="button">Copy</button></pre>
+						</li>
+					</ul>
+					<p>
+						<strong><code>Dependabot</code></strong>
+					</p>
+					<p>
+						Scans project directories (identified by various package
+						manifest files like <code>package.json</code>,
+						<code>Cargo.toml</code>, etc.) and generates/updates
+						<code>.github/dependabot.yml</code> configuration files.
+						It also creates a supporting
+						<code>.github/workflows/Dependabot.yml</code> GitHub
+						Actions workflow. This helps in keeping project
+						dependencies up-to-date automatically.
+					</p>
+					<ul>
+						<li>
+							<strong>Example:</strong>
+							<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Dependabot</span>
+</code><button type="button">Copy</button></pre>
+						</li>
+					</ul>
+					<p>
+						<strong><code>Dispatch [Repositories...]</code></strong>
+					</p>
+					<p>
+						Triggers <code>workflow_dispatch</code> events for all
+						workflows found in the specified repositories. If no
+						repositories are listed, it attempts to dispatch events
+						for all repositories accessible to the configured user.
+						The dispatch is triggered on a ref named
+						&quot;Current&quot;.
+					</p>
+					<ul>
+						<li>
+							<strong>Arguments:</strong>
+							<ul>
+								<li>
+									<code>[Repositories...]</code>: (Optional) A
+									list of repository names to dispatch
+									workflow events for.
+								</li>
+							</ul>
+						</li>
+						<li>
+							<strong>Example:</strong>
+							<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Dispatch</span><span class="hl-1"> </span><span class="hl-2">MyRepo</span><span class="hl-1"> </span><span class="hl-2">AnotherRepo</span><br/><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Dispatch</span><span class="hl-1"> </span><span class="hl-4"># Dispatches for all accessible repositories</span>
+</code><button type="button">Copy</button></pre>
+						</li>
+					</ul>
+					<p>
+						<strong><code>Edit [Repositories...]</code></strong>
+					</p>
+					<p>
+						Configures a wide range of settings for your GitHub
+						organizations and repositories. This includes enabling
+						vulnerability alerts, automated security fixes,
+						adjusting merge strategies (e.g., allow squash merge,
+						auto-merge, delete branch on merge), fork settings,
+						requiring web commit signoffs, and setting default
+						permissions for GitHub Actions at both repository and
+						organization levels. Applies to specified repositories
+						or all accessible ones.
+					</p>
+					<ul>
+						<li>
+							<strong>Arguments:</strong>
+							<ul>
+								<li>
+									<code>[Repositories...]</code>: (Optional) A
+									list of repository names to edit.
+								</li>
+							</ul>
+						</li>
+						<li>
+							<strong>Example:</strong>
+							<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Edit</span><span class="hl-1"> </span><span class="hl-2">MyRepo</span><span class="hl-1"> </span><span class="hl-2">AnotherRepo</span><br/><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Edit</span><span class="hl-1"> </span><span class="hl-4"># Edits settings for all accessible repositories and organizations</span>
+</code><button type="button">Copy</button></pre>
+						</li>
+					</ul>
+					<p>
+						<strong><code>Node</code></strong>
+					</p>
+					<p>
+						Generates or updates a
+						<code>.github/workflows/Node.yml</code> GitHub Actions
+						workflow for projects using Node.js (identified by
+						<code>package.json</code> files). The workflow
+						configures Node.js, installs dependencies using
+						<code>pnpm</code> (with caching for
+						<code>pnpm-lock.yaml</code>), and includes steps for
+						common npm scripts like <code>build</code>,
+						<code>test</code>, and <code>prepublishOnly</code>.
+						Build artifacts from <code>./Target</code> (if a build
+						script is present) are uploaded.
+					</p>
+					<ul>
+						<li>
+							<strong>Example:</strong>
+							<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Node</span>
+</code><button type="button">Copy</button></pre>
+						</li>
+					</ul>
+					<p>
+						<strong><code>Cloudflare</code></strong>
+					</p>
+					<p>
+						Generates or updates a
+						<code>.github/workflows/Cloudflare.yml</code> GitHub
+						Actions workflow for projects intended for Cloudflare
+						deployment (identified by
+						<code>wrangler.toml</code> files). It sets up the
+						<code>cloudflare/wrangler-action</code> for deployments.
+					</p>
+					<ul>
+						<li>
+							<strong>Example:</strong>
+							<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Cloudflare</span>
+</code><button type="button">Copy</button></pre>
+						</li>
+					</ul>
+					<p>
+						<strong><code>NPM</code></strong>
+					</p>
+					<p>
+						Generates or updates a
+						<code>.github/workflows/NPM.yml</code> GitHub Actions
+						workflow for Node.js projects that publish packages to
+						NPM. If <code>build</code>, <code>prepublishOnly</code>,
+						or <code>Build</code> scripts are found in
+						<code>package.json</code>, it adds steps to publish the
+						package using
+						<code
+							>npm publish --legacy-peer-deps --provenance
+							--ignore-scripts</code
+						>.
+					</p>
+					<ul>
+						<li>
+							<strong>Example:</strong>
+							<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">NPM</span>
+</code><button type="button">Copy</button></pre>
+						</li>
+					</ul>
+					<p>
+						<strong><code>Rust</code></strong>
+					</p>
+					<p>
+						Generates or updates a
+						<code>.github/workflows/Rust.yml</code> GitHub Actions
+						workflow for Rust projects (identified by
+						<code>Cargo.toml</code> files). The workflow includes
+						steps for caching Cargo dependencies and building the
+						project in release mode (<code
+							>cargo build --release --all-features</code
+						>).
+					</p>
+					<ul>
+						<li>
+							<strong>Example:</strong>
+							<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Rust</span>
+</code><button type="button">Copy</button></pre>
+						</li>
+					</ul>
+					<p>
+						<strong><code>GitHub</code></strong>
+					</p>
+					<p>
+						Generates or updates a generic
+						<code>.github/workflows/GitHub.yml</code> GitHub Actions
+						workflow. This workflow can be used for general CI
+						purposes across your repositories.
+					</p>
+					<ul>
+						<li>
+							<strong>Example:</strong>
+							<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">GitHub</span>
+</code><button type="button">Copy</button></pre>
+						</li>
+					</ul>
+					<p>
+						<strong><code>Workflow</code></strong>
+					</p>
+					<p>
+						A meta-command that executes all individual workflow
+						generation commands: <code>Dependabot</code>,
+						<code>Node</code>, <code>Cloudflare</code>,
+						<code>NPM</code>, <code>Rust</code>, and
+						<code>GitHub</code>. This is useful for setting up all
+						standard workflows in a project.
+					</p>
+					<ul>
+						<li>
+							<strong>Example:</strong>
+							<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Workflow</span>
+</code><button type="button">Copy</button></pre>
+						</li>
+					</ul>
+					<p>
+						<strong><code>Star</code></strong>
+					</p>
+					<p>
+						Scans all <code>package.json</code> files found within
+						the <code>Base</code> directory (see
+						<code>.env</code> configuration), extracts all NPM
+						dependencies (both <code>dependencies</code> and
+						<code>devDependencies</code>), and attempts to star
+						their corresponding GitHub repositories.
+					</p>
+					<ul>
+						<li>
+							<strong>Example:</strong>
+							<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Star</span>
+</code><button type="button">Copy</button></pre>
+						</li>
+					</ul>
+					<p>
+						<strong><code>Complexity [files...]</code></strong>
+						Scans specified files or project directories and logs
+						package file information. (Note: Advanced complexity
+						analysis features may be under development, current
+						primary function is discovery and logging of project
+						structure related to package files).
+					</p>
+					<ul>
+						<li>
+							<strong>Arguments:</strong>
+							<ul>
+								<li>
+									<code>[files...]</code>: (Optional) A list
+									of files or globs to scan.
+								</li>
+							</ul>
+						</li>
+						<li>
+							<strong>Example:</strong>
+							<pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Complexity</span><span class="hl-1"> </span><span class="hl-2">&quot;src/**/*.ts&quot;</span><br/><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Complexity</span><span class="hl-1"> </span><span class="hl-4"># Scans based on located package files</span>
+</code><button type="button">Copy</button></pre>
+						</li>
+					</ul>
+					<h2 class="tsd-anchor-link" id="env-configuration">
+						.env Configuration<a
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							href="#env-configuration"
+							><svg aria-hidden="true" viewBox="0 0 24 24">
+								<use
+									href="assets/icons.svg#icon-anchor"></use></svg
+						></a>
+					</h2>
+					<p>
+						Create a <code>.env</code> file in the root directory
+						where you run <code>Maintain</code> or ensure these
+						environment variables are set:
+					</p>
+					<pre><code class="sh"><span class="hl-4"># Your GitHub username.</span><br/><span class="hl-4"># Used by: Clean, Dispatch, Edit.</span><br/><span class="hl-5">User</span><span class="hl-1">=</span><span class="hl-2">&quot;YourGitHubUsername&quot;</span><br/><br/><span class="hl-4"># The base directory for operations like scanning for package.json files.</span><br/><span class="hl-4"># Defaults to the current working directory.</span><br/><span class="hl-4"># Used by: Star, and all workflow generation commands (Dependabot, Node, Cloudflare, NPM, Rust, GitHub, Complexity).</span><br/><span class="hl-5">Base</span><span class="hl-1">=</span><span class="hl-2">&quot;/path/to/your/projects_root_or_monorepo_root&quot;</span><br/><br/><span class="hl-4"># Your GitHub Personal Access Token (PAT) with appropriate permissions.</span><br/><span class="hl-4"># (e.g., repo, workflow, admin:org for organization edits).</span><br/><span class="hl-4"># Used by: Clean, Dispatch, Edit, Star.</span><br/><span class="hl-5">Token</span><span class="hl-1">=</span><span class="hl-2">&quot;YourGitHubPAT&quot;</span>
 </code><button type="button">Copy</button></pre>
 
-</li>
-</ul>
-<p><strong><code>Dependabot</code></strong></p>
-<p>Scans project directories (identified by various package manifest files like
-<code>package.json</code>, <code>Cargo.toml</code>, etc.) and generates/updates
-<code>.github/dependabot.yml</code> configuration files. It also creates a supporting
-<code>.github/workflows/Dependabot.yml</code> GitHub Actions workflow. This helps in
-keeping project dependencies up-to-date automatically.</p>
-<ul>
-<li><strong>Example:</strong><pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Dependabot</span>
-</code><button type="button">Copy</button></pre>
-
-</li>
-</ul>
-<p><strong><code>Dispatch [Repositories...]</code></strong></p>
-<p>Triggers <code>workflow_dispatch</code> events for all workflows found in the specified
-repositories. If no repositories are listed, it attempts to dispatch events for
-all repositories accessible to the configured user. The dispatch is triggered on
-a ref named &quot;Current&quot;.</p>
-<ul>
-<li><strong>Arguments:</strong>
-<ul>
-<li><code>[Repositories...]</code>: (Optional) A list of repository names to dispatch
-workflow events for.</li>
-</ul>
-</li>
-<li><strong>Example:</strong><pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Dispatch</span><span class="hl-1"> </span><span class="hl-2">MyRepo</span><span class="hl-1"> </span><span class="hl-2">AnotherRepo</span><br/><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Dispatch</span><span class="hl-1"> </span><span class="hl-4"># Dispatches for all accessible repositories</span>
-</code><button type="button">Copy</button></pre>
-
-</li>
-</ul>
-<p><strong><code>Edit [Repositories...]</code></strong></p>
-<p>Configures a wide range of settings for your GitHub organizations and
-repositories. This includes enabling vulnerability alerts, automated security
-fixes, adjusting merge strategies (e.g., allow squash merge, auto-merge, delete
-branch on merge), fork settings, requiring web commit signoffs, and setting
-default permissions for GitHub Actions at both repository and organization
-levels. Applies to specified repositories or all accessible ones.</p>
-<ul>
-<li><strong>Arguments:</strong>
-<ul>
-<li><code>[Repositories...]</code>: (Optional) A list of repository names to edit.</li>
-</ul>
-</li>
-<li><strong>Example:</strong><pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Edit</span><span class="hl-1"> </span><span class="hl-2">MyRepo</span><span class="hl-1"> </span><span class="hl-2">AnotherRepo</span><br/><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Edit</span><span class="hl-1"> </span><span class="hl-4"># Edits settings for all accessible repositories and organizations</span>
-</code><button type="button">Copy</button></pre>
-
-</li>
-</ul>
-<p><strong><code>Node</code></strong></p>
-<p>Generates or updates a <code>.github/workflows/Node.yml</code> GitHub Actions workflow for
-projects using Node.js (identified by <code>package.json</code> files). The workflow
-configures Node.js, installs dependencies using <code>pnpm</code> (with caching for
-<code>pnpm-lock.yaml</code>), and includes steps for common npm scripts like <code>build</code>,
-<code>test</code>, and <code>prepublishOnly</code>. Build artifacts from <code>./Target</code> (if a build script
-is present) are uploaded.</p>
-<ul>
-<li><strong>Example:</strong><pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Node</span>
-</code><button type="button">Copy</button></pre>
-
-</li>
-</ul>
-<p><strong><code>Cloudflare</code></strong></p>
-<p>Generates or updates a <code>.github/workflows/Cloudflare.yml</code> GitHub Actions
-workflow for projects intended for Cloudflare deployment (identified by
-<code>wrangler.toml</code> files). It sets up the <code>cloudflare/wrangler-action</code> for
-deployments.</p>
-<ul>
-<li><strong>Example:</strong><pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Cloudflare</span>
-</code><button type="button">Copy</button></pre>
-
-</li>
-</ul>
-<p><strong><code>NPM</code></strong></p>
-<p>Generates or updates a <code>.github/workflows/NPM.yml</code> GitHub Actions workflow for
-Node.js projects that publish packages to NPM. If <code>build</code>, <code>prepublishOnly</code>, or
-<code>Build</code> scripts are found in <code>package.json</code>, it adds steps to publish the
-package using <code>npm publish --legacy-peer-deps --provenance --ignore-scripts</code>.</p>
-<ul>
-<li><strong>Example:</strong><pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">NPM</span>
-</code><button type="button">Copy</button></pre>
-
-</li>
-</ul>
-<p><strong><code>Rust</code></strong></p>
-<p>Generates or updates a <code>.github/workflows/Rust.yml</code> GitHub Actions workflow for
-Rust projects (identified by <code>Cargo.toml</code> files). The workflow includes steps
-for caching Cargo dependencies and building the project in release mode
-(<code>cargo build --release --all-features</code>).</p>
-<ul>
-<li><strong>Example:</strong><pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Rust</span>
-</code><button type="button">Copy</button></pre>
-
-</li>
-</ul>
-<p><strong><code>GitHub</code></strong></p>
-<p>Generates or updates a generic <code>.github/workflows/GitHub.yml</code> GitHub Actions
-workflow. This workflow can be used for general CI purposes across your
-repositories.</p>
-<ul>
-<li><strong>Example:</strong><pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">GitHub</span>
-</code><button type="button">Copy</button></pre>
-
-</li>
-</ul>
-<p><strong><code>Workflow</code></strong></p>
-<p>A meta-command that executes all individual workflow generation commands:
-<code>Dependabot</code>, <code>Node</code>, <code>Cloudflare</code>, <code>NPM</code>, <code>Rust</code>, and <code>GitHub</code>. This is useful
-for setting up all standard workflows in a project.</p>
-<ul>
-<li><strong>Example:</strong><pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Workflow</span>
-</code><button type="button">Copy</button></pre>
-
-</li>
-</ul>
-<p><strong><code>Star</code></strong></p>
-<p>Scans all <code>package.json</code> files found within the <code>Base</code> directory (see <code>.env</code>
-configuration), extracts all NPM dependencies (both <code>dependencies</code> and
-<code>devDependencies</code>), and attempts to star their corresponding GitHub
-repositories.</p>
-<ul>
-<li><strong>Example:</strong><pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Star</span>
-</code><button type="button">Copy</button></pre>
-
-</li>
-</ul>
-<p><strong><code>Complexity [files...]</code></strong> Scans specified files or project directories and
-logs package file information. (Note: Advanced complexity analysis features may
-be under development, current primary function is discovery and logging of
-project structure related to package files).</p>
-<ul>
-<li><strong>Arguments:</strong>
-<ul>
-<li><code>[files...]</code>: (Optional) A list of files or globs to scan.</li>
-</ul>
-</li>
-<li><strong>Example:</strong><pre><code class="sh"><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Complexity</span><span class="hl-1"> </span><span class="hl-2">&quot;src/**/*.ts&quot;</span><br/><span class="hl-0">Maintain</span><span class="hl-1"> </span><span class="hl-2">Complexity</span><span class="hl-1"> </span><span class="hl-4"># Scans based on located package files</span>
-</code><button type="button">Copy</button></pre>
-
-</li>
-</ul>
-<h2 id="env-configuration" class="tsd-anchor-link">.env Configuration<a href="#env-configuration" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Create a <code>.env</code> file in the root directory where you run <code>Maintain</code> or ensure
-these environment variables are set:</p>
-<pre><code class="sh"><span class="hl-4"># Your GitHub username.</span><br/><span class="hl-4"># Used by: Clean, Dispatch, Edit.</span><br/><span class="hl-5">User</span><span class="hl-1">=</span><span class="hl-2">&quot;YourGitHubUsername&quot;</span><br/><br/><span class="hl-4"># The base directory for operations like scanning for package.json files.</span><br/><span class="hl-4"># Defaults to the current working directory.</span><br/><span class="hl-4"># Used by: Star, and all workflow generation commands (Dependabot, Node, Cloudflare, NPM, Rust, GitHub, Complexity).</span><br/><span class="hl-5">Base</span><span class="hl-1">=</span><span class="hl-2">&quot;/path/to/your/projects_root_or_monorepo_root&quot;</span><br/><br/><span class="hl-4"># Your GitHub Personal Access Token (PAT) with appropriate permissions.</span><br/><span class="hl-4"># (e.g., repo, workflow, admin:org for organization edits).</span><br/><span class="hl-4"># Used by: Clean, Dispatch, Edit, Star.</span><br/><span class="hl-5">Token</span><span class="hl-1">=</span><span class="hl-2">&quot;YourGitHubPAT&quot;</span>
-</code><button type="button">Copy</button></pre>
-
-<h2 id="links" class="tsd-anchor-link">Links<a href="#links" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
-<li><strong>Project Repository:</strong> <a href="HTTPS://GitHub.Com/PlayForm/Maintain.git">Maintain</a></li>
-<li><strong>NPM Package:</strong> <a href="https://www.npmjs.com/package/@playform/maintain">@playform/maintain</a></li>
-</ul>
-</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#maintain🔧"><span>Maintain 🔧</span></a><ul><li><a href="#installation🚀"><span>Installation 🚀</span></a></li><li><a href="#cli-usage"><span>CLI <wbr/>Usage:</span></a></li><li><ul><li><a href="#commands"><span>Commands:</span></a></li></ul></li><li><a href="#env-configuration"><span>.env <wbr/>Configuration</span></a></li><li><a href="#links"><span>Links</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">@playform/maintain - v0.1.7</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
+					<h2 class="tsd-anchor-link" id="links">
+						Links<a
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							href="#links"
+							><svg aria-hidden="true" viewBox="0 0 24 24">
+								<use
+									href="assets/icons.svg#icon-anchor"></use></svg
+						></a>
+					</h2>
+					<ul>
+						<li>
+							<strong>Project Repository:</strong>
+							<a href="HTTPS://GitHub.Com/PlayForm/Maintain.git"
+								>Maintain</a
+							>
+						</li>
+						<li>
+							<strong>NPM Package:</strong>
+							<a
+								href="https://www.npmjs.com/package/@playform/maintain"
+								>@playform/maintain</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sidebar">
+				<div class="page-menu">
+					<div class="tsd-navigation settings">
+						<details class="tsd-accordion">
+							<summary class="tsd-accordion-summary">
+								<svg
+									aria-hidden="true"
+									fill="none"
+									height="20"
+									viewBox="0 0 24 24"
+									width="20">
+									<use
+										href="assets/icons.svg#icon-chevronDown"></use>
+								</svg>
+								<h3>Settings</h3>
+							</summary>
+							<div class="tsd-accordion-details">
+								<div class="tsd-filter-visibility">
+									<span class="settings-label"
+										>Member Visibility</span
+									>
+									<ul id="tsd-filter-options">
+										<li class="tsd-filter-item">
+											<label class="tsd-filter-input"
+												><input
+													id="tsd-filter-protected"
+													name="protected"
+													type="checkbox" /><svg
+													aria-hidden="true"
+													height="32"
+													viewBox="0 0 32 32"
+													width="32">
+													<rect
+														class="tsd-checkbox-background"
+														fill="none"
+														height="30"
+														rx="6"
+														width="30"
+														x="1"
+														y="1"></rect>
+													<path
+														class="tsd-checkbox-checkmark"
+														d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+														fill="none"
+														stroke="none"
+														stroke-linejoin="round"
+														stroke-width="3.5"></path></svg
+												><span>Protected</span></label
+											>
+										</li>
+										<li class="tsd-filter-item">
+											<label class="tsd-filter-input"
+												><input
+													checked
+													id="tsd-filter-inherited"
+													name="inherited"
+													type="checkbox" /><svg
+													aria-hidden="true"
+													height="32"
+													viewBox="0 0 32 32"
+													width="32">
+													<rect
+														class="tsd-checkbox-background"
+														fill="none"
+														height="30"
+														rx="6"
+														width="30"
+														x="1"
+														y="1"></rect>
+													<path
+														class="tsd-checkbox-checkmark"
+														d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+														fill="none"
+														stroke="none"
+														stroke-linejoin="round"
+														stroke-width="3.5"></path></svg
+												><span>Inherited</span></label
+											>
+										</li>
+										<li class="tsd-filter-item">
+											<label class="tsd-filter-input"
+												><input
+													id="tsd-filter-external"
+													name="external"
+													type="checkbox" /><svg
+													aria-hidden="true"
+													height="32"
+													viewBox="0 0 32 32"
+													width="32">
+													<rect
+														class="tsd-checkbox-background"
+														fill="none"
+														height="30"
+														rx="6"
+														width="30"
+														x="1"
+														y="1"></rect>
+													<path
+														class="tsd-checkbox-checkmark"
+														d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+														fill="none"
+														stroke="none"
+														stroke-linejoin="round"
+														stroke-width="3.5"></path></svg
+												><span>External</span></label
+											>
+										</li>
+									</ul>
+								</div>
+								<div class="tsd-theme-toggle">
+									<label
+										class="settings-label"
+										for="tsd-theme"
+										>Theme</label
+									><select id="tsd-theme">
+										<option value="os">OS</option>
+										<option value="light">Light</option>
+										<option value="dark">Dark</option>
+									</select>
+								</div>
+							</div>
+						</details>
+					</div>
+					<details class="tsd-accordion tsd-page-navigation" open>
+						<summary class="tsd-accordion-summary">
+							<svg
+								aria-hidden="true"
+								fill="none"
+								height="20"
+								viewBox="0 0 24 24"
+								width="20">
+								<use
+									href="assets/icons.svg#icon-chevronDown"></use>
+							</svg>
+							<h3>On This Page</h3>
+						</summary>
+						<div class="tsd-accordion-details">
+							<a href="#maintain🔧"><span>Maintain 🔧</span></a>
+							<ul>
+								<li>
+									<a href="#installation🚀"
+										><span>Installation 🚀</span></a
+									>
+								</li>
+								<li>
+									<a href="#cli-usage"
+										><span>CLI <wbr />Usage:</span></a
+									>
+								</li>
+								<li>
+									<ul>
+										<li>
+											<a href="#commands"
+												><span>Commands:</span></a
+											>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#env-configuration"
+										><span
+											>.env <wbr />Configuration</span
+										></a
+									>
+								</li>
+								<li>
+									<a href="#links"><span>Links</span></a>
+								</li>
+							</ul>
+						</div>
+					</details>
+				</div>
+				<div class="site-menu">
+					<nav class="tsd-navigation">
+						<a href="modules.html">@playform/maintain - v0.1.7</a>
+						<ul
+							class="tsd-small-nested-navigation"
+							id="tsd-nav-container">
+							<li>Loading...</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p class="tsd-generator">
+				Generated using
+				<a href="https://typedoc.org/" target="_blank">TypeDoc</a>
+			</p>
+		</footer>
+		<div class="overlay"></div>
+	</body>
+</html>

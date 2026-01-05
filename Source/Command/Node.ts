@@ -154,7 +154,9 @@ export default async () =>
 				let Branch = "main";
 
 				try {
-					await (await import("node:fs/promises")).access(
+					await (
+						await import("node:fs/promises")
+					).access(
 						_Directory,
 						(await import("node:fs/promises")).constants.F_OK,
 					);
@@ -175,18 +177,19 @@ export default async () =>
 
 				if (Base.size > 1) {
 					try {
-						await (await import("node:fs/promises")).mkdir(
-							`${GitHub}${Path}`,
-							{
-								recursive: true,
-							},
-						);
+						await (
+							await import("node:fs/promises")
+						).mkdir(`${GitHub}${Path}`, {
+							recursive: true,
+						});
 					} catch {
 						console.log(`Could not create: ${GitHub}${Path}`);
 					}
 
 					try {
-						await (await import("node:fs/promises")).writeFile(
+						await (
+							await import("node:fs/promises")
+						).writeFile(
 							`${GitHub}${Path}${Name}`,
 							`${[...Base].join("")}`.replaceAll(
 								"$Branch$",

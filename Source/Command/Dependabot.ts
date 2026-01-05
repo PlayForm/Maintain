@@ -37,34 +37,30 @@ export default async () =>
     - package-ecosystem: "${
 		typeof Environment !== "undefined"
 			? String(Environment).toLowerCase()
-			: (
-					() => {
-						switch (Package.split(".").pop()) {
-							case "csproj":
-								return "nuget";
+			: (() => {
+					switch (Package.split(".").pop()) {
+						case "csproj":
+							return "nuget";
 
-							default:
-								return "npm";
-						}
+						default:
+							return "npm";
 					}
-				)()
+				})()
 	}"
       directory: "${Directory ? Directory : "/"}"
       schedule:
           interval: "daily"
       versioning-strategy: ${
 			typeof Environment !== "undefined"
-				? (
-						() => {
-							switch (Environment) {
-								case "Cargo":
-									return "lockfile-only";
+				? (() => {
+						switch (Environment) {
+							case "Cargo":
+								return "lockfile-only";
 
-								default:
-									return "increase";
-							}
+							default:
+								return "increase";
 						}
-					)()
+					})()
 				: "increase"
 		}
       ${
@@ -82,18 +78,19 @@ export default async () =>
 
 				if (Base.size > 0) {
 					try {
-						await (await import("node:fs/promises")).mkdir(
-							`${GitHub}${Path}`,
-							{
-								recursive: true,
-							},
-						);
+						await (
+							await import("node:fs/promises")
+						).mkdir(`${GitHub}${Path}`, {
+							recursive: true,
+						});
 					} catch {
 						console.log(`Could not create: ${GitHub}${Path}`);
 					}
 
 					try {
-						await (await import("node:fs/promises")).writeFile(
+						await (
+							await import("node:fs/promises")
+						).writeFile(
 							`${GitHub}${Path}${Name}`,
 							`${[...Base].join("")}`,
 						);
