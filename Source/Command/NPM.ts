@@ -69,9 +69,7 @@ export default async () =>
               continue-on-error: true
               working-directory: .${Directory}
               run: |
-                  npm publish --legacy-peer-deps --provenance --ignore-scripts
-              env:
-                  NODE_AUTH_TOKEN: \${{ secrets.NPM_TOKEN }}
+                  npm publish --legacy-peer-deps --ignore-scripts
 `);
 													}
 
@@ -84,9 +82,7 @@ export default async () =>
               continue-on-error: true
               working-directory: .${Directory}
               run: |
-                  npm publish --legacy-peer-deps --provenance --ignore-scripts
-              env:
-                  NODE_AUTH_TOKEN: \${{ secrets.NPM_TOKEN }}
+                  npm publish --legacy-peer-deps --ignore-scripts
 `);
 													}
 
@@ -96,9 +92,7 @@ export default async () =>
               continue-on-error: true
               working-directory: .${Directory}
               run: |
-                  npm publish --legacy-peer-deps --provenance --ignore-scripts
-              env:
-                  NODE_AUTH_TOKEN: \${{ secrets.NPM_TOKEN }}
+                  npm publish --legacy-peer-deps --ignore-scripts
 `);
 													}
 												}

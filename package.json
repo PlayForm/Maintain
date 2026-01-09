@@ -1,6 +1,6 @@
 {
 	"name": "@playform/maintain",
-	"version": "0.1.7",
+	"version": "0.1.8",
 	"private": false,
 	"description": "Maintain 🔧",
 	"keywords": [
@@ -41,7 +41,7 @@
 		"dotenv": "17.2.3",
 		"etag": "1.8.1",
 		"fast-glob": "3.3.3",
-		"zod": "4.3.4"
+		"zod": "4.3.5"
 	},
 	"devDependencies": {
 		"@octokit/types": "16.0.0",

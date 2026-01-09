@@ -1,4 +1,86 @@
+## 0.1.8
+
+### Add
+
+- Added dynamic GitHub Actions version management using environment variables
+- Added ESBuild configuration files (`Maintain.js` and `Maintain.ts`) for build
+  process
+- Added shell scripts for fetching latest action versions (`Fetch.sh`, `Run.sh`,
+  `prepublishOnly.sh`)
+- Added `Update.sh` script for automatically updating GitHub Actions versions in
+  workflow files
+- Added support for dynamically injecting action versions via `process.env`
+  variables
+
+### Remove
+
+- Removed `.gitignore` file
+- Removed `Action.sh` utility script
+
+### Change
+
+- Updated URLs in `package.json` to use lowercase `https://` scheme
+- Updated dependencies:
+    - Bump `@octokit/core` from 6.1.5 to 7.0.6
+    - Bump `commander` from 13.1.0 to 14.0.2
+    - Bump `dotenv` from 16.5.0 to 17.2.3
+    - Bump `zod` from 3.24.4 to 4.3.5
+    - Bump `@octokit/types` from 14.0.0 to 16.0.0
+    - Bump `@playform/build` from 0.2.4 to 0.2.6
+    - Bump `@types/etag` from 1.8.3 to 1.8.4
+    - Bump `@types/node` from 22.15.15 to 25.0.3
+- Updated build scripts in `package.json`:
+    - Changed `Run` script from `Build 'Source/**/*.ts' --Watch` to
+      `sh Source/Run.sh`
+    - Changed `prepublishOnly` script from `Build 'Source/**/*.ts'` to
+      `sh Source/prepublishOnly.sh`
+- Updated GitHub Actions versions:
+    - Bump `actions/checkout` from v4.2.2 to v6.0.1 across all workflow files
+    - Bump `actions/setup-node` from v4.4.0 to v6.1.0 in `Node.ts`, `NPM.yml`,
+      and `codeql.yml`
+    - Bump `actions/upload-artifact` from v4.6.2 to v6.0.0 in `Node.ts`
+    - Bump `actions/cache` from v4.2.3 to dynamic version in `Rust.ts`
+    - Bump `actions-rs/cargo` from v1.0.3 to dynamic version in `Rust.ts`
+    - Bump `cloudflare/wrangler-action` from v3.14.1 to dynamic version in
+      `Cloudflare.ts`
+    - Bump `github/codeql-action/init` from v3.28.17 to v4.31.9 in `codeql.yml`
+    - Bump `github/codeql-action/analyze` from v3.28.17 to v4.31.9 in
+      `codeql.yml`
+    - Bump `pnpm/action-setup` from v4.1.0 to v4.2.0 in `Node.yml` and
+      `codeql.yml`
+    - Bump `dependabot/fetch-metadata` from v2.3.0 to v2.4.0 in
+      `InnerDependabot.yml`
+    - Bump `ad-m/github-push-action` from `master` to v1.0.0 in `Auto.yml`
+- Replaced hardcoded action versions with dynamic environment variable
+  references in workflow generation
+- Changed variable declarations from `let` to `const` in `Dispatch.ts` for
+  improved immutability
+- Enhanced error handling and validation in version fetching scripts
+
 ## 0.1.7
+
+### Change
+
+- Bumped version from 0.1.6 to 0.1.7 in `package.json`
+- Updated contact email from `Source/Open@PlayForm.LTD` to
+  `Source/Open@PlayForm.Cloud`
+- Updated organization URL from `HTTPS://PlayForm.LTD` to
+  `HTTPS://PlayForm.Cloud`
+- Updated dependencies:
+    - Bump `@octokit/core` from 6.1.4 to 6.1.5
+    - Bump `dotenv` from 16.4.7 to 16.5.0
+    - Bump `zod` from 3.24.2 to 3.24.4
+    - Bump `@octokit/types` from 13.10.0 to 14.0.0
+    - Bump `@playform/build` from 0.2.2 to 0.2.4
+    - Bump `@types/node` from 22.14.0 to 22.15.15
+- Updated GitHub Actions:
+    - Bump `actions/setup-node` from v4.3.0 to v4.4.0 in `Node.ts`, `NPM.yml`,
+      and `codeql.yml`
+    - Bump `github/codeql-action/init` from v3.28.13 to v3.28.17 in `codeql.yml`
+    - Bump `github/codeql-action/analyze` from v3.28.13 to v3.28.17 in
+      `codeql.yml`
+- Updated git config user email in `Auto.yml` from `auto@playform.cloud` to
+  `Commit@PlayForm.Cloud`
 
 ## 0.1.6
 

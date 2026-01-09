@@ -145,7 +145,7 @@ deployments.
 Generates or updates a `.github/workflows/NPM.yml` GitHub Actions workflow for
 Node.js projects that publish packages to NPM. If `build`, `prepublishOnly`, or
 `Build` scripts are found in `package.json`, it adds steps to publish the
-package using `npm publish --legacy-peer-deps --provenance --ignore-scripts`.
+package using `npm publish --legacy-peer-deps --ignore-scripts`.
 
 - **Example:**
     ```sh
