@@ -1,5 +1,5 @@
 var m=async()=>await(async l=>{for(const{Path:r,Name:i,File:p}of l)for(const[t,w]of await(await import("../Function/Directory.js")).default(await(await import("../Function/Package.js")).default("Cargo"))){const e=`${t}/.github`,o=await p();if(r==="/workflows/"&&i==="Rust.yml")for(const a of w){const c=(await import("node:path")).dirname(a).replace(t,""),n=(await(await import("../Function/Type.js")).default()).get(a.split("/").pop());typeof n<"u"&&n==="Cargo"&&o.add(`
-            - uses: actions/cache@v5.0.1
+            - uses: actions/cache@v5.0.3
               with:
                   path: |
                       ~/.cargo/bin/

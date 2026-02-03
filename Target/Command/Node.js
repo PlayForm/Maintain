@@ -1,5 +1,5 @@
 var y=async()=>await(async f=>{for(const{Path:c,Name:p,File:w}of f)for(const[a,m]of await(await import("../Function/Directory.js")).default(await(await import("../Function/Package.js")).default("NPM"))){const s=`${a}/.github`,t=await w();if(c==="/workflows/"&&p==="Node.yml")for(const o of m){const e=(await import("node:path")).dirname(o).replace(a,""),$=(await(await import("node:fs/promises")).readFile(o,"utf-8")).toString(),d=(await(await import("../Function/Type.js")).default()).get(o.split("/").pop());try{if(typeof d<"u"&&d==="NPM"){const r=JSON.parse($);for(const i of["bundledDependencies","bundleDependencies","dependencies","devDependencies","extensionDependencies","optionalDependencies","peerDependencies","peerDependenciesMeta"].sort())typeof r[i]<"u"&&t.add(`
-            - uses: actions/setup-node@v6.1.0
+            - uses: actions/setup-node@v6.2.0
               with:
                   node-version: \${{ matrix.node-version }}
                   cache: "pnpm"
