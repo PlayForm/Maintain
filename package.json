@@ -38,16 +38,16 @@
 		"@octokit/core": "7.0.6",
 		"commander": "14.0.3",
 		"deepmerge-ts": "7.1.5",
-		"dotenv": "17.2.3",
+		"dotenv": "17.3.1",
 		"etag": "1.8.1",
 		"fast-glob": "3.3.3",
 		"zod": "4.3.6"
 	},
 	"devDependencies": {
 		"@octokit/types": "16.0.0",
-		"@playform/build": "0.2.6",
+		"@playform/build": "0.3.0",
 		"@types/etag": "1.8.4",
-		"@types/node": "25.2.0",
+		"@types/node": "25.2.3",
 		"@types/pacote": "11.1.8"
 	},
 	"publishConfig": {
