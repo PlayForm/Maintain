@@ -22,13 +22,13 @@ var Target_default = {
       "v3.14.1"
     ),
     "process.env.VERSION_ACTIONS_SETUP_NODE": JSON.stringify(
-      "v6.2.0"
+      "v6.3.0"
     ),
     "process.env.VERSION_ACTIONS_UPLOAD_ARTIFACT": JSON.stringify(
-      "v6.0.0"
+      "v7.0.0"
     ),
     "process.env.VERSION_ACTIONS_CACHE": JSON.stringify(
-      "v5.0.3"
+      "v5.0.4"
     ),
     "process.env.VERSION_ACTIONS_RS_CARGO": JSON.stringify(
       "v1.0.3"
