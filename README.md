@@ -1,241 +1,237 @@
+<table><tr> <td colspan="1"> <h3 align="center"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Dark/Image/GitHub/GitHub.svg"> <source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/GitHub.svg"> <img width="28" alt="GitHub" src="https://PlayForm.Cloud/Image/GitHub/GitHub.svg"> </picture>  </h3> </td> <td colspan="3" valign="top"> <h3 align="center"> Related </h3> </td> </tr><tr><td valign="top" colspan="1"><a href="https://GitHub.Com/PlayForm/Compress/actions/workflows/Node.yml" target="_blank"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/actions/workflow/status/PlayForm/Compress/Node.yml?branch=main&label=Build&logo=node.js&color=black&labelColor=black&logoColor=white&logoWidth=0"> <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/actions/workflow/status/PlayForm/Compress/Node.yml?branch=main&label=Build&logo=node.js&color=white&labelColor=white&logoColor=black&logoWidth=0"> <img src="https://img.shields.io/github/actions/workflow/status/PlayForm/Compress/Node.yml?branch=main&label=Build&logo=node.js&color=black&labelColor=black&logoColor=white&logoWidth=0" alt="Build" title="Build"> </picture> </a><br><a href="https://NPMJS.Org/@playform/compress?activeTab=dependencies" target="_blank"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/librariesio/release/npm/@playform/compress?logo=dependabot&label=&color=black&labelColor=black&logoColor=white&logoWidth=0"> <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/librariesio/release/npm/@playform/compress?logo=dependabot&label=&color=white&labelColor=white&logoColor=black&logoWidth=0"> <img src="https://img.shields.io/librariesio/release/npm/@playform/compress?logo=dependabot&label=&color=black&labelColor=black&logoColor=white&logoWidth=0" alt="Dependency" title="Dependency"> </picture> </a><br><a href="https://NPMJS.Org/@playform/compress" target="_blank"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@playform/compress?label=Version&logo=npm&color=black&labelColor=black&logoColor=white&logoWidth=0"> <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/npm/v/@playform/compress?label=Version&logo=npm&color=white&labelColor=white&logoColor=black&logoWidth=0"> <img src="https://img.shields.io/npm/v/@playform/compress?label=Version&logo=npm&color=black&labelColor=black&logoColor=white&logoWidth=0" alt="Version" title="Version"> </picture> </a><br></td><td valign="top" colspan="1"><a href="https://GitHub.Com/PlayForm/Compress" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/stars/PlayForm/Compress?style=flat&label=Star&logo=github&color=black&labelColor=black&logoColor=white&logoWidth=0"><source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/stars/PlayForm/Compress?style=flat&label=Star&logo=github&color=white&labelColor=white&logoColor=black&logoWidth=0"><img src="https://img.shields.io/github/stars/PlayForm/Compress?style=flat&label=Star&logo=github&color=black&labelColor=black&logoColor=white&logoWidth=0" alt="Star"></picture></a><br><a href="https://NPMJS.Org/@playform/compress" target="_blank"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/d18m/@playform/compress?label=Download&logo=npm&color=black&labelColor=black&logoColor=white&logoWidth=0"> <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/npm/d18m/@playform/compress?label=Download&logo=npm&color=white&labelColor=white&logoColor=black&logoWidth=0"> <img src="https://img.shields.io/npm/d18m/@playform/compress?label=Download&logo=npm&color=black&labelColor=black&logoColor=white&logoWidth=0" alt="Download" title="Download"> </picture> </a><br><a href="https://GitHub.Com/PlayForm/Compress" target="_blank"><b>🗜️ Compress —</b></a></td><td valign="top" colspan="1"><a href="https://GitHub.Com/PlayForm/Format/actions/workflows/Node.yml" target="_blank"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/actions/workflow/status/PlayForm/Format/Node.yml?branch=main&label=Build&logo=node.js&color=black&labelColor=black&logoColor=white&logoWidth=0"> <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/actions/workflow/status/PlayForm/Format/Node.yml?branch=main&label=Build&logo=node.js&color=white&labelColor=white&logoColor=black&logoWidth=0"> <img src="https://img.shields.io/github/actions/workflow/status/PlayForm/Format/Node.yml?branch=main&label=Build&logo=node.js&color=black&labelColor=black&logoColor=white&logoWidth=0" alt="Build" title="Build"> </picture> </a><br><a href="https://NPMJS.Org/@playform/format?activeTab=dependencies" target="_blank"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/librariesio/release/npm/@playform/format?logo=dependabot&label=&color=black&labelColor=black&logoColor=white&logoWidth=0"> <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/librariesio/release/npm/@playform/format?logo=dependabot&label=&color=white&labelColor=white&logoColor=black&logoWidth=0"> <img src="https://img.shields.io/librariesio/release/npm/@playform/format?logo=dependabot&label=&color=black&labelColor=black&logoColor=white&logoWidth=0" alt="Dependency" title="Dependency"> </picture> </a><br><a href="https://NPMJS.Org/@playform/format" target="_blank"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@playform/format?label=Version&logo=npm&color=black&labelColor=black&logoColor=white&logoWidth=0"> <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/npm/v/@playform/format?label=Version&logo=npm&color=white&labelColor=white&logoColor=black&logoWidth=0"> <img src="https://img.shields.io/npm/v/@playform/format?label=Version&logo=npm&color=black&labelColor=black&logoColor=white&logoWidth=0" alt="Version" title="Version"> </picture> </a><br></td><td valign="top" colspan="1"><a href="https://GitHub.Com/PlayForm/Format" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/github/stars/PlayForm/Format?style=flat&label=Star&logo=github&color=black&labelColor=black&logoColor=white&logoWidth=0"><source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/github/stars/PlayForm/Format?style=flat&label=Star&logo=github&color=white&labelColor=white&logoColor=black&logoWidth=0"><img src="https://img.shields.io/github/stars/PlayForm/Format?style=flat&label=Star&logo=github&color=black&labelColor=black&logoColor=white&logoWidth=0" alt="Star"></picture></a><br><a href="https://NPMJS.Org/@playform/format" target="_blank"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/d18m/@playform/format?label=Download&logo=npm&color=black&labelColor=black&logoColor=white&logoWidth=0"> <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/npm/d18m/@playform/format?label=Download&logo=npm&color=white&labelColor=white&logoColor=black&logoWidth=0"> <img src="https://img.shields.io/npm/d18m/@playform/format?label=Download&logo=npm&color=black&labelColor=black&logoColor=white&logoWidth=0" alt="Download" title="Download"> </picture> </a><br><a href="https://GitHub.Com/PlayForm/Format" target="_blank"><b>🗻 Format —</b></a></td></tr></table><hr>
+
 # [Maintain] 🔧
 
-Maintain GitHub repositories and automate common tasks related to project
-upkeep, CI/CD workflows, and dependency management.
+This **[`CLI tool`][Maintain]** brings GitHub repository maintenance utilities
+to your workflow.
+
+[`Clean`][Clean] 🎁
+
+[`Dependabot`][Dependabot] 🎁
+
+[`Dispatch`][Dispatch] 🎁
+
+[`Edit`][Edit] 🎁
+
+[`Node`][Node] 🎁
+
+[`Cloudflare`][Cloudflare] 🎁
+
+[`NPM`][NPM] 🎁
+
+[`Rust`][Rust] 🎁
+
+[`GitHub`][GitHub] 🎁
+
+[`Star`][Star] 🎁
+
+> [!IMPORTANT]
+>
+> Set `Base` and `Token` in your `.env` before running any commands.
 
 ## Installation 🚀
 
-Using NPM
+There are two ways to use `Maintain`. Install it globally for repeated use, or
+run it directly without installing.
+
+### Install globally
+
+Using NPM:
 
 ```sh
 npm install -g @playform/maintain
 ```
 
-Using Yarn
+Using Yarn:
 
 ```sh
 yarn global add @playform/maintain
 ```
 
-Using PNPM
+Using PNPM:
 
 ```sh
-pnpm install -g @playform/maintain
+pnpm add -g @playform/maintain
 ```
 
-or direct usage:
+### Run directly
 
-Using NPM
+Using NPM:
 
 ```sh
 npx @playform/maintain < Command > [Arguments...]
 ```
 
-Using Yarn
+Using Yarn:
 
 ```sh
-yarn @playform/maintain < Command > [Arguments...]
+yarn dlx @playform/maintain < Command > [Arguments...]
 ```
 
-Using PNPM
+Using PNPM:
 
 ```sh
 pnpx @playform/maintain < Command > [Arguments...]
 ```
 
-## CLI Usage:
+## Getting started
 
-The CLI is invoked using the `Maintain` command, followed by a specific
-subcommand.
+Once installed, invoke `Maintain` followed by a subcommand:
 
 ```sh
 Maintain < Command > [Arguments...]
 ```
 
-### Commands:
+### Clean
 
-**`Clean [Repositories...]`**
-
-Deletes GitHub Actions workflow runs, their logs, and actions caches for
-specified repositories. If no repositories are listed, it attempts to clean all
-repositories accessible to the configured user.
-
-- **Arguments:**
-    - `[Repositories...]`: (Optional) A list of repository names to clean.
-- **Example:**
-    ```sh
-    Maintain Clean MyRepo AnotherRepo
-    Maintain Clean # Cleans all accessible repositories
-    ```
-
-**`Dependabot`**
-
-Scans project directories (identified by various package manifest files like
-`package.json`, `Cargo.toml`, etc.) and generates/updates
-`.github/dependabot.yml` configuration files. It also creates a supporting
-`.github/workflows/Dependabot.yml` GitHub Actions workflow. This helps in
-keeping project dependencies up-to-date automatically.
-
-- **Example:**
-    ```sh
-    Maintain Dependabot
-    ```
-
-**`Dispatch [Repositories...]`**
-
-Triggers `workflow_dispatch` events for all workflows found in the specified
-repositories. If no repositories are listed, it attempts to dispatch events for
-all repositories accessible to the configured user. The dispatch is triggered on
-a ref named "Current".
-
-- **Arguments:**
-    - `[Repositories...]`: (Optional) A list of repository names to dispatch
-      workflow events for.
-- **Example:**
-    ```sh
-    Maintain Dispatch MyRepo AnotherRepo
-    Maintain Dispatch # Dispatches for all accessible repositories
-    ```
-
-**`Edit [Repositories...]`**
-
-Configures a wide range of settings for your GitHub organizations and
-repositories. This includes enabling vulnerability alerts, automated security
-fixes, adjusting merge strategies (e.g., allow squash merge, auto-merge, delete
-branch on merge), fork settings, requiring web commit signoffs, and setting
-default permissions for GitHub Actions at both repository and organization
-levels. Applies to specified repositories or all accessible ones.
-
-- **Arguments:**
-    - `[Repositories...]`: (Optional) A list of repository names to edit.
-- **Example:**
-    ```sh
-    Maintain Edit MyRepo AnotherRepo
-    Maintain Edit # Edits settings for all accessible repositories and organizations
-    ```
-
-**`Node`**
-
-Generates or updates a `.github/workflows/Node.yml` GitHub Actions workflow for
-projects using Node.js (identified by `package.json` files). The workflow
-configures Node.js, installs dependencies using `pnpm` (with caching for
-`pnpm-lock.yaml`), and includes steps for common npm scripts like `build`,
-`test`, and `prepublishOnly`. Build artifacts from `./Target` (if a build script
-is present) are uploaded.
-
-- **Example:**
-    ```sh
-    Maintain Node
-    ```
-
-**`Cloudflare`**
-
-Generates or updates a `.github/workflows/Cloudflare.yml` GitHub Actions
-workflow for projects intended for Cloudflare deployment (identified by
-`wrangler.toml` files). It sets up the `cloudflare/wrangler-action` for
-deployments.
-
-- **Example:**
-    ```sh
-    Maintain Cloudflare
-    ```
-
-**`NPM`**
-
-Generates or updates a `.github/workflows/NPM.yml` GitHub Actions workflow for
-Node.js projects that publish packages to NPM. If `build`, `prepublishOnly`, or
-`Build` scripts are found in `package.json`, it adds steps to publish the
-package using `npm publish --legacy-peer-deps --ignore-scripts`.
-
-- **Example:**
-    ```sh
-    Maintain NPM
-    ```
-
-**`Rust`**
-
-Generates or updates a `.github/workflows/Rust.yml` GitHub Actions workflow for
-Rust projects (identified by `Cargo.toml` files). The workflow includes steps
-for caching Cargo dependencies and building the project in release mode
-(`cargo build --release --all-features`).
-
-- **Example:**
-    ```sh
-    Maintain Rust
-    ```
-
-**`GitHub`**
-
-Generates or updates a generic `.github/workflows/GitHub.yml` GitHub Actions
-workflow. This workflow can be used for general CI purposes across your
-repositories.
-
-- **Example:**
-    ```sh
-    Maintain GitHub
-    ```
-
-**`Workflow`**
-
-A meta-command that executes all individual workflow generation commands:
-`Dependabot`, `Node`, `Cloudflare`, `NPM`, `Rust`, and `GitHub`. This is useful
-for setting up all standard workflows in a project.
-
-- **Example:**
-    ```sh
-    Maintain Workflow
-    ```
-
-**`Star`**
-
-Scans all `package.json` files found within the `Base` directory (see `.env`
-configuration), extracts all NPM dependencies (both `dependencies` and
-`devDependencies`), and attempts to star their corresponding GitHub
-repositories.
-
-- **Example:**
-    ```sh
-    Maintain Star
-    ```
-
-**`Complexity [files...]`** Scans specified files or project directories and
-logs package file information. (Note: Advanced complexity analysis features may
-be under development, current primary function is discovery and logging of
-project structure related to package files).
-
-- **Arguments:**
-    - `[files...]`: (Optional) A list of files or globs to scan.
-- **Example:**
-    ```sh
-    Maintain Complexity "src/**/*.ts"
-    Maintain Complexity # Scans based on located package files
-    ```
-
-## .env Configuration
-
-Create a `.env` file in the root directory where you run `Maintain` or ensure
-these environment variables are set:
+Deletes GitHub Actions workflow runs, their logs, and caches for the specified
+repositories. Omit repositories to target all accessible ones.
 
 ```sh
-# Your GitHub username.
-# Used by: Clean, Dispatch, Edit.
+Maintain Clean MyRepo AnotherRepo
+Maintain Clean
+```
+
+### Dependabot
+
+Scans project directories for package manifests (`package.json`, `Cargo.toml`,
+etc.) and generates `.github/dependabot.yml` alongside a supporting
+`.github/workflows/Dependabot.yml` workflow to keep dependencies up-to-date
+automatically.
+
+```sh
+Maintain Dependabot
+```
+
+### Dispatch
+
+Triggers `workflow_dispatch` events for every workflow in the specified
+repositories on the `Current` ref. Omit repositories to dispatch for all
+accessible ones.
+
+```sh
+Maintain Dispatch MyRepo AnotherRepo
+Maintain Dispatch
+```
+
+### Edit
+
+Configures repository and organization settings: vulnerability alerts, automated
+security fixes, merge strategies, auto-merge, branch deletion on merge, fork
+settings, web commit signoffs, and default Actions permissions.
+
+```sh
+Maintain Edit MyRepo AnotherRepo
+Maintain Edit
+```
+
+### Node
+
+Generates or updates `.github/workflows/Node.yml` for Node.js projects
+(`package.json`). Configures `pnpm` with lock-file caching and adds steps for
+`build`, `test`, and `prepublishOnly` scripts. Uploads `./Target` artifacts when
+a build script is present.
+
+```sh
+Maintain Node
+```
+
+### Cloudflare
+
+Generates or updates `.github/workflows/Cloudflare.yml` for Cloudflare Workers
+projects (`wrangler.toml`). Configures `cloudflare/wrangler-action` for
+deployments.
+
+```sh
+Maintain Cloudflare
+```
+
+### NPM
+
+Generates or updates `.github/workflows/NPM.yml` for packages published to NPM.
+Adds a publish step via `npm publish --legacy-peer-deps --ignore-scripts` when
+`build`, `prepublishOnly`, or `Build` scripts are detected.
+
+```sh
+Maintain NPM
+```
+
+### Rust
+
+Generates or updates `.github/workflows/Rust.yml` for Rust projects
+(`Cargo.toml`). Caches Cargo dependencies and builds in release mode with all
+features enabled.
+
+```sh
+Maintain Rust
+```
+
+### GitHub
+
+Generates or updates `.github/workflows/GitHub.yml` for general CI use across
+repositories.
+
+```sh
+Maintain GitHub
+```
+
+### Workflow
+
+Meta-command that runs all workflow generators — `Dependabot`, `Node`,
+`Cloudflare`, `NPM`, `Rust`, and `GitHub` — in a single pass.
+
+```sh
+Maintain Workflow
+```
+
+### Star
+
+Reads all `package.json` files under `Base`, collects every NPM dependency, and
+stars their corresponding GitHub repositories.
+
+```sh
+Maintain Star
+```
+
+### Complexity
+
+Discovers and logs package file information across project directories.
+
+```sh
+Maintain Complexity "src/**/*.ts"
+Maintain Complexity
+```
+
+## `.env` Configuration
+
+Create a `.env` file in the directory where you run `Maintain`:
+
+```sh
+# Your GitHub username — used by Clean, Dispatch, Edit.
 User="YourGitHubUsername"
 
-# The base directory for operations like scanning for package.json files.
+# Root directory scanned for package manifests.
 # Defaults to the current working directory.
-# Used by: Star, and all workflow generation commands (Dependabot, Node, Cloudflare, NPM, Rust, GitHub, Complexity).
-Base="/path/to/your/projects_root_or_monorepo_root"
+# Used by Star and all workflow commands.
+Base="/path/to/your/projects"
 
-# Your GitHub Personal Access Token (PAT) with appropriate permissions.
-# (e.g., repo, workflow, admin:org for organization edits).
-# Used by: Clean, Dispatch, Edit, Star.
+# GitHub Personal Access Token with repo, workflow, and admin:org scopes.
+# Used by Clean, Dispatch, Edit, Star.
 Token="YourGitHubPAT"
 ```
 
-## Links
+[Maintain]: HTTPS://NPMJS.Org/@playform/maintain
+[Clean]: #clean
+[Dependabot]: #dependabot
+[Dispatch]: #dispatch
+[Edit]: #edit
+[Node]: #node
+[Cloudflare]: #cloudflare
+[NPM]: #npm
+[Rust]: #rust
+[GitHub]: #github
+[Star]: #star
 
-- **Project Repository:** [Maintain]
-- **NPM Package:** [@playform/maintain]
+## Changelog
 
-[Maintain]: https://GitHub.Com/PlayForm/Maintain.git
-[@playform/maintain]: https://www.npmjs.com/package/@playform/maintain
+See [`CHANGELOG.md`](CHANGELOG.md) for a history of changes to this tool.
