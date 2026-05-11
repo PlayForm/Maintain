@@ -19,16 +19,16 @@ var Maintain_default = {
   plugins: [],
   define: {
     "process.env.VERSION_CLOUDFLARE_WRANGLER_ACTION": JSON.stringify(
-      "v3.14.1"
+      "v3.15.0"
     ),
     "process.env.VERSION_ACTIONS_SETUP_NODE": JSON.stringify(
-      "v6.3.0"
+      "v6.4.0"
     ),
     "process.env.VERSION_ACTIONS_UPLOAD_ARTIFACT": JSON.stringify(
-      "v7.0.0"
+      "v7.0.1"
     ),
     "process.env.VERSION_ACTIONS_CACHE": JSON.stringify(
-      "v5.0.4"
+      "v5.0.5"
     ),
     "process.env.VERSION_ACTIONS_RS_CARGO": JSON.stringify(
       "v1.0.3"
