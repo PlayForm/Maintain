@@ -1,6 +1,6 @@
 {
 	"name": "@playform/maintain",
-	"version": "0.1.9",
+	"version": "0.2.0",
 	"private": false,
 	"description": "Maintain 🔧",
 	"keywords": [
@@ -38,16 +38,16 @@
 		"@octokit/core": "7.0.6",
 		"commander": "14.0.3",
 		"deepmerge-ts": "7.1.5",
-		"dotenv": "17.4.1",
+		"dotenv": "17.4.2",
 		"etag": "1.8.1",
 		"fast-glob": "3.3.3",
-		"zod": "4.3.6"
+		"zod": "4.4.3"
 	},
 	"devDependencies": {
 		"@octokit/types": "16.0.0",
-		"@playform/build": "0.3.1",
+		"@playform/build": "0.3.2",
 		"@types/etag": "1.8.4",
-		"@types/node": "25.5.2",
+		"@types/node": "25.9.1",
 		"@types/pacote": "11.1.8"
 	},
 	"publishConfig": {

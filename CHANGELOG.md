@@ -1,3 +1,27 @@
+## 0.2.0
+
+### Change
+
+- Bumped version from 0.1.9 to 0.2.0 in `package.json`
+- Updated dependencies:
+    - Bump `dotenv` from 17.4.1 to 17.4.2
+    - Bump `@types/node` from 25.5.2 to 25.6.2
+- Updated GitHub Actions versions across workflow files:
+    - Bump `cloudflare/wrangler-action` from v3.14.1 to v3.15.0 in `Version.yml`
+    - Bump `actions/upload-artifact` from v7.0.0 to v7.0.1 in `Version.yml`
+    - Bump `actions/cache` from v5.0.4 to v5.0.5 in `Version.yml`
+    - Bump `actions/setup-node` from v6.3.0 to v6.4.0 in `Version.yml`,
+      `NPM.yml`, `codeql.yml`, and `Node.yml`
+    - Bump `pnpm/action-setup` from v5.0.0 to v6.0.7 in `Node.yml` and
+      `codeql.yml`
+    - Bump `github/codeql-action/init` from v4.35.1 to v4.35.4 in `codeql.yml`
+    - Bump `github/codeql-action/analyze` from v4.35.1 to v4.35.4 in
+      `codeql.yml`
+    - Bump `ad-m/github-push-action` from v1.0.0 to v1.1.0 in `Auto.yml`
+    - Bump `pozil/auto-assign-issue` from v2.2.0 to v3.0.0 in `GitHub.yml`
+    - Bump `dependabot/fetch-metadata` from v3.0.0 to v3.1.0 in
+      `InnerDependabot.yml`
+
 ## 0.1.9
 
 ### Add
