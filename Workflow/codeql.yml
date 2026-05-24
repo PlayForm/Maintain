@@ -66,11 +66,11 @@ jobs:
         steps:
             - uses: actions/checkout@v6.0.2
 
-            - uses: github/codeql-action/init@v4.35.4
+            - uses: github/codeql-action/init@v4.36.0
               with:
                   languages: ${{ matrix.language }}
 
-            - uses: pnpm/action-setup@v6.0.7
+            - uses: pnpm/action-setup@v6.0.8
               with:
                   version: 9.0.3
                   run_install: |
@@ -97,6 +97,6 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: github/codeql-action/analyze@v4.35.4
+            - uses: github/codeql-action/analyze@v4.36.0
               with:
                   category: "/language:${{matrix.language}}"
