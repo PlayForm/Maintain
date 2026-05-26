@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../Source/Configuration/ESBuild/Target.d.ts"],
-  "sourcesContent": ["declare const _default: {\n    color: true;\n    format: \"esm\";\n    logLevel: \"debug\";\n    metafile: true;\n    minify: true;\n    outdir: string;\n    platform: \"node\";\n    target: string;\n    tsconfig: string;\n    write: true;\n    legalComments: \"none\";\n    bundle: false;\n    assetNames: string;\n    sourcemap: false;\n    drop: \"debugger\"[];\n    ignoreAnnotations: true;\n    keepNames: false;\n    plugins: never[];\n    define: {\n        \"process.env.VERSION_CLOUDFLARE_WRANGLER_ACTION\": string;\n        \"process.env.VERSION_ACTIONS_SETUP_NODE\": string;\n        \"process.env.VERSION_ACTIONS_UPLOAD_ARTIFACT\": string;\n        \"process.env.VERSION_ACTIONS_CACHE\": string;\n        \"process.env.VERSION_ACTIONS_RS_CARGO\": string;\n    };\n};\nexport default _default;\n"],
-  "mappings": "AA2BA,IAAO,mBAAQ;",
+  "sourcesContent": ["declare const _default: BuildOptions;\nexport default _default;\n"],
+  "mappings": "AACA,IAAO,mBAAQ;",
   "names": []
 }

@@ -2,7 +2,7 @@
 	"name": "@playform/maintain",
 	"version": "0.2.0",
 	"private": false,
-	"description": "Maintain 🔧",
+	"description": "Maintain 🔧",
 	"keywords": [
 		"git",
 		"github",
@@ -20,7 +20,7 @@
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Source ✍🏻 Open 👐🏻",
+		"name": "Source ✍🏻 Open 👐🏻",
 		"email": "Source/Open@PlayForm.Cloud",
 		"url": "https://PlayForm.Cloud"
 	},
@@ -48,7 +48,8 @@
 		"@playform/build": "0.3.2",
 		"@types/etag": "1.8.4",
 		"@types/node": "25.9.1",
-		"@types/pacote": "11.1.8"
+		"@types/pacote": "11.1.8",
+		"esbuild": "0.28.0"
 	},
 	"publishConfig": {
 		"access": "public",
