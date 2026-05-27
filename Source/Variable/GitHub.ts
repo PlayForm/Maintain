@@ -7,6 +7,27 @@ import type Type from "../Type/File.js";
 export default new Set([
 	{
 		Path: "/workflows/",
+		Name: "Auto.yml",
+		File: async () =>
+			new Set([
+				(
+					await (
+						await import("node:fs/promises")
+					).readFile(
+						(await import("node:path")).resolve(
+							`${(await import("node:path")).dirname(
+								(await import("node:url")).fileURLToPath(
+									import.meta.url,
+								),
+							)}/../../Workflow/Auto.yml`,
+						),
+						"utf-8",
+					)
+				).toString(),
+			]),
+	},
+	{
+		Path: "/workflows/",
 		Name: "GitHub.yml",
 		File: async () =>
 			new Set([
