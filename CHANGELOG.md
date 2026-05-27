@@ -1,5 +1,31 @@
 ## 0.2.1
 
+### Add
+
+- Registered `Auto.yml` in `Source/Variable/GitHub.ts` so `Maintain Workflow`
+  now syncs it to all discovered repos
+
+### Change
+
+- Updated dependencies:
+    - Bump `@types/node` from 25.7.0 to 25.9.1
+    - Add `esbuild` 0.28.0 as a dev dependency
+- Updated GitHub Actions versions across workflow files:
+    - Bump `ad-m/github-push-action` from v1.1.0 to v1.3.0 in `Auto.yml`
+    - Bump `github/codeql-action/init` from v4.35.4 to v4.36.0 in `codeql.yml`
+    - Bump `github/codeql-action/analyze` from v4.35.4 to v4.36.0 in
+      `codeql.yml`
+    - Bump `pnpm/action-setup` from v6.0.7 to v6.0.8 in `codeql.yml` and
+      `Node.yml`
+    - Bump `cloudflare/wrangler-action` from v3.15.0 to v4.0.0 in `Version.yml`
+- Fixed Dependabot auto-approve workflow (`InnerDependabot.yml`) to use
+  `secrets.GITHUB_TOKEN` instead of `secrets.DEPENDABOT_TOKEN`, and tightened
+  the job condition to also check `github.event.pull_request.user.login`
+- Improved `Update.sh`:
+    - Scoped `find` to skip `node_modules`, `vendor`, `dist`, `target`, `.git`,
+      `.next`, and `.venv` instead of scanning all files from the project root
+    - Prefixed all shell commands with `\` to bypass aliases
+
 ## 0.2.0
 
 ### Change
