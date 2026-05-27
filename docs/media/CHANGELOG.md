@@ -1,3 +1,61 @@
+## 0.2.2
+
+### Change
+
+- Bumped version from 0.2.1 to 0.2.2 in `package.json`
+
+## 0.2.1
+
+### Add
+
+- Registered `Auto.yml` in `Source/Variable/GitHub.ts` so `Maintain Workflow`
+  now syncs it to all discovered repos
+
+### Change
+
+- Updated dependencies:
+    - Bump `@types/node` from 25.7.0 to 25.9.1
+    - Add `esbuild` 0.28.0 as a dev dependency
+- Updated GitHub Actions versions across workflow files:
+    - Bump `ad-m/github-push-action` from v1.1.0 to v1.3.0 in `Auto.yml`
+    - Bump `github/codeql-action/init` from v4.35.4 to v4.36.0 in `codeql.yml`
+    - Bump `github/codeql-action/analyze` from v4.35.4 to v4.36.0 in
+      `codeql.yml`
+    - Bump `pnpm/action-setup` from v6.0.7 to v6.0.8 in `codeql.yml` and
+      `Node.yml`
+    - Bump `cloudflare/wrangler-action` from v3.15.0 to v4.0.0 in `Version.yml`
+- Fixed Dependabot auto-approve workflow (`InnerDependabot.yml`) to use
+  `secrets.GITHUB_TOKEN` instead of `secrets.DEPENDABOT_TOKEN`, and tightened
+  the job condition to also check `github.event.pull_request.user.login`
+- Improved `Update.sh`:
+    - Scoped `find` to skip `node_modules`, `vendor`, `dist`, `target`, `.git`,
+      `.next`, and `.venv` instead of scanning all files from the project root
+    - Prefixed all shell commands with `\` to bypass aliases
+
+## 0.2.0
+
+### Change
+
+- Bumped version from 0.1.9 to 0.2.0 in `package.json`
+- Updated dependencies:
+    - Bump `dotenv` from 17.4.1 to 17.4.2
+    - Bump `@types/node` from 25.5.2 to 25.6.2
+- Updated GitHub Actions versions across workflow files:
+    - Bump `cloudflare/wrangler-action` from v3.14.1 to v3.15.0 in `Version.yml`
+    - Bump `actions/upload-artifact` from v7.0.0 to v7.0.1 in `Version.yml`
+    - Bump `actions/cache` from v5.0.4 to v5.0.5 in `Version.yml`
+    - Bump `actions/setup-node` from v6.3.0 to v6.4.0 in `Version.yml`,
+      `NPM.yml`, `codeql.yml`, and `Node.yml`
+    - Bump `pnpm/action-setup` from v5.0.0 to v6.0.7 in `Node.yml` and
+      `codeql.yml`
+    - Bump `github/codeql-action/init` from v4.35.1 to v4.35.4 in `codeql.yml`
+    - Bump `github/codeql-action/analyze` from v4.35.1 to v4.35.4 in
+      `codeql.yml`
+    - Bump `ad-m/github-push-action` from v1.0.0 to v1.1.0 in `Auto.yml`
+    - Bump `pozil/auto-assign-issue` from v2.2.0 to v3.0.0 in `GitHub.yml`
+    - Bump `dependabot/fetch-metadata` from v3.0.0 to v3.1.0 in
+      `InnerDependabot.yml`
+
 ## 0.1.9
 
 ### Add

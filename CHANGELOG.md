@@ -1,12 +1,8 @@
 ## 0.2.2
 
-### Fix
+### Change
 
-- Resolved `@playform/document` plugin load failures
-  (`typedoc-plugin-remove-references`, `typedoc-plugin-rename-defaults`,
-  `typedoc-plugin-mdn-links`, `typedoc-plugin-zod`,
-  `typedoc-plugin-merge-modules`, `typedoc-plugin-keywords`) caused by pnpm's
-  isolated node_modules layout not co-locating plugins with the global install
+- Bumped version from 0.2.1 to 0.2.2 in `package.json`
 
 ## 0.2.1
 
