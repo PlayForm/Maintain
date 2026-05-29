@@ -6,8 +6,8 @@ Current=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 source "$Current/Fetch.sh"
 
 Build "$Current/Configuration/**/*.{ts,json}" \
-    --ESBuild "$Current/Configuration/ESBuild/Maintain.ts"
+	--ESBuild "$Current/Configuration/ESBuild/Maintain.ts"
 
 Build "$Current/**/*.ts" \
-    --ESBuild "$Current/Configuration/ESBuild/Target.ts" \
-    --Watch
+	--ESBuild "$Current/Configuration/ESBuild/Target.ts" \
+	--Watch

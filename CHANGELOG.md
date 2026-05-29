@@ -2,7 +2,20 @@
 
 ### Change
 
-- Bumped version from 0.2.1 to 0.2.2 in `package.json`
+- Verified all GitHub Actions versions are current via `Update.sh` - no changes
+  required:
+    - `actions/checkout@v6.0.2`
+    - `actions/setup-node@v6.4.0`
+    - `actions/upload-artifact@v7.0.1`
+    - `actions/cache@v5.0.5`
+    - `pnpm/action-setup@v6.0.8`
+    - `dependabot/fetch-metadata@v3.1.0`
+    - `ad-m/github-push-action@v1.3.0`
+    - `pozil/auto-assign-issue@v3.0.0`
+    - `cloudflare/wrangler-action@v4.0.0`
+    - `github/codeql-action@v4.36.0`
+    - `actions-rs/cargo@v1.0.3`
+    - `actions-rs/toolchain@v1.0.7`
 
 ## 0.2.1
 
