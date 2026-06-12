@@ -49,7 +49,7 @@
 		"@types/etag": "1.8.4",
 		"@types/node": "25.9.3",
 		"@types/pacote": "11.1.8",
-		"esbuild": "0.28.0"
+		"esbuild": "0.28.1"
 	},
 	"publishConfig": {
 		"access": "public",
