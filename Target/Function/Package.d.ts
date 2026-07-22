@@ -1,7 +1,7 @@
 import type Type from "../Type/Package.js";
+export default _default;
 /**
  * @module Package
  *
  */
-declare const _default: (Filter?: Type) => Promise<Set<string>>;
-export default _default;
+declare function _default(Filter?: Type): Promise<Set<string>>;

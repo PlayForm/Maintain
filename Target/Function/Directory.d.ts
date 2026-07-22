@@ -1,3 +1,4 @@
+export default _default;
 /**
  * @module Search
  *
@@ -14,5 +15,4 @@
  * paths and the values are sets of glob patterns associated with each directory.
  *
  */
-declare const _default: (Search: Set<string>) => Promise<Map<any, any>>;
-export default _default;
+declare function _default(Search: Set<string>): Promise<Map<any, any>>;

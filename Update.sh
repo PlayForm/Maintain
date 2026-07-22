@@ -42,22 +42,20 @@ print_status "Starting Update.sh script"
 		if [[ "$line" =~ uses:\ [^[:space:]]+ ]]; then
 			print_status "Found uses in $file: $line"
 
-			action_part=$(\echo "$line" | \sed -E 's/.*uses:\ ([^[:space:]]+).*/\1/' | \tr -d "'\"")
+			# Extract the full action reference (no surrounding quotes, no existing # comment)
+			action_part=$(\echo "$line" | \sed -E 's/.*uses:\ ([^[:space:]"'\'']+).*/\1/' | \sed -E 's/\s*#.*//')
 
 			print_status "Action part: $action_part"
 
+			# Split into action_name and current_reference
 			if [[ "$action_part" == *@* ]]; then
 				action_name=$(\echo "$action_part" | \cut -d '@' -f 1)
-
-				current_version=$(\echo "$action_part" | \cut -d '@' -f 2)
-
-				print_status "Current version: $current_version"
+				current_reference=$(\echo "$action_part" | \cut -d '@' -f 2)
+				print_status "Current reference: $current_reference"
 			else
 				action_name="$action_part"
-
-				current_version=""
-
-				print_status "No version specified"
+				current_reference=""
+				print_status "No reference specified"
 			fi
 
 			IFS='/' read -r -a parts <<<"$action_name"
@@ -87,9 +85,10 @@ print_status "Starting Update.sh script"
 				continue
 			fi
 
+			# Get the latest tag
 			latest_tag=$(\gh api "repos/$repo_part/tags" | \jq -r '.[0].name')
 
-			if [ -z "$latest_tag" ]; then
+			if [ -z "$latest_tag" ] || [ "$latest_tag" == "null" ]; then
 				print_error "Failed to get tag for $repo_part"
 
 				\echo "$line" >>"$temp_file"
@@ -99,17 +98,33 @@ print_status "Starting Update.sh script"
 
 			print_status "Latest tag: $latest_tag"
 
+			# Resolve the tag to a commit SHA (immutable pin)
+			commit_sha=$(\gh api "repos/$repo_part/git/ref/tags/$latest_tag" | \jq -r '.object.sha // .object.sha')
+
+			if [ -z "$commit_sha" ] || [ "$commit_sha" == "null" ]; then
+				print_error "Failed to resolve commit SHA for $repo_part @ $latest_tag"
+
+				\echo "$line" >>"$temp_file"
+
+				continue
+			fi
+
+			print_status "Commit SHA: $commit_sha"
+
+			# Build the new action reference: action@sha # tag
 			if [ -n "$path_part" ]; then
-				new_action_part="${repo_part}/${path_part}@${latest_tag}"
+				new_action_part="${repo_part}/${path_part}@${commit_sha} # ${latest_tag}"
 			else
-				new_action_part="${repo_part}@${latest_tag}"
+				new_action_part="${repo_part}@${commit_sha} # ${latest_tag}"
 			fi
 
 			print_status "New action part: $new_action_part"
 
-			new_line="${line/$action_part/$new_action_part}"
+			# Use sed to replace the entire uses: reference including any existing comments
+			# This handles: @tag, @sha # oldcomment, @sha # old1 # old2, etc.
+			new_line=$(\echo "$line" | \sed -E 's|(uses:\s+)[^[:space:]"'\'']+.*|\1'"${new_action_part}"'|')
 
-			print_success "Updating $action_part to $new_action_part"
+			print_success "→ ${new_line}"
 
 			\echo "$new_line" >>"$temp_file"
 		else

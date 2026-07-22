@@ -63,7 +63,7 @@ export default async () =>
 										"undefined"
 									) {
 										Base.add(`
-            - uses: actions/setup-node@${process.env["VERSION_ACTIONS_SETUP_NODE"]}
+            - uses: actions/setup-node@${process.env["VERSION_ACTIONS_SETUP_NODE"]} # ${process.env["VERSION_ACTIONS_SETUP_NODE_TAG"]}
               with:
                   node-version: \${{ matrix.node-version }}
                   cache: "pnpm"
@@ -98,7 +98,7 @@ export default async () =>
             - run: pnpm run build
               working-directory: .
 
-            - uses: actions/upload-artifact@${process.env["VERSION_ACTIONS_UPLOAD_ARTIFACT"]}
+            - uses: actions/upload-artifact@${process.env["VERSION_ACTIONS_UPLOAD_ARTIFACT"]} # ${process.env["VERSION_ACTIONS_UPLOAD_ARTIFACT_TAG"]}
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target
@@ -113,7 +113,7 @@ export default async () =>
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: actions/upload-artifact@${process.env["VERSION_ACTIONS_UPLOAD_ARTIFACT"]}
+            - uses: actions/upload-artifact@${process.env["VERSION_ACTIONS_UPLOAD_ARTIFACT"]} # ${process.env["VERSION_ACTIONS_UPLOAD_ARTIFACT_TAG"]}
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target
@@ -125,7 +125,7 @@ export default async () =>
             - run: pnpm run Build
               working-directory: .
 
-            - uses: actions/upload-artifact@v6.0.0
+            - uses: actions/upload-artifact@${process.env["VERSION_ACTIONS_UPLOAD_ARTIFACT"]} # ${process.env["VERSION_ACTIONS_UPLOAD_ARTIFACT_TAG"]}
               with:
                   name: .${Directory.replaceAll("/", "-")}-Node-\${{ matrix.node-version }}-Target
                   path: .${Directory}/Target

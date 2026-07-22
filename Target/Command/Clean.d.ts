@@ -1,9 +1,9 @@
+export default _default;
 /**
  * @module Clean
  *
  */
-declare const _default: (Repositories?: string[]) => Promise<void>;
-export default _default;
+declare function _default(Repositories?: string[]): Promise<void>;
 export declare const Request: (Where: string, With?: {}, Type?: string) => Promise<import("@octokit/types").OctokitResponse<any, number> | any>;
 export declare const User: string;
 export declare const All: {

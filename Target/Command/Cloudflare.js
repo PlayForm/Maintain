@@ -1,5 +1,5 @@
 var p=async()=>await(async l=>{for(const{Path:o,Name:i,File:n}of l)for(const[t,w]of await(await import("../Function/Directory.js")).default(await(await import("../Function/Package.js")).default("Cloudflare"))){const e=`${t}/.github`,r=await n();if(o==="/workflows/"&&i==="Cloudflare.yml")for(const a of w){const f=(await import("node:path")).dirname(a).replace(t,""),s=(await(await import("../Function/Type.js")).default()).get(a.split("/").pop());typeof s<"u"&&s==="Cloudflare"&&r.add(`
-            - uses: cloudflare/wrangler-action@v4.0.0
+            - uses: cloudflare/wrangler-action@ebbaa1584979971c8614a24965b4405ff95890e0 # ${process.env.VERSION_CLOUDFLARE_WRANGLER_ACTION_TAG}
               with:
                   apiToken: \${{ secrets.CF_API_TOKEN }}
                   accountId: \${{ secrets.CF_ACCOUNT_ID }}

@@ -1,3 +1,4 @@
+export default _default;
 /**
  * @module NPM
  *
@@ -9,5 +10,4 @@
  * about the files to be processed. Each object has the following properties:
  *
  */
-declare const _default: () => Promise<void>;
-export default _default;
+declare function _default(): Promise<void>;

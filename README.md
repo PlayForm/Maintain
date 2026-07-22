@@ -116,9 +116,9 @@ Maintain Dispatch
 
 ### Edit
 
-Configures repository and organization settings: vulnerability alerts, automated
-security fixes, merge strategies, auto-merge, branch deletion on merge, fork
-settings, web commit signoffs, and default Actions permissions.
+Configures repository and organization settings: merge strategies, auto-merge,
+branch deletion on merge, fork settings, web commit signoffs, and default
+Actions permissions.
 
 ```sh
 Maintain Edit MyRepo AnotherRepo

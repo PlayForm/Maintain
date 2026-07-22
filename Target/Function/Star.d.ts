@@ -1,6 +1,6 @@
+export default _default;
 /**
  * @module Star
  *
  */
-declare const _default: (URL?: string) => Promise<void>;
-export default _default;
+declare function _default(URL?: string): Promise<void>;

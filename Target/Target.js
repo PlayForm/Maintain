@@ -19,19 +19,19 @@ var Target_default = {
   plugins: [],
   define: {
     "process.env.VERSION_CLOUDFLARE_WRANGLER_ACTION": JSON.stringify(
-      "v4.0.0"
+      "ebbaa1584979971c8614a24965b4405ff95890e0"
     ),
     "process.env.VERSION_ACTIONS_SETUP_NODE": JSON.stringify(
-      "v6.4.0"
+      "820762786026740c76f36085b0efc47a31fe5020"
     ),
     "process.env.VERSION_ACTIONS_UPLOAD_ARTIFACT": JSON.stringify(
-      "v7.0.1"
+      "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a"
     ),
     "process.env.VERSION_ACTIONS_CACHE": JSON.stringify(
-      "v5.0.5"
+      "55cc8345863c7cc4c66a329aec7e433d2d1c52a9"
     ),
     "process.env.VERSION_ACTIONS_RS_CARGO": JSON.stringify(
-      "v1.0.3"
+      "4ff6ec2846f6e7217c1a9b0b503506665f134c4b"
     )
   }
 };
