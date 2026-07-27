@@ -47,7 +47,7 @@
 		"@octokit/types": "16.0.0",
 		"@playform/build": "0.3.3",
 		"@types/etag": "1.8.4",
-		"@types/node": "26.1.1",
+		"@types/node": "26.1.2",
 		"@types/pacote": "11.1.8",
 		"esbuild": "0.28.1"
 	},
