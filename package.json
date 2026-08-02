@@ -35,7 +35,7 @@
 		"prepublishOnly": "sh Source/prepublishOnly.sh"
 	},
 	"dependencies": {
-		"@octokit/core": "7.0.6",
+		"@octokit/core": "7.0.7",
 		"commander": "15.0.0",
 		"deepmerge-ts": "7.1.5",
 		"dotenv": "17.4.2",
@@ -44,10 +44,10 @@
 		"zod": "4.4.3"
 	},
 	"devDependencies": {
-		"@octokit/types": "16.0.0",
+		"@octokit/types": "17.0.0",
 		"@playform/build": "0.3.3",
 		"@types/etag": "1.8.4",
-		"@types/node": "26.1.1",
+		"@types/node": "26.1.2",
 		"@types/pacote": "11.1.8",
 		"esbuild": "0.28.1"
 	},
