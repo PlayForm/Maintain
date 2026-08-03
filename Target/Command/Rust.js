@@ -1,5 +1,5 @@
 var m=async()=>await(async l=>{for(const{Path:e,Name:i,File:p}of l)for(const[t,w]of await(await import("../Function/Directory.js")).default(await(await import("../Function/Package.js")).default("Cargo"))){const r=`${t}/.github`,o=await p();if(e==="/workflows/"&&i==="Rust.yml")for(const a of w){const c=(await import("node:path")).dirname(a).replace(t,""),n=(await(await import("../Function/Type.js")).default()).get(a.split("/").pop());typeof n<"u"&&n==="Cargo"&&o.add(`
-            - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # ${process.env.VERSION_ACTIONS_CACHE_TAG}
+            - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
               with:
                   path: |
                       ~/.cargo/bin/
@@ -9,7 +9,7 @@ var m=async()=>await(async l=>{for(const{Path:e,Name:i,File:p}of l)for(const[t,w
                       target/
                       Target/
                   key: \${{ runner.os }}-cargo-\${{ hashFiles('.${c}/Cargo.toml') }}
-            - uses: actions-rs/cargo@4ff6ec2846f6e7217c1a9b0b503506665f134c4b # ${process.env.VERSION_ACTIONS_RS_CARGO_TAG}
+            - uses: actions-rs/cargo@4ff6ec2846f6e7217c1a9b0b503506665f134c4b # v1.0.3
               with:
                 command: build
                 args: --release --all-features --manifest-path .${c}/${(await import("node:path")).basename(a)}

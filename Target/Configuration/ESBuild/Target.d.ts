@@ -19,10 +19,15 @@ declare const _default: {
     plugins: never[];
     define: {
         "process.env.VERSION_CLOUDFLARE_WRANGLER_ACTION": string;
+        "process.env.VERSION_CLOUDFLARE_WRANGLER_ACTION_TAG": string;
         "process.env.VERSION_ACTIONS_SETUP_NODE": string;
+        "process.env.VERSION_ACTIONS_SETUP_NODE_TAG": string;
         "process.env.VERSION_ACTIONS_UPLOAD_ARTIFACT": string;
+        "process.env.VERSION_ACTIONS_UPLOAD_ARTIFACT_TAG": string;
         "process.env.VERSION_ACTIONS_CACHE": string;
+        "process.env.VERSION_ACTIONS_CACHE_TAG": string;
         "process.env.VERSION_ACTIONS_RS_CARGO": string;
+        "process.env.VERSION_ACTIONS_RS_CARGO_TAG": string;
     };
 };
 export default _default;
