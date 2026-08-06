@@ -5,43 +5,19 @@
 		"outDir": "Target",
 
 		"paths": {
-			"@Asset/*": ["Source/Asset/*"],
+			"@Class/*": ["./Source/Class/*"],
 
-			"@Class/*": ["Source/Class/*"],
+			"@Command/*": ["./Source/Command/*"],
 
-			"@Command/*": ["Source/Command/*"],
+			"@Configuration/*": ["./Source/Configuration/*"],
 
-			"@Component/*": ["Source/Component/*"],
+			"@Function/*": ["./Source/Function/*"],
 
-			"@Context/*": ["Source/Context/*"],
+			"@Interface/*": ["./Source/Interface/*"],
 
-			"@Element/*": ["Source/Element/*"],
+			"@Type/*": ["./Source/Type/*"],
 
-			"@Function/*": ["Source/Function/*"],
-
-			"@Interface/*": ["Source/Interface/*"],
-
-			"@Layout/*": ["Source/Layout/*"],
-
-			"@Library/*": ["Source/Library/*"],
-
-			"@Notation/*": ["Source/Notation/*"],
-
-			"@Option/*": ["Source/Option/*"],
-
-			"@Page/*": ["Source/pages/*"],
-
-			"@Script/*": ["Source/Script/*"],
-
-			"@Stylesheet/*": ["Source/Stylesheet/*"],
-
-			"@Target/*": ["Source/Target/*"],
-
-			"@Test/*": ["Source/Test/*"],
-
-			"@Type/*": ["Source/Type/*"],
-
-			"@Variable/*": ["Source/Variable/*"]
+			"@Variable/*": ["./Source/Variable/*"]
 		},
 
 		"rootDir": "./Source"
