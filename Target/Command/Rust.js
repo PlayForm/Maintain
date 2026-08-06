@@ -9,7 +9,7 @@ var m=async()=>await(async l=>{for(const{Path:e,Name:i,File:p}of l)for(const[t,w
                       target/
                       Target/
                   key: \${{ runner.os }}-cargo-\${{ hashFiles('.${c}/Cargo.toml') }}
-            - uses: actions-rs/cargo@4ff6ec2846f6e7217c1a9b0b503506665f134c4b # v1.0.3
+            - uses: actions-rs/cargo@844f36862e911db73fe0815f00a4a2602c279505 # v1.0.3
               with:
                 command: build
                 args: --release --all-features --manifest-path .${c}/${(await import("node:path")).basename(a)}

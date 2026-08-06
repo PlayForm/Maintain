@@ -85,8 +85,16 @@ print_status "Starting Update.sh script"
 				continue
 			fi
 
-			# Get the latest tag
-			latest_tag=$(\gh api "repos/$repo_part/tags" | \jq -r '.[0].name')
+			# Get the latest tag - use the newest semantic version from ALL tags,
+			# not just tags[0] (the API returns tags in an arbitrary order).
+			latest_tag=$(\gh api "repos/$repo_part/tags?per_page=100" | \jq -r '.[].name' |
+				\grep -E '^v?[0-9]+\.[0-9]+\.[0-9]+$' |
+				\sed 's/^v//' | \sort -V | tail -1 | \sed 's/^/v/')
+
+			if [ -z "$latest_tag" ] || [ "$latest_tag" = "v" ]; then
+				# Fallback: no semver tags found, take the first available tag.
+				latest_tag=$(\gh api "repos/$repo_part/tags" | \jq -r '.[0].name')
+			fi
 
 			if [ -z "$latest_tag" ] || [ "$latest_tag" == "null" ]; then
 				print_error "Failed to get tag for $repo_part"
@@ -98,8 +106,28 @@ print_status "Starting Update.sh script"
 
 			print_status "Latest tag: $latest_tag"
 
-			# Resolve the tag to a commit SHA (immutable pin)
-			commit_sha=$(\gh api "repos/$repo_part/git/ref/tags/$latest_tag" | \jq -r '.object.sha // .object.sha')
+			# Resolve the tag ref to a SHA. For ANNOTATED tags, ref.object.sha is the
+			# tag-object SHA, NOT the commit. Follow it to the real commit SHA, which
+			# is what GitHub Actions requires in `uses:`.
+			ref_json=$(\gh api "repos/$repo_part/git/ref/tags/$latest_tag")
+			if [ -z "$ref_json" ] || [ "$ref_json" == "null" ]; then
+				print_error "Failed to resolve ref for $repo_part @ $latest_tag"
+
+				\echo "$line" >>"$temp_file"
+
+				continue
+			fi
+
+			obj_type=$(\echo "$ref_json" | \jq -r '.object.type')
+			obj_sha=$(\echo "$ref_json" | \jq -r '.object.sha')
+
+			if [ "$obj_type" = "tag" ]; then
+				# Annotated tag: the object is itself a tag; fetch its commit.
+				commit_sha=$(\gh api "repos/$repo_part/git/tags/$obj_sha" | \jq -r '.object.sha')
+			else
+				# Lightweight tag: the object is the commit directly.
+				commit_sha="$obj_sha"
+			fi
 
 			if [ -z "$commit_sha" ] || [ "$commit_sha" == "null" ]; then
 				print_error "Failed to resolve commit SHA for $repo_part @ $latest_tag"

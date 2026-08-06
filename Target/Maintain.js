@@ -43,7 +43,7 @@ var Maintain_default = {
       "v6.1.0"
     ),
     "process.env.VERSION_ACTIONS_RS_CARGO": JSON.stringify(
-      "4ff6ec2846f6e7217c1a9b0b503506665f134c4b"
+      "844f36862e911db73fe0815f00a4a2602c279505"
     ),
     "process.env.VERSION_ACTIONS_RS_CARGO_TAG": JSON.stringify(
       "v1.0.3"
