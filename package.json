@@ -41,7 +41,7 @@
 		"dotenv": "17.4.2",
 		"etag": "1.8.1",
 		"fast-glob": "3.3.3",
-		"zod": "4.4.3"
+		"zod": "4.5.1"
 	},
 	"devDependencies": {
 		"@octokit/types": "17.0.0",
