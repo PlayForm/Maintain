@@ -1,6 +1,6 @@
 {
 	"name": "@playform/maintain",
-	"version": "0.2.3",
+	"version": "0.2.4",
 	"private": false,
 	"description": "Maintain 🔧",
 	"keywords": [
@@ -35,21 +35,21 @@
 		"prepublishOnly": "sh Source/prepublishOnly.sh"
 	},
 	"dependencies": {
-		"@octokit/core": "7.0.7",
+		"@octokit/core": "7.0.8",
 		"commander": "15.0.0",
-		"deepmerge-ts": "7.1.5",
+		"deepmerge-ts": "8.0.2",
 		"dotenv": "17.4.2",
 		"etag": "1.8.1",
 		"fast-glob": "3.3.3",
-		"zod": "4.4.3"
+		"zod": "4.5.4"
 	},
 	"devDependencies": {
-		"@octokit/types": "17.0.0",
+		"@octokit/types": "18.0.0",
 		"@playform/build": "0.3.4",
 		"@types/etag": "1.8.4",
-		"@types/node": "26.1.2",
+		"@types/node": "26.4.1",
 		"@types/pacote": "11.1.8",
-		"esbuild": "0.28.1"
+		"esbuild": "0.28.2"
 	},
 	"publishConfig": {
 		"access": "public",
