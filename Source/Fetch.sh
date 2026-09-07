@@ -3,11 +3,16 @@
 ScriptDir=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Root="$(dirname "$ScriptDir")"
 
+# Extract version (SHA) and tag from the SOURCE OF TRUTH only: ./Workflow/.
+# Never grep ./.github/workflows/ — those are GENERATED files (output of
+# `Maintain Workflow`). Reading them creates a circular dependency: the
+# generated file would be missing the tag (because the env var wasn't set
+# yet), then Fetch.sh would read that "# undefined" back from the generated
+# file instead of the correct value from the Workflow template.
 ExtractVersion() {
 	local Action="$1"
 	grep -rh "uses:[[:space:]]*${Action}@" \
 		"$Root/Workflow/" \
-		"$Root/.github/workflows/" \
 		2>/dev/null |
 		head -1 |
 		sed -E "s|.*uses:[[:space:]]*${Action}@([^[:space:]]+).*|\1|" |
@@ -20,7 +25,6 @@ ExtractTag() {
 	local Action="$1"
 	grep -rh "uses:[[:space:]]*${Action}@" \
 		"$Root/Workflow/" \
-		"$Root/.github/workflows/" \
 		2>/dev/null |
 		head -1 |
 		sed -nE 's/.*# ([^[:space:]]+).*/\1/p' |
