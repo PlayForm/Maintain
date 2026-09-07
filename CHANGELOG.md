@@ -1,3 +1,81 @@
+## 0.2.4
+
+### Change
+
+- Updated dependencies:
+    - Bump `@octokit/core` from 7.0.6 to 7.0.8
+    - Bump `deepmerge-ts` from 7.1.5 to 8.0.2
+    - Bump `zod` from 4.4.3 to 4.5.4
+    - Bump `@octokit/types` from 16.0.0 to 18.0.0
+    - Bump `@playform/build` from 0.3.3 to 0.3.4
+    - Bump `@types/node` from 26.1.1 to 26.4.1
+    - Bump `esbuild` from 0.28.1 to 0.28.2
+- Updated GitHub Actions pinned SHAs:
+    - `github/codeql-action/init` from v4.37.3 to v4.37.6 in
+      `Workflow/codeql.yml`
+    - `github/codeql-action/analyze` from v4.37.3 to v4.37.6 in
+      `Workflow/codeql.yml`
+    - `pnpm/action-setup` from v6.0.9 to v6.1.0 in `Workflow/Node.yml` and
+      `Workflow/codeql.yml`
+    - `actions-rs/toolchain` SHA refreshed in `Workflow/Rust.yml`
+    - `actions-rs/cargo` SHA refreshed in `Workflow/Version.yml`
+- Improved `Update.sh`:
+    - Refactored tag fetching to sort all semantic versions and select the
+      newest, rather than relying on API return order
+    - Properly dereference annotated tags to their underlying commit SHA
+      (required for `uses:`)
+- Normalized `tsconfig.json` path aliases with consistent `./` prefix
+
+## 0.2.3
+
+### Add
+
+- Added `ExtractTag()` function to `Source/Fetch.sh` to extract human-readable
+  version tags from pinned SHA comments
+- Added ESBuild build-time definitions for TAG environment variables:
+    - `VERSION_CLOUDFLARE_WRANGLER_ACTION_TAG`
+    - `VERSION_ACTIONS_SETUP_NODE_TAG`
+    - `VERSION_ACTIONS_UPLOAD_ARTIFACT_TAG`
+    - `VERSION_ACTIONS_CACHE_TAG`
+    - `VERSION_ACTIONS_RS_CARGO_TAG`
+- Added TypeScript declarations for new TAG env vars in
+  `Source/Configuration/ESBuild/Maintain.d.ts`
+
+### Change
+
+- Updated dependencies:
+    - Bump `@playform/build` from 0.3.2 to 0.3.3
+    - Bump `@types/node` from 25.9.1 to 26.1.1
+    - Bump `esbuild` from 0.28.0 to 0.28.1
+- Major rewrite of `Update.sh`:
+    - Switched from floating tag pinning (`@v7.0.1`) to immutable commit SHA
+      pinning (`@3d3c42e # v7.0.1`)
+    - Improved regex to strip existing `# comment` from `uses:` lines before
+      parsing
+    - Handles annotated tags (tag objects) in addition to lightweight tags
+    - Appends human-readable tag comment after the SHA for readability
+- Updated workflow templates (`Cloudflare.ts`, `Node.ts`, `Rust.ts`) to append
+  tag comments alongside pinned SHAs
+- Pinned all GitHub Actions across workflow files to commit SHAs:
+    - `actions/checkout` v6.0.2 → `3d3c42e` (v7.0.1) in `Auto.yml`,
+      `Cloudflare.yml`, `codeql.yml`, `Node.yml`, `NPM.yml`, `Rust.yml`
+    - `actions/setup-node` v6.4.0 → `8207627` (v7.0.0) in `Node.ts`, `NPM.yml`,
+      `codeql.yml`, `Version.yml`
+    - `actions/upload-artifact` v6.0.0/v7.0.1 → `043fb46` (v7.0.1) in `Node.ts`,
+      `Version.yml`
+    - `actions/cache` v5.0.5 → `55cc834` (v6.1.0) in `Rust.ts`, `Version.yml`
+    - `actions-rs/cargo` v1.0.3 → `844f368` (v1.0.3) in `Rust.ts`, `Version.yml`
+    - `pnpm/action-setup` v6.0.8 → `0083308` (v6.0.9) in `codeql.yml`,
+      `Node.yml`
+    - `github/codeql-action/init` v4.36.0 → `c54b30b` (v4.37.3) in `codeql.yml`
+    - `github/codeql-action/analyze` v4.36.0 → `c54b30b` (v4.37.3) in
+      `codeql.yml`
+    - `pozil/auto-assign-issue` v3.0.0 → `af6beea` (v4.0.1) in `GitHub.yml`
+    - `dependabot/fetch-metadata` v3.1.0 → `25dd0e3` (v3.1.0) in
+      `InnerDependabot.yml`
+    - `ad-m/github-push-action` v1.3.0 → `881a632` (v1.3.0) in `Auto.yml`
+    - `cloudflare/wrangler-action` v4.0.0 → `ebbaa15` (v4.0.0) in `Version.yml`
+
 ## 0.2.2
 
 ### Change
