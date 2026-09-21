@@ -4,7 +4,7 @@ ScriptDir=$(\cd -- "$(\dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && \pwd)
 Root="$(dirname "$ScriptDir")"
 
 # Extract version (SHA) and tag from the SOURCE OF TRUTH only: ./Workflow/.
-# Never grep ./.github/workflows/ — those are GENERATED files (output of
+# Never grep ./.github/workflows/ - those are GENERATED files (output of
 # `Maintain Workflow`). Reading them creates a circular dependency: the
 # generated file would be missing the tag (because the env var wasn't set
 # yet), then Fetch.sh would read that "# undefined" back from the generated
@@ -45,7 +45,7 @@ VERSION_ACTIONS_RS_CARGO_TAG=$(ExtractTag "actions-rs/cargo")
 for Var in VERSION_CLOUDFLARE_WRANGLER_ACTION VERSION_ACTIONS_SETUP_NODE \
 	VERSION_ACTIONS_UPLOAD_ARTIFACT VERSION_ACTIONS_CACHE VERSION_ACTIONS_RS_CARGO; do
 	if [ -z "${!Var}" ]; then
-		echo "Error: Failed to extract ${Var} from local yml files"
+		\echo "Error: Failed to extract ${Var} from local yml files"
 		exit 1
 	fi
 done
