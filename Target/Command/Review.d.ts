@@ -1,3 +1,4 @@
+export default _default;
 /**
  * @module Review
  *
@@ -15,5 +16,4 @@
  * - actions the templates do not cover (their `Update.sh` pin stands).
  *
  */
-declare const _default: () => Promise<void>;
-export default _default;
+declare function _default(): Promise<void>;

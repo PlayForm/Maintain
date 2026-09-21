@@ -1,3 +1,4 @@
+export default _default;
 /**
  * @module Node
  *
@@ -11,5 +12,4 @@
  * @param Files - containers
  *
  */
-declare const _default: () => Promise<void>;
-export default _default;
+declare function _default(): Promise<void>;

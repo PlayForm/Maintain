@@ -1,3 +1,4 @@
+export default _default;
 /**
  * @module Workflow
  *
@@ -9,8 +10,7 @@
  * @param Options - commander options
  *
  */
-declare const _default: (Options?: {
+declare function _default(Options?: {
     Absorb?: boolean;
     Review?: boolean;
-}) => Promise<void>;
-export default _default;
+}): Promise<void>;

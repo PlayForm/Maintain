@@ -1,3 +1,4 @@
+export default _default;
 /**
  * @module Absorb
  *
@@ -18,5 +19,4 @@
  * else in the repository is left untouched.
  *
  */
-declare const _default: () => Promise<void>;
-export default _default;
+declare function _default(): Promise<void>;
