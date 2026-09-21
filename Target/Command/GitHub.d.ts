@@ -1,4 +1,3 @@
-export default _default;
 /**
  * @module GitHub
  *
@@ -12,4 +11,5 @@ export default _default;
  * @param Files - containers
  *
  */
-declare function _default(): Promise<void>;
+declare const _default: () => Promise<void>;
+export default _default;

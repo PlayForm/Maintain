@@ -7,6 +7,10 @@ import type { CommandOptions } from "commander";
 export const Variable: Set<{
 	Name: string;
 	Opts?: CommandOptions;
+	Options?: Set<{
+		Name: string;
+		Description?: string;
+	}>;
 	Type?: "Workflow";
 	Description?: string;
 	Arguments?: Set<{
@@ -102,10 +106,19 @@ export const Variable: Set<{
 	{
 		Name: "Workflow",
 		Description: "Trigger all workflow tasks.",
-		Action: async () =>
-			Variable.forEach((Command) =>
-				Command.Type === "Workflow" ? Command.Action() : {},
-			),
+		Options: new Set([
+			{
+				Name: "--Review",
+				Description:
+					"Review (read-only) action versions in the current repository against the latest releases and canonical templates - writes nothing.",
+			},
+			{
+				Name: "--Absorb",
+				Description:
+					"Absorb action versions only: write a scoped Update.sh (phase 1), then apply the canonical Workflow template versions (phase 2).",
+			},
+		]),
+		Action: (await import("@Command/Workflow.js")).default,
 	},
 	{
 		Name: "Star",

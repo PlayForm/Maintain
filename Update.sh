@@ -38,12 +38,23 @@ print_status "Starting Update.sh script"
 
 	temp_file=$(\mktemp)
 
-	while IFS= read -r line; do
+	# Byte-preserving append: writes the argument without a trailing newline,
+	# then adds the newline only when the source line had one (tracked by
+	# $Newline). Prevents `while read` from dropping an unterminated last line.
+	append_line() {
+		\printf '%s' "$1" >>"$temp_file"
+
+		[ "${Newline:-1}" -eq 1 ] && \printf '\n' >>"$temp_file"
+	}
+
+	Newline=1
+
+	while IFS= read -r line || { Newline=0; [ -n "$line" ]; }; do
 		if [[ "$line" =~ uses:\ [^[:space:]]+ ]]; then
 			print_status "Found uses in $file: $line"
 
 			# Extract the full action reference (no surrounding quotes, no existing # comment)
-			action_part=$(\echo "$line" | \sed -E 's/.*uses:\ ([^[:space:]"'\'']+).*/\1/' | \sed -E 's/\s*#.*//')
+			action_part=$(\echo "$line" | \sed -E 's/.*uses:\ ([^[:space:]"'"'"']+).*/\1/' | \sed -E 's/\s*#.*//')
 
 			print_status "Action part: $action_part"
 
@@ -63,7 +74,7 @@ print_status "Starting Update.sh script"
 			if [ ${#parts[@]} -lt 2 ]; then
 				print_error "Invalid action name: $action_name"
 
-				\echo "$line" >>"$temp_file"
+				append_line "$line"
 
 				continue
 			fi
@@ -80,7 +91,7 @@ print_status "Starting Update.sh script"
 			if [[ "$repo_part" == ./* || "$repo_part" == ./. ]]; then
 				print_warning "Skipping local action: $action_part"
 
-				\echo "$line" >>"$temp_file"
+				append_line "$line"
 
 				continue
 			fi
@@ -99,7 +110,7 @@ print_status "Starting Update.sh script"
 			if [ -z "$latest_tag" ] || [ "$latest_tag" == "null" ]; then
 				print_error "Failed to get tag for $repo_part"
 
-				\echo "$line" >>"$temp_file"
+				append_line "$line"
 
 				continue
 			fi
@@ -113,7 +124,7 @@ print_status "Starting Update.sh script"
 			if [ -z "$ref_json" ] || [ "$ref_json" == "null" ]; then
 				print_error "Failed to resolve ref for $repo_part @ $latest_tag"
 
-				\echo "$line" >>"$temp_file"
+				append_line "$line"
 
 				continue
 			fi
@@ -132,7 +143,7 @@ print_status "Starting Update.sh script"
 			if [ -z "$commit_sha" ] || [ "$commit_sha" == "null" ]; then
 				print_error "Failed to resolve commit SHA for $repo_part @ $latest_tag"
 
-				\echo "$line" >>"$temp_file"
+				append_line "$line"
 
 				continue
 			fi
@@ -150,13 +161,15 @@ print_status "Starting Update.sh script"
 
 			# Use sed to replace the entire uses: reference including any existing comments
 			# This handles: @tag, @sha # oldcomment, @sha # old1 # old2, etc.
-			new_line=$(\echo "$line" | \sed -E 's|(uses:\s+)[^[:space:]"'\'']+.*|\1'"${new_action_part}"'|')
+			# Use POSIX [[:space:]] instead of \s: BSD sed (macOS) does not
+			# support GNU \s, which silently left every line untouched.
+			new_line=$(\echo "$line" | \sed -E 's|(uses:[[:space:]]+)[^[:space:]"'"'"']+.*|\1'"${new_action_part}"'|')
 
 			print_success "→ ${new_line}"
 
-			\echo "$new_line" >>"$temp_file"
+			append_line "$new_line"
 		else
-			\echo "$line" >>"$temp_file"
+			append_line "$line"
 		fi
 	done <"$file"
 

@@ -1,6 +1,6 @@
-export default _default;
 /**
  * @module Readme
  *
  */
-declare function _default(): Promise<Set<string>>;
+declare const _default: () => Promise<Set<string>>;
+export default _default;

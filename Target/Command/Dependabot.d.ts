@@ -1,4 +1,3 @@
-export default _default;
 /**
  * @module Dependabot
  *
@@ -11,4 +10,5 @@ export default _default;
  * function.
  *
  */
-declare function _default(): Promise<void>;
+declare const _default: () => Promise<void>;
+export default _default;
