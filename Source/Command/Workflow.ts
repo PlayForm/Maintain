@@ -22,8 +22,8 @@ export default async (Options: { Absorb?: boolean; Review?: boolean } = {}) => {
 		return;
 	}
 
-	(await import("@Variable/Command.js")).default.forEach((Command: {
-		Type?: "Workflow";
-		Action: () => void;
-	}) => (Command.Type === "Workflow" ? Command.Action() : {}));
+	(await import("@Variable/Command.js")).default.forEach(
+		(Command: { Type?: "Workflow"; Action: () => void }) =>
+			Command.Type === "Workflow" ? Command.Action() : {},
+	);
 };

@@ -48,9 +48,9 @@ export default async () => {
 		try {
 			const Entries = await readdir(Directory, { withFileTypes: true });
 
-			return Entries.filter((Entry) => Entry.isFile() && /\.ya?ml$/i.test(Entry.name)).map(
-				(Entry) => join(Directory, Entry.name),
-			);
+			return Entries.filter(
+				(Entry) => Entry.isFile() && /\.ya?ml$/i.test(Entry.name),
+			).map((Entry) => join(Directory, Entry.name));
 		} catch {
 			return [];
 		}
@@ -72,7 +72,9 @@ export default async () => {
 	const Files = [...(await Yaml(GitHub)), ...(await Yaml(Workflows))];
 
 	if (Files.length === 0) {
-		console.log(`[Absorb] No YAML files found under ${GitHub} - nothing to absorb.`);
+		console.log(
+			`[Absorb] No YAML files found under ${GitHub} - nothing to absorb.`,
+		);
 
 		return;
 	}
@@ -97,7 +99,10 @@ export default async () => {
 		}
 	}
 
-	if ((await Exists(Update)) && !(await readFile(Update, "utf-8")).includes(Mark)) {
+	if (
+		(await Exists(Update)) &&
+		!(await readFile(Update, "utf-8")).includes(Mark)
+	) {
 		console.log(
 			`[Absorb] ${Update} exists but is not marked as absorb-generated - refusing to overwrite it.`,
 		);
@@ -126,11 +131,10 @@ export default async () => {
 		// Scope the canonical pinner to `.github/` only: same pinning logic
 		// (latest semver tag, annotated-tag deref, `@sha # tag`), zero risk to
 		// anything outside the repository's GitHub configuration.
-		const Scoped = Source
-			.replace(
-				/\\find \.[\s\S]*?-print0/,
-				'\\find .github -type f \\( -iname "*.yml" -o -iname "*.yaml" \\) -print0',
-			)
+		const Scoped = Source.replace(
+			/\\find \.[\s\S]*?-print0/,
+			'\\find .github -type f \\( -iname "*.yml" -o -iname "*.yaml" \\) -print0',
+		)
 			.replace(
 				'print_status "Starting Update.sh script"',
 				`${ManifestBlock}print_status "Starting Update.sh script"`,
@@ -153,7 +157,10 @@ export default async () => {
 	 * workflow files, in place, versions only.
 	 */
 	async function PhaseTwo() {
-		const Pins = new Map<string, { Ref: string; Tag: string | undefined }>();
+		const Pins = new Map<
+			string,
+			{ Ref: string; Tag: string | undefined }
+		>();
 
 		for (const File of await Yaml(TemplateDirectory)) {
 			const Content = await readFile(File, "utf-8");
@@ -167,19 +174,19 @@ export default async () => {
 
 				const [Name, Ref] = Value.split("@");
 
-							if (
-								Name === undefined ||
-								Ref === undefined ||
-								Name.startsWith(".") ||
-								!Name.includes("/") ||
-								Pins.has(Name)
-							) {
-								continue;
-							}
+				if (
+					Name === undefined ||
+					Ref === undefined ||
+					Name.startsWith(".") ||
+					!Name.includes("/") ||
+					Pins.has(Name)
+				) {
+					continue;
+				}
 
-							const Tag = /#\s*([^\s]+)/.exec(Line)?.[1];
+				const Tag = /#\s*([^\s]+)/.exec(Line)?.[1];
 
-							Pins.set(Name, { Ref, Tag });
+				Pins.set(Name, { Ref, Tag });
 			}
 		}
 
@@ -188,7 +195,11 @@ export default async () => {
 
 			const Right = B.replace(/^v/, "").split(".").map(Number);
 
-			for (let Index = 0; Index < Math.max(Left.length, Right.length); Index += 1) {
+			for (
+				let Index = 0;
+				Index < Math.max(Left.length, Right.length);
+				Index += 1
+			) {
 				const X = Left[Index] ?? 0;
 
 				const Y = Right[Index] ?? 0;
@@ -216,18 +227,18 @@ export default async () => {
 
 					const Value = (Match[1] ?? "").replace(/^["']|["']$/g, "");
 
-									const [Name, Ref] = Value.split("@");
+					const [Name, Ref] = Value.split("@");
 
-									if (
-										Name === undefined ||
-										Ref === undefined ||
-										Name.startsWith(".") ||
-										!Name.includes("/")
-									) {
-										return Line;
-									}
+					if (
+						Name === undefined ||
+						Ref === undefined ||
+						Name.startsWith(".") ||
+						!Name.includes("/")
+					) {
+						return Line;
+					}
 
-									const Pin = Pins.get(Name);
+					const Pin = Pins.get(Name);
 
 					if (Pin === undefined) {
 						Skipped += 1;
@@ -237,7 +248,11 @@ export default async () => {
 
 					const Tag = /#\s*([^\s]+)/.exec(Line)?.[1];
 
-					if (Tag !== undefined && Pin.Tag !== undefined && Compare(Tag, Pin.Tag) > 0) {
+					if (
+						Tag !== undefined &&
+						Pin.Tag !== undefined &&
+						Compare(Tag, Pin.Tag) > 0
+					) {
 						Kept += 1;
 
 						return Line;
@@ -245,14 +260,13 @@ export default async () => {
 
 					const Index = Match.index ?? 0;
 
-									const Rest = Line
-										.slice(Index + (Match[0]?.length ?? 0))
-										.replace(/^\s*#.*$/, "")
-										.replace(/\s+$/, "");
+					const Rest = Line.slice(Index + (Match[0]?.length ?? 0))
+						.replace(/^\s*#.*$/, "")
+						.replace(/\s+$/, "");
 
-									Updated += 1;
+					Updated += 1;
 
-									return `${Line.slice(0, Index)}uses: ${Name}@${Pin.Ref}${
+					return `${Line.slice(0, Index)}uses: ${Name}@${Pin.Ref}${
 						Pin.Tag === undefined ? "" : ` # ${Pin.Tag}`
 					}${Rest.length > 0 ? ` ${Rest}` : ""}`;
 				})
@@ -266,7 +280,11 @@ export default async () => {
 		console.log(`[Absorb] Phase 2 complete:`);
 		console.log(`[Absorb]   Template source: ${TemplateDirectory}`);
 		console.log(`[Absorb]   Actions covered by templates: ${Pins.size}`);
-		console.log(`[Absorb]   Updated: ${Updated}, kept (template older): ${Kept}, no template: ${Skipped}`);
-		console.log(`[Absorb]   ${Update} left in place - delete it to re-run phase 1.`);
+		console.log(
+			`[Absorb]   Updated: ${Updated}, kept (template older): ${Kept}, no template: ${Skipped}`,
+		);
+		console.log(
+			`[Absorb]   ${Update} left in place - delete it to re-run phase 1.`,
+		);
 	}
 };

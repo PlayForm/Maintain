@@ -42,9 +42,9 @@ export default async () => {
 		try {
 			const Entries = await readdir(Directory, { withFileTypes: true });
 
-			return Entries.filter((Entry) => Entry.isFile() && /\.ya?ml$/i.test(Entry.name)).map(
-				(Entry) => join(Directory, Entry.name),
-			);
+			return Entries.filter(
+				(Entry) => Entry.isFile() && /\.ya?ml$/i.test(Entry.name),
+			).map((Entry) => join(Directory, Entry.name));
 		} catch {
 			return [];
 		}
@@ -53,7 +53,9 @@ export default async () => {
 	const Files = [...(await Yaml(GitHub)), ...(await Yaml(Workflows))];
 
 	if (Files.length === 0) {
-		console.log(`[Review] No YAML files found under ${GitHub} - nothing to review.`);
+		console.log(
+			`[Review] No YAML files found under ${GitHub} - nothing to review.`,
+		);
 
 		return;
 	}
@@ -149,7 +151,11 @@ export default async () => {
 
 		const Right = B.replace(/^v/, "").split(".").map(Number);
 
-		for (let Index = 0; Index < Math.max(Left.length, Right.length); Index += 1) {
+		for (
+			let Index = 0;
+			Index < Math.max(Left.length, Right.length);
+			Index += 1
+		) {
 			const X = Left[Index] ?? 0;
 
 			const Y = Right[Index] ?? 0;
@@ -167,7 +173,9 @@ export default async () => {
 		RepoPart: string,
 	): Promise<{ Tag: string; Sha: string } | undefined> => {
 		try {
-			const Tags = JSON.parse(await Gh(`repos/${RepoPart}/tags?per_page=100`)) as Array<{
+			const Tags = JSON.parse(
+				await Gh(`repos/${RepoPart}/tags?per_page=100`),
+			) as Array<{
 				name: string;
 				commit: { sha: string };
 			}>;
@@ -180,14 +188,20 @@ export default async () => {
 
 			if (Tag === undefined) return undefined;
 
-			const Ref = JSON.parse(await Gh(`repos/${RepoPart}/git/ref/tags/${Tag}`)) as {
+			const Ref = JSON.parse(
+				await Gh(`repos/${RepoPart}/git/ref/tags/${Tag}`),
+			) as {
 				object: { type: string; sha: string };
 			};
 
 			const Sha =
 				Ref.object.type === "tag"
 					? (
-							JSON.parse(await Gh(`repos/${RepoPart}/git/tags/${Ref.object.sha}`)) as {
+							JSON.parse(
+								await Gh(
+									`repos/${RepoPart}/git/tags/${Ref.object.sha}`,
+								),
+							) as {
 								object: { sha: string };
 							}
 						).object.sha
@@ -248,7 +262,11 @@ export default async () => {
 
 		const WouldApply =
 			Pin !== undefined &&
-			!(Entry.Tag !== undefined && Pin.Tag !== undefined && CompareVersions(Entry.Tag, Pin.Tag) > 0);
+			!(
+				Entry.Tag !== undefined &&
+				Pin.Tag !== undefined &&
+				CompareVersions(Entry.Tag, Pin.Tag) > 0
+			);
 
 		console.log(
 			`[Review]   ${Entry.Name}@${Entry.Ref}${Entry.Tag === undefined ? "" : ` # ${Entry.Tag}`}  ${Status}`,
