@@ -66,11 +66,11 @@ jobs:
         steps:
             - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-            - uses: github/codeql-action/init@c54b30b7df092240050e69945842bc67aee0f0f4 # v4.37.3
+            - uses: github/codeql-action/init@5595ccaf912efad79be6eef63a5619ff05969be3 # v4.37.6
               with:
                   languages: ${{ matrix.language }}
 
-            - uses: pnpm/action-setup@008330803749db0355799c700092d9a85fd074e9 # v6.0.9
+            - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
               with:
                   version: 9.0.3
                   run_install: |
@@ -97,6 +97,6 @@ jobs:
             - run: pnpm run prepublishOnly
               working-directory: .
 
-            - uses: github/codeql-action/analyze@c54b30b7df092240050e69945842bc67aee0f0f4 # v4.37.3
+            - uses: github/codeql-action/analyze@5595ccaf912efad79be6eef63a5619ff05969be3 # v4.37.6
               with:
                   category: "/language:${{matrix.language}}"

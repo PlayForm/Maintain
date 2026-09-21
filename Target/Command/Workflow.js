@@ -1,0 +1,1 @@
+var t=async(a={})=>{if(a?.Review){await(await import("./Review.js")).default();return}if(a?.Absorb){await(await import("./Absorb.js")).default();return}(await import("../Variable/Command.js")).default.forEach(o=>o.Type==="Workflow"?o.Action():{})};export{t as default};

@@ -6,6 +6,10 @@ import type { CommandOptions } from "commander";
 export declare const Variable: Set<{
     Name: string;
     Opts?: CommandOptions;
+    Options?: Set<{
+        Name: string;
+        Description?: string;
+    }>;
     Type?: "Workflow";
     Description?: string;
     Arguments?: Set<{
