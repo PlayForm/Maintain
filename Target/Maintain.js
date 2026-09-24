@@ -19,10 +19,10 @@ var Maintain_default = {
   plugins: [],
   define: {
     "process.env.VERSION_CLOUDFLARE_WRANGLER_ACTION": JSON.stringify(
-      "ebbaa1584979971c8614a24965b4405ff95890e0"
+      "25853364521e0d392ece9b0c1e97a4b37b638087"
     ),
     "process.env.VERSION_CLOUDFLARE_WRANGLER_ACTION_TAG": JSON.stringify(
-      "v4.0.0"
+      "v4.1.2"
     ),
     "process.env.VERSION_ACTIONS_SETUP_NODE": JSON.stringify(
       "820762786026740c76f36085b0efc47a31fe5020"
