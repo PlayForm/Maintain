@@ -38,7 +38,7 @@
 		"@octokit/core": "7.0.8",
 		"commander": "15.0.0",
 		"deepmerge-ts": "8.0.2",
-		"dotenv": "18.0.1",
+		"dotenv": "18.0.3",
 		"etag": "1.8.1",
 		"fast-glob": "3.3.3",
 		"zod": "4.6.5"
