@@ -1,3 +1,18 @@
+## 0.3.1
+
+### Fix
+
+- `Update.sh`: added a `gh_api_retry` helper (3 attempts with 2s/4s/8s
+  exponential backoff) so transient TLS/network failures on the GitHub API no
+  longer abort an action's version pin.
+- `Update.sh`: restricted the workflow scan to `./Workflow/` and
+  `./.github/workflows/` only - `pnpm-lock.yaml` (and any other non-workflow
+  YAML) is no longer rewritten via temp-file+mv on every run.
+- `Update.sh`: the `Auto.yml` Commit job push now uses the per-repo
+  fine-grained PAT secret `PLAYFORM_AUTO_PAT` (`contents:write`, authenticating
+  as the repo admin) instead of `GITHUB_TOKEN`, which cannot bypass branch
+  protection on `Current`.
+
 ## 0.3.0
 
 ### Add
