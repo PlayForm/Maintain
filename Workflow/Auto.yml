@@ -64,5 +64,9 @@ jobs:
 
             - uses: ad-m/github-push-action@881a6320fdb16eb5318c5054f31c218aec2b324c # v1.3.0
               with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  # Fine-grained PAT (repo secret, contents:write) - GITHUB_TOKEN
+                  # is the github-actions bot and cannot bypass branch protection
+                  # (Current requires the Assign status check). This PAT authenticates
+                  # as the repo admin, which bypasses when enforce_admins is off.
+                  github_token: ${{ secrets.PLAYFORM_AUTO_PAT }}
                   branch: Current

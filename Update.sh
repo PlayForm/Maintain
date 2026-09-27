@@ -32,8 +32,31 @@ print_warning() {
 
 print_status "Starting Update.sh script"
 
-# Find workflow .yml/.yaml files, ignoring common non-source directories
-\find . -type d \( -iname node_modules -o -iname vendor -o -iname dist -o -iname target -o -iname \.git -o -iname \.next -o -iname \.venv \) -prune -false -o -type f \( -name "*.yml" -o -name "*.yaml" \) -print0 | while IFS= read -r -d $'\0' file; do
+# Retry helper for transient network failures (TLS handshake timeouts etc.):
+# 3 attempts with short backoff; prints the last attempt's stdout only if it
+# succeeds. Anything else (404, invalid token) fails on first try as before.
+gh_api_retry() {
+	local attempts=3 backoff=2 out rc
+	local i
+	for ((i = 1; i <= attempts; i++)); do
+		out=$(\gh api "$@" 2>/dev/null)
+		rc=$?
+		if [ "$rc" -eq 0 ]; then
+			\printf '%s' "$out"
+			return 0
+		fi
+		if [ "$i" -lt "$attempts" ]; then
+			\sleep "$backoff"
+			backoff=$((backoff * 2))
+		fi
+	done
+	return "$rc"
+}
+
+# Find workflow .yml/.yaml files. Only the actual workflow dirs are scanned -
+# never pnpm-lock.yaml / yarn.lock or any other YAML that isn't a GitHub Actions
+# workflow (a lockfile has no `uses:` and must not be rewritten via temp+mv).
+\find ./Workflow ./.github/workflows -type f \( -name "*.yml" -o -name "*.yaml" \) -print0 | while IFS= read -r -d $'\0' file; do
 	print_status "Processing file: $file"
 
 	temp_file=$(\mktemp)
@@ -49,7 +72,10 @@ print_status "Starting Update.sh script"
 
 	Newline=1
 
-	while IFS= read -r line || { Newline=0; [ -n "$line" ]; }; do
+	while IFS= read -r line || {
+		Newline=0
+		[ -n "$line" ]
+	}; do
 		if [[ "$line" =~ uses:\ [^[:space:]]+ ]]; then
 			print_status "Found uses in $file: $line"
 
@@ -98,13 +124,13 @@ print_status "Starting Update.sh script"
 
 			# Get the latest tag - use the newest semantic version from ALL tags,
 			# not just tags[0] (the API returns tags in an arbitrary order).
-			latest_tag=$(\gh api "repos/$repo_part/tags?per_page=100" | \jq -r '.[].name' |
+			latest_tag=$(gh_api_retry "repos/$repo_part/tags?per_page=100" | \jq -r '.[].name' |
 				\grep -E '^v?[0-9]+\.[0-9]+\.[0-9]+$' |
 				\sed 's/^v//' | \sort -V | tail -1 | \sed 's/^/v/')
 
 			if [ -z "$latest_tag" ] || [ "$latest_tag" = "v" ]; then
 				# Fallback: no semver tags found, take the first available tag.
-				latest_tag=$(\gh api "repos/$repo_part/tags" | \jq -r '.[0].name')
+				latest_tag=$(gh_api_retry "repos/$repo_part/tags" | \jq -r '.[0].name')
 			fi
 
 			if [ -z "$latest_tag" ] || [ "$latest_tag" == "null" ]; then
@@ -120,7 +146,7 @@ print_status "Starting Update.sh script"
 			# Resolve the tag ref to a SHA. For ANNOTATED tags, ref.object.sha is the
 			# tag-object SHA, NOT the commit. Follow it to the real commit SHA, which
 			# is what GitHub Actions requires in `uses:`.
-			ref_json=$(\gh api "repos/$repo_part/git/ref/tags/$latest_tag")
+			ref_json=$(gh_api_retry "repos/$repo_part/git/ref/tags/$latest_tag")
 			if [ -z "$ref_json" ] || [ "$ref_json" == "null" ]; then
 				print_error "Failed to resolve ref for $repo_part @ $latest_tag"
 
@@ -134,7 +160,7 @@ print_status "Starting Update.sh script"
 
 			if [ "$obj_type" = "tag" ]; then
 				# Annotated tag: the object is itself a tag; fetch its commit.
-				commit_sha=$(\gh api "repos/$repo_part/git/tags/$obj_sha" | \jq -r '.object.sha')
+				commit_sha=$(gh_api_retry "repos/$repo_part/git/tags/$obj_sha" | \jq -r '.object.sha')
 			else
 				# Lightweight tag: the object is the commit directly.
 				commit_sha="$obj_sha"
