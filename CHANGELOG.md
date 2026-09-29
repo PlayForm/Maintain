@@ -1,3 +1,18 @@
+## 0.3.2
+
+### Fix
+
+- `package.json`: `Run` and `prepublishOnly` now execute the `Source/` scripts
+  with `bash` instead of `sh` - on GitHub's Ubuntu runners `sh` is dash, which
+  rejects `${BASH_SOURCE[0]}` (Bad substitution) and `source` (not found), so
+  the CI `prepublishOnly` died before generating `Configuration/ESBuild/*.js`
+  (downstream `ERR_MODULE_NOT_FOUND`). Matches the scripts'
+  `#!/usr/bin/env bash`.
+- `Auto.yml`: the Commit job push uses `GITHUB_TOKEN` again - branch
+  protection was removed fleet-wide, so the per-repo fine-grained PAT
+  (`PLAYFORM_AUTO_PAT`) approach is retired.
+- Version registry: Cloudflare Wrangler Action pinned to `v4.1.3`.
+
 ## 0.3.1
 
 ### Fix
