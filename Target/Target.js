@@ -19,10 +19,10 @@ var Target_default = {
   plugins: [],
   define: {
     "process.env.VERSION_CLOUDFLARE_WRANGLER_ACTION": JSON.stringify(
-      "25853364521e0d392ece9b0c1e97a4b37b638087"
+      "953926a2e2182532811c01a25e53647d93bf07c0"
     ),
     "process.env.VERSION_CLOUDFLARE_WRANGLER_ACTION_TAG": JSON.stringify(
-      "v4.1.2"
+      "v4.1.3"
     ),
     "process.env.VERSION_ACTIONS_SETUP_NODE": JSON.stringify(
       "820762786026740c76f36085b0efc47a31fe5020"
