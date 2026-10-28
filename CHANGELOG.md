@@ -1,3 +1,22 @@
+## 0.3.3
+
+### Fix
+
+- `@playform/build` from `0.3.4` to `0.3.5`: the `Exec` helper in `0.3.4`
+  resolved before its child process exited, so the `tsc` and `tsc-alias` passes
+  in the build ran concurrently and left a nondeterministic subset of the
+  generated declarations with unrewritten `@Class`/`@Command`/`@Configuration`/
+  `@Function`/`@Interface`/`@Type`/`@Variable` aliases.
+- `Node.yml`: the build matrix runs Node `22`, `24` and `26` instead of the
+  end-of-life `18`, `19` and `20`.
+- `package.json`: corrected the indentation of the `version` field.
+- `Workflow/NPM.yml`: added the missing publish step, so the workflow template
+  matches the live `.github/workflows/NPM.yml`.
+
+### Change
+
+- Version `0.3.3`.
+
 ## 0.3.2
 
 ### Fix
